@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 
 module.exports = {
@@ -19,7 +21,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/html/index.html',
-        })
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+              { from: "./src/templates/handlebars_img", to: "./handlebars_img" },
+            ],
+          }),
     ],
     module: {
         rules:[
@@ -33,7 +40,7 @@ module.exports = {
         },
         {
             test: /\.handlebars$/, 
-            loader: "handlebars-loader" 
+            loader: "handlebars-loader",
         },
         {
             test: /\.mp3$/,

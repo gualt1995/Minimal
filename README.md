@@ -1,2 +1,2 @@
-# Presentation
- Canvas and slide out menu for UI/UX 
+# Minimal
+Just my current website
