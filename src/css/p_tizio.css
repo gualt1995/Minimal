@@ -1,0 +1,13 @@
+.tizio_frame{
+    position: relative;
+    cursor: pointer;
+}
+
+.tizio_img{
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

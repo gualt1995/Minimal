@@ -1,0 +1,48 @@
+.cv_frame{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: 'rgba(0, 0, 0, 0)';
+    z-index: 2;
+}
+
+.cv_content{
+    width: 90vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv_img{
+    /* Calcuating the correct aspect ratio for an A4 paper to fill in the screen */
+    height: calc(min(90vw, (98vh - 64px) * 0.70707070707) * 1.41428571429);
+    width: min(90vw, (98vh - 64px) * 0.70707070707);
+    background-image: url(../assets/cv.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+    background-color: var(--white);
+    z-index: 3;
+}
+
+.cv_btn_frame{
+    margin-top: 10px;
+    display: flex;
+    width: 185px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+

@@ -1,0 +1,62 @@
+.menu_btn_frame{
+    pointer-events: none;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.menu_flex_wrapper{
+    left: 0;
+    bottom: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(0deg, var(--black)  0%, rgba(0, 0, 0, 0.37) 20%, rgba(0, 0, 0, 0) 50%);
+}
+
+.menu_fab{
+    height: 52px;
+    width: 52px;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.overlay_image{
+    position: absolute; 
+}
+
+.menu{
+    display: flex;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.menu_btn{
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+    /* when the viewport is 450px or smaller */
+    .menu_flex_wrapper{
+        padding: 8px;
+    }
+}
+

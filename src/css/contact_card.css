@@ -1,0 +1,120 @@
+.contact_card_frame{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.contact_card{
+    width: 90vw;
+    height: calc(90vw * 1.65);
+    max-width: 380px;
+    max-height: 630px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../assets/profile_picture.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    z-index: 3;
+}
+
+.contact_fab_frame{
+    margin-top: 20px;
+}
+
+.contact_fab{
+    height: 52px;
+    width: 52px;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.contact_head_frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95%;
+    margin-top: 10px;
+}
+
+.contact_name{
+    position: relative;
+    font-size: 1.333rem;
+}
+
+.links_frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0px 30px 0px;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    border-top: solid 2px var(--white);
+    background-color: var(--black);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.contact_link_frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact_link_frame a{
+    letter-spacing: 0.12em;
+    text-decoration-line: underline;
+    color: var(--white);
+    font-weight: 300;
+}
+
+.email_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.email{
+    font-size: 1.333rem;
+    margin-right: 12px;
+    font-weight: bold;
+    text-decoration-line: none;
+    color: var(--white);
+}
+
+.toast_contact{
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    top: 50%;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: var(--black);
+}

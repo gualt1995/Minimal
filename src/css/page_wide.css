@@ -1,0 +1,45 @@
+:root{
+    /* Color styles */
+    --black:#000000;
+    --white:#ffffff;
+    --red:#B90000;
+    --orange:#F36139;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+    font-size: 18px;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    margin: 0px;
+}
+
+.view_port_frame{
+    width: 100vw;
+    height: 100vh;
+}
+
+.dot{
+    color: var(--red);
+}
+
+.unselectable{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+@media screen and (max-width: 450px) {
+    /* when the viewport is 450px or smaller */
+    html{
+        font-size: 16px;
+    }
+}

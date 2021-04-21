@@ -1,0 +1,194 @@
+/* Martingale */
+
+.vitals_blue{
+    --vitals_bg: #181739;
+    --vitals_slider_bg: #181739;
+    --vitals_slider_knob: #4A4963;
+    --vitals_led_bg: #242441;
+    --vitals_led_off: #414050;
+    --vitals_stroke: #585772;
+    --vitals_led_on: #51FE8C;
+}
+
+.vitals_red{
+    --vitals_bg: #531515;
+    --vitals_slider_bg: #391010;
+    --vitals_slider_knob: #734545;
+    --vitals_led_bg: #603434;
+    --vitals_led_off: #653939;
+    --vitals_stroke: #8B5959;
+    --vitals_led_on: #51FE8C;
+
+}
+
+.vitals_monitor_frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.vitals_card{
+    width: 313px;
+    height: 444px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(0, 0, 0, 0) 100%), var(--vitals_bg);
+    box-shadow: inset 0px 4px 2px rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--vitals_stroke);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+.vitals_title_frame{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.vitals_monitor_heart{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    height: 55%;
+}
+
+.vitals_frame_switch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.vitals_led_frame{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.vitals_leb_background{
+    background: var(--vitals_led_bg);
+    box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.05), inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+    filter: blur(2px);
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    top: 0px;
+    left: 0px;
+}
+
+.vitals_led{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    background: var(--vitals_led_on);
+    border-radius: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 0px 10px 5px rgba(0, 255, 87, 0.3), inset 0px -2px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+}
+
+.vitals_display{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background: #000000;
+    background: #000000;
+    box-shadow: 0px -1px 5px rgba(255, 255, 255, 0.15), 0px 4px 8px rgba(0, 0, 0, 0.4), 0px -4px 5px 1px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 8%;
+    position: relative;
+}
+
+.vitals_graph_frame{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.vitals_digits_frame{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-right: 2%;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.065em;
+}
+
+.vitals_unit_frame{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.vitals_digit{
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 0.065em;
+}
+
+.vitals_percent{
+    font-size: 2em;
+}
+
+.vitals_switch {
+    position: relative;
+    display: inline-block;
+    width: 58px;
+    height: 32px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  /* The slider */
+.vitals_slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 18px;
+    background: var(--vitals_slider_bg);
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+}
+  
+.vitals_slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 3px;
+    bottom: 3px;
+    background: var(--vitals_slider_knob);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), inset 0px 10px 9px rgba(0, 0, 0, 0.15), inset 0px -5px 7px rgba(255, 255, 255, 0.15);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .vitals_slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
