@@ -24,10 +24,6 @@
     text-transform: uppercase;
 }
 
-.tab span:hover{
-    text-shadow: 5px 2px 0px var(--red);
-}
-
 .underline{
     width: 100%;
     height: 2px;

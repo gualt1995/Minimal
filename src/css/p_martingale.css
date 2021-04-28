@@ -2,7 +2,7 @@
 
 .vitals_blue{
     --vitals_bg: #181739;
-    --vitals_slider_bg: #181739;
+    --vitals_slider_bg: #13122e;
     --vitals_slider_knob: #4A4963;
     --vitals_led_bg: #242441;
     --vitals_led_off: #414050;
@@ -13,7 +13,7 @@
 .vitals_red{
     --vitals_bg: #531515;
     --vitals_slider_bg: #391010;
-    --vitals_slider_knob: #734545;
+    --vitals_slider_knob: #613b3b;
     --vitals_led_bg: #603434;
     --vitals_led_off: #653939;
     --vitals_stroke: #8B5959;
@@ -26,13 +26,15 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .vitals_card{
     width: 313px;
     height: 444px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(0, 0, 0, 0) 100%), var(--vitals_bg);
-    box-shadow: inset 0px 4px 2px rgba(255, 255, 255, 0.25);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(0, 0, 0, 0) 100%), var(--vitals_bg);
+    box-shadow: inset 0px -4px 2px rgba(0, 0, 0, 0) 100%;
     border: 1px solid var(--vitals_stroke);
     border-radius: 10px;
     display: flex;
