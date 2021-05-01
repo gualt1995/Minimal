@@ -4,11 +4,22 @@ import anime from 'animejs/lib/anime.es.js';
 export default class bits{
     constructor(){
         var template = require("../templates/bits.handlebars");
-        var context = { 
-            "title" : "Ritesh Kumar", 
-            "description" : "developer",
-            "url" : "./assets/missing_image.png"
-        };
+        var context = 
+        { 
+            "bits" : 
+            [
+                { 
+                    "title" : "TYKHO.3", 
+                    "description" : "developer",
+                    "url" : "./assets/missing_image.png"
+                },
+                {
+                    "title" : "MUGGE", 
+                    "description" : "developer",
+                    "url" : "./assets/missing_image.png"
+                }    
+            ]
+        }
         var html = template(context)
         $('.bits_flex_wrapper').html(html);
 

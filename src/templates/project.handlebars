@@ -1,0 +1,19 @@
+<h1> {{title}} <span class="dot">.</span> </h1>
+<h3> {{subtitle}}  </h3>
+<p> {{body}} </p>
+<div class="project_tag_frame">
+    {{#each tags}}
+        <div class="tag"> {{this}} </div>
+    {{/each}}
+</div>
+<div class="project_links_frame">
+    {{#each links}}
+    <a href="{{url}}" >
+        <div class="project_link"> 
+            <i class="fab {{icon}}"></i>
+            <span> {{name}} </span>
+            <img class="project_link_icon" src="./handlebars_img/arrow_link.svg"  alt="Arrow_right">
+        </div>
+    </a>
+    {{/each}}
+</div>

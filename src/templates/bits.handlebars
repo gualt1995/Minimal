@@ -1,10 +1,12 @@
-<div class="bits_card">
-    <img class="bits_card_img" src="{{url}}">
-    <div class="bits_link_frame">
-        <span>{{title}}</span>
-        <img src="./handlebars_img/arrow_bits.svg" alt="Arrow_link">
+{{#each bits}}
+    <div class="bits_card">
+        <img class="bits_card_img" src="{{url}}">
+        <div class="bits_link_frame">
+            <span>{{title}}</span>
+            <img src="./handlebars_img/arrow_bits.svg" alt="Arrow_link">
+        </div>
+        <span class="bits_description">
+            {{description}}
+        </span>
     </div>
-    <span class="bits_description">
-        {{description}}
-    </span>
-</div>
+{{/each}}
