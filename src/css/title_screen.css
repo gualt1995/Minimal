@@ -6,67 +6,30 @@
     flex-direction: row;
     left: 0;
     top: 0;
-    background-color: rgba(255,255,255,1);
     z-index: 5;
 }
 
-.grid_losange{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.losange_line{
-    display: flex;
-    flex-direction: row;
-}
-
-.losange{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: #FFFFFF;
-    box-sizing: border-box;
-    transform: rotate(-45deg);
-    flex-grow: 0;
-    margin: 0 60px;
-    opacity: 0;
-}
-
-.title_content_frame{
-    width: 76%;
-    max-width: 1100px;
-    height: 75%;
-    max-height: 635px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.title_text_frame{
-    display: flex;
-    flex-direction: column;
-    font-size: 2.667em;
+.title_purse_frame{
     width: 100%;
-    letter-spacing: 0.06em;
-    font-weight: 500;
-}
-
-.text_this_frame{
+    height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
-.title_line{
-    margin-left: 10px;
+.title_purse_top{
     width: 100%;
+    height: 50%;
+    background-color: var(--white);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
-.btn_works{
+.title_purse_bottom{
+    width: 100%;
+    height: 50%;
+    background-color: var(--white);
+}
+
+.title_btn_works{
     width: 120px;
     height: 120px;
     position: absolute;
@@ -78,28 +41,33 @@
     font-weight: 500;
     color: var(--black);
 }
-.btn_works > span{
+
+.title_text_gualti{
     margin-right: 10px;
+    z-index: 1;
+    cursor: pointer;
 }
 
-.btn_works_background{
+.title_arrow{
+    z-index: 1;
+    cursor: pointer;
+}
+
+.title_btn_works_outline{
     position: absolute;
     cursor: pointer;
     width: 120px;
     height: 120px;
-    transform: rotate(-45deg);
-    border: 2px solid var(--black);
     transition: 150ms;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+    transform: rotate(45deg);
 }
 
-.btn_works_background:hover{
-    border: 4px solid var(--black)
-}
-
-.btn_works_animation{
+.title_btn_works_halo{
     position: absolute;
     width: 120px;
     height: 120px;
-    transform: rotate(-45deg);
     border: 1px solid var(--black);
 }

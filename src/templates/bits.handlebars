@@ -1,6 +1,7 @@
 {{#each bits}}
     <div class="bits_card">
-        <img class="bits_card_img" src="{{url}}">
+        <a href='{{url}}' target="_blank">
+        <img class="bits_card_img {{bits_img_class_name}}">
         <div class="bits_link_frame">
             <span>{{title}}</span>
             <img src="./handlebars_img/arrow_bits.svg" alt="Arrow_link">
@@ -8,5 +9,6 @@
         <span class="bits_description">
             {{description}}
         </span>
+        </a>
     </div>
 {{/each}}

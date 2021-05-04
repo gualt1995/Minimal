@@ -4,88 +4,103 @@ import arrow from '../assets/arrow_works.svg';
 
 
 export default class title_screen{
-    constructor()
-    {
-        anime({
-            targets: '.losange',
-            opacity: 0,
-            rotate: '45deg',
-            duration:0,
-            background: "rgba(255,255,255,1)",
-        });
+  constructor(){
+    $("#title_screen_arrow").attr("src", arrow);
+    anime({
+      targets: '.title_btn_works_halo',
+      opacity: 1,
+      rotate: '45deg',
+      duration:0,
+    });
+    
+    anime({
+      targets: '.title_btn_works_outline',
+      opacity: 1,
+      rotate: '45deg',
+      duration:0,
+    });
 
-        anime({
-          targets: '.btn_works_animation',
-          opacity: 1,
-          rotate: '45deg',
-          duration:0,
-      });
+    //this is ugly, but it does not mess with the scrollbar, overlay blocks the jumpy page anyways
+    $( window ).on("scroll", this.lockToTop);
 
-      var works_animation = anime({
-          targets: '.btn_works_animation',
-          opacity: 0,
-          rotate: '45deg',
-          scale: 2,
-          easing: 'easeInQuart', 
-          duration:2000,
-          autoplay: false,
-          loop: true,
-      });
-      works_animation.play();
 
-      $("#title_screen_arrow").attr("src", arrow);
-      $( ".btn_works_background" ).on('click', () => {
-            console.log("hiding title screen")
-            works_animation.pause();
-            var tl = anime.timeline({
-                easing: 'easeOutExpo',
-                complete: function(anim) {
-                  $( ".title_screen_frame" ).hide();
-                }
-              });
-              tl
-              .add({
-                targets: '.btn_works_animation',
-                opacity: 0, 
-                easing: 'linear', 
-                duration: 100,
-              },0)
-              .add({
-                targets: '.btn_works',
-                opacity: 0, 
-                scale: 0,
-                easing: 'easeInBack', 
-                duration: 300,
-              },0)
-              .add({
-                targets: '.btn_works_background',
-                opacity: 0, 
-                scale: 0,
-                easing: 'easeInBack', 
-                duration: 300,
-              },0)
-              .add({
-                targets: '.losange',
-                opacity: 1, 
-                easing: 'linear', 
-                duration: 10,
-              },0)
-              .add({
-                targets:'.title_screen_frame',
-                background: "rgba(255,255,255,0)",
-                duration:500,
-                easing:'easeInQuint'
-              },10) // relative offset
-              .add({
-                targets: '.losange',
-                scale: 0,
-                rotate: '135deg',
-                easing: 'easeInBack', 
-                duration: 500, 
-                delay: anime.stagger(100, {grid:[11, 7], from: 'center'})
-              },110); // absolute offset
-              
-        });
-    }
+    this.works_animation = anime({
+        targets: '.title_btn_works_halo',
+        opacity: 0,
+        rotate: '45deg',
+        scale: 2,
+        easing: 'easeInQuart', 
+        duration:2000,
+        autoplay: false,
+        loop: true,
+    });
+    this.works_animation.play();
+
+    //html structure forces several classes so that we do not inherit the rotation from the background
+    $( ".title_btn_works_outline, .title_text_gualti, .title_arrow" ).on('click', () => {
+      this.startupAnimation()
+    });
+  }
+
+  startupAnimation(){
+    $( window ).off("scroll",this.lockToTop)
+    this.works_animation.pause();
+    var tl = anime.timeline({
+      complete: function(anim) {
+        $( ".title_screen_frame" ).hide();
+      }
+    });
+    tl
+    .add({
+      targets: '.title_arrow,  .title_text_gualti',
+      opacity: 0, 
+      scale:0,
+      easing: 'easeOutExpo',   
+      duration: 300,
+    },0)
+    .add({
+      targets: '.title_btn_works_halo',
+      opacity: 0, 
+      easing: 'linear', 
+      duration: 100,
+    },0)
+    .add({
+      targets: '.title_btn_works_outline',
+      rotate:[
+        {value: '-10deg', easing:"linear",duration:100},
+        {value: '45deg', easing:"spring(1, 80, 10, 20)",delay: 200},
+      ],
+      scale:[
+        {value: 0.9, easing:"linear",duration:100},
+        {value: 1, easing:"easeOutBack",delay: 200},
+      ],
+      boxShadow:[
+        {value: "8px 8px 9px rgba(0, 0, 0, 0.25)", easing:"linear", duration:100, delay: 250},
+      ],
+    },0)
+    .add({
+      targets: '.title_btn_works',
+      translateY:[
+        {value: -$( window ).height(), easing:"easeOutExpo",duration:600,delay:900},
+      ],
+    },0)
+    .add({
+      targets: '.title_purse_bottom',
+      translateY:[
+        {value: 1, easing:'easeOutExpo',duration:100},
+        {value: "100%", easing:"easeOutExpo",duration:300,delay:400},
+      ],
+    },100)
+    .add({
+      targets: '.title_purse_top',
+      translateY:[
+        {value: "-100%", easing:"easeOutExpo",duration:300,delay:800},
+      ],
+    },100)
+  }
+
+  lockToTop(){
+    window.scrollTo(0, 0);
+  }
 }
 

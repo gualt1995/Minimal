@@ -123,6 +123,10 @@
     letter-spacing: 0.065em;
 }
 
+.vitals_arrow{
+    cursor: pointer;
+}
+
 .vitals_unit_frame{
     display: flex;
     flex-direction: column;

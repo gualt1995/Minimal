@@ -1,5 +1,9 @@
 require('../css/bits.css');
 import anime from 'animejs/lib/anime.es.js';
+import mugge from '../assets/thumbnail_mugge.png';
+import lexon from '../assets/thumbnail_lexon.png';
+
+
 
 export default class bits{
     constructor(){
@@ -9,19 +13,24 @@ export default class bits{
             "bits" : 
             [
                 { 
-                    "title" : "TYKHO.3", 
+                    "title" : "MUGGE", 
+                    "url" : "https://www.figma.com/community/file/968632724189976512/Mugge",
                     "description" : "developer",
-                    "url" : "./assets/missing_image.png"
+                    "bits_img_class_name" : "img_mugge"
                 },
                 {
-                    "title" : "MUGGE", 
+                    "title" : "TYKHO.3", 
+                    "url" : "https://www.figma.com/community/file/968550486589020045/TYKHO.3",
                     "description" : "developer",
-                    "url" : "./assets/missing_image.png"
+                    "bits_img_class_name" : "img_lexon"
                 }    
             ]
         }
         var html = template(context)
         $('.bits_flex_wrapper').html(html);
+
+        $(".img_mugge").attr("src", mugge);
+        $(".img_lexon").attr("src", lexon);
 
         $( ".bits_card" ).on('mouseenter',function(e) {
             $(this).css('z-index', 1);
