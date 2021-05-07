@@ -1,0 +1,18 @@
+name: 🚀 Deploy website on push
+
+on: push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.cluster020.hosting.ovh.net
+        username: ${{ secrets.ftp_login }}
+        password: ${{ secrets.ftp_password }}
+        port: 21 
+        local-dir : ./dist/
