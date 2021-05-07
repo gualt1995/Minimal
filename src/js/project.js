@@ -1,6 +1,7 @@
 require('../css/project.css');
 
 import anime from 'animejs/lib/anime.es.js';
+import arrow from '../assets/arrow_link.svg';
 
 export default class project{
     constructor(){  
@@ -44,6 +45,8 @@ export default class project{
             duration: 1,
             background: "linear-gradient(to right, var(--white) 0%, var(--black) 0%)",
         });
+
+        $(".project_link_icon").attr("src", arrow);
 
         $( ".project_link" ).on("mouseenter",function(e) {
             //do note use variavbles for colors in here, these do not work within the SVG.

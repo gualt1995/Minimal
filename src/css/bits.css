@@ -28,7 +28,6 @@
     margin-right: 2%;
     margin-left: 2%;
     margin-bottom: 20px;
-
     background: var(--black);
     box-shadow:  0px 0px 10px var(--black),0px 0px 60px var(--black);
     cursor: pointer;
@@ -37,6 +36,7 @@
 .bits_card a {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .bits_card_img{
@@ -48,7 +48,6 @@
 
 .bits_description{
     color: var(--white);
-    text-decoration: none;
     display: block;
     margin-right: 10px;
     margin-left: 10px;
@@ -57,7 +56,6 @@
 
 .bits_link_frame{
     color: var(--white);
-    text-decoration: none;
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
@@ -67,6 +65,5 @@
     align-items: center;
     position: static;
     font-weight: bold;
-    font-size: 1.333;
     text-transform: uppercase;
 }

@@ -2,8 +2,7 @@ require('../css/bits.css');
 import anime from 'animejs/lib/anime.es.js';
 import mugge from '../assets/thumbnail_mugge.png';
 import lexon from '../assets/thumbnail_lexon.png';
-
-
+import arrow from '../assets/arrow_bits.svg';
 
 export default class bits{
     constructor(){
@@ -15,19 +14,20 @@ export default class bits{
                 { 
                     "title" : "MUGGE", 
                     "url" : "https://www.figma.com/community/file/968632724189976512/Mugge",
-                    "description" : "developer",
+                    "description" : "Album art",
                     "bits_img_class_name" : "img_mugge"
                 },
                 {
                     "title" : "TYKHO.3", 
                     "url" : "https://www.figma.com/community/file/968550486589020045/TYKHO.3",
-                    "description" : "developer",
+                    "description" : "Lexon's Radio",
                     "bits_img_class_name" : "img_lexon"
                 }    
             ]
         }
         var html = template(context)
         $('.bits_flex_wrapper').html(html);
+        $(".bits_arrow").attr("src", arrow);
 
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);

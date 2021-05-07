@@ -22,11 +22,6 @@ module.exports = {
             filename: 'index.html',
             template: './src/html/index.html',
         }),
-        new CopyWebpackPlugin({
-            patterns: [
-              { from: "./src/templates/handlebars_img", to: "./handlebars_img" },
-            ],
-          }),
     ],
     module: {
         rules:[
