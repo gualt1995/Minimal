@@ -39,7 +39,7 @@ export default class footer{
         if (navigator.share) {
             console.log("Sharing Page")
             navigator.share({
-                title: 'WebShare API Demo',
+                title: 'Share this website',
                 url: 'http://mottola.fr/'
             })
         } else {

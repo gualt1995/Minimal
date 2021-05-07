@@ -26,7 +26,7 @@ export default class menuFab{
             opacity : 0,
             duration: 1,
         })
-        $( "#menu_fab" ).on('mouseenter',function() {
+        $( "#menu_fab" ).on('mouseenter, touchstart',function() {
             that.Shake("menu_btn_dots")
             that.Shake("menu_btn_close")
         })

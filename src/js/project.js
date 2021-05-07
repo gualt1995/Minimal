@@ -48,7 +48,7 @@ export default class project{
 
         $(".project_link_icon").attr("src", arrow);
 
-        $( ".project_link" ).on("mouseenter",function(e) {
+        $( ".project_link" ).on("mouseenter touchstart",function(e) {
             //do note use variavbles for colors in here, these do not work within the SVG.
             anime({
                 targets: e.currentTarget,
@@ -59,7 +59,7 @@ export default class project{
                 background: "linear-gradient(to right, var(--white) 100%, var(--black) 0%)",
             });
         })
-        $( ".project_link" ).on("mouseleave",function(e) {
+        $( ".project_link" ).on("mouseleave touchmove click",function(e) {
             anime({
                 targets: e.currentTarget,
                 easing: 'linear',
@@ -69,7 +69,5 @@ export default class project{
                 background: "linear-gradient(to right, var(--white) 0%, var(--black) 0%)",
             });
         })
-
-
     }
 }

@@ -32,7 +32,7 @@ export default class bits{
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);
 
-        $( ".bits_card" ).on('mouseenter',function(e) {
+        $( ".bits_card" ).on('mouseenter touchstart',function(e) {
             $(this).css('z-index', 1);
             anime({
                 targets: e.currentTarget,
@@ -42,7 +42,7 @@ export default class bits{
             });
         });
 
-        $( ".bits_card" ).on('mouseleave',function(e) {
+        $( ".bits_card" ).on('mouseleave touchmove click',function(e) {
             $(this).css('z-index', 0);
             anime({
                 targets: e.currentTarget,

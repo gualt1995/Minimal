@@ -23,7 +23,6 @@ export default class title_screen{
     //this is ugly, but it does not mess with the scrollbar, overlay blocks the jumpy page anyways
     $( window ).on("scroll", this.lockToTop);
 
-
     this.works_animation = anime({
         targets: '.title_btn_works_halo',
         opacity: 0,

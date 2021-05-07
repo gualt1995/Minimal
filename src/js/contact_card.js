@@ -8,6 +8,7 @@ export default class contactCard{
         $("#contact_fab_close_img").attr("src", close);
         $("#contact_fab_copy_img").attr("src", copy);
         $( "#contact_card_frame" ).addClass( "hidden" )
+
         anime({
             targets: $( "#contact_card_frame")[0],
             opacity : 0,
@@ -28,24 +29,24 @@ export default class contactCard{
         });
 
         var that = this
-        $( "#contact_fab_copy" ).on('click',function() {
+        $( "#contact_fab_copy" ).on('click',() => {
             that.DisplayToast()
         });
-        $( "#contact_fab_close" ).on('click',function() {
+        $( "#contact_fab_close" ).on('click',() => {
             that.HideContact(true)
         });
-        $( "#contact_card_frame" ).on('click',function(e) {
+        $( "#contact_card_frame" ).on('click',(e) => {
             if(e.target == $( "#contact_card_frame" )[0]){
                 that.HideContact(true)
             }
         });
-        $( "#contact_fab_copy" ).on('mouseenter',function() {
+        $( "#contact_fab_copy" ).on('mouseenter, touchstart',() => {
             that.shake("contact_fab_copy_img")
         })
-        $( "#contact_fab_close" ).on('mouseenter',function() {
+        $( "#contact_fab_close" ).on('mouseenter, touchstart',() =>{
             that.shake("contact_fab_close_img")
         })
-        $( ".email, .contact_link_frame a" ).on('mouseenter',function(e) {
+        $( ".email, .contact_link_frame a" ).on('mouseenter, touchstart',(e) => {
             anime({
                 targets: e.target,
                 duration: 100,
@@ -53,7 +54,7 @@ export default class contactCard{
                 background: "linear-gradient(to top, var(--red) 100%, transparent 0)",
             });
         })
-        $( ".email, .contact_link_frame a" ).on('mouseleave',function(e) {
+        $( ".email, .contact_link_frame a" ).on('mouseleave, touchmove, click',(e) => {
             anime({
                 targets: e.target,
                 duration:100,
@@ -61,11 +62,15 @@ export default class contactCard{
                 background: "linear-gradient(to top, var(--red) 0%, transparent 0)",
             });
         })
+
+        this.scrollPosition = 0
+        
         console.log("created contact card")
     }
       
     HideContact(){
       if(!$( "#contact_card_frame" ).hasClass("hidden")){
+        $( window ).off("scroll", this.lockOnCard);
         console.log("hiding contact card")
         $( "#contact_card_frame" ).addClass( "hidden" )
         anime({
@@ -80,7 +85,7 @@ export default class contactCard{
             opacity : 0,
             translateY: "-100%",
             duration: 150,
-            complete: function() {
+            complete: () => {
                 anime({
                     targets: $( "#contact_card_frame")[0],
                     easing: "easeInBack",
@@ -95,7 +100,8 @@ export default class contactCard{
   
     ShowContact(){
         if($( "#contact_card_frame" ).hasClass("hidden")){
-            console.log("showing contact card")
+            this.scrollPosition = $(document).scrollTop()
+            $( window ).on("scroll", {scroll:this.scrollPosition} ,this.lockOnCard);
             $( "#contact_card_frame" ).removeClass( "hidden" )
             anime({
                 targets: $( "#contact_card_frame")[0],
@@ -103,7 +109,7 @@ export default class contactCard{
                 opacity : 1,
                 translateY: 0,
                 duration: 400,
-                complete: function() {
+                complete: () => {
                     anime({
                         targets: $( "#contact_fab_close")[0],
                         easing: "easeOutBack",
@@ -139,7 +145,7 @@ export default class contactCard{
             opacity : 1,
             duration: 300,
             translateY: 0,
-            complete: function() {
+            complete: () => {
                 anime({
                     targets: $( "#toast_contact")[0],
                     opacity : 0,
@@ -166,5 +172,9 @@ export default class contactCard{
                 { value: 0 }
             ],
         });
+    }
+
+    lockOnCard(event){
+        window.scrollTo(0, event.data.scroll);
     }
 }

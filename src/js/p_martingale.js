@@ -39,7 +39,7 @@ export default class martingale{
             }
         }, 3000);
 
-        $( ".vitals_arrow" ).on('mouseenter',function(event) {
+        $( ".vitals_arrow" ).on('mouseenter touchstart',function(event) {
             that.shake(event.target.id)
         })
 

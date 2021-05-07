@@ -30,21 +30,25 @@ export default class cvCard{
                 that.hideCv(true)
             }
         });
-        $( "#cv_fab_download" ).on('mouseenter',function() {
+        $( "#cv_fab_download" ).on('mouseenter, touchstart',function() {
             that.shake("cv_fab_download_img")
         })
         $("#cv_fab_download").on('click',function() {
             // // hope the server sets Content-Disposition: attachment!
         });
-        $( "#cv_fab_close" ).on('mouseenter',function() {
+        $( "#cv_fab_close" ).on('mouseenter, touchstart',function() {
             that.shake("cv_fab_close_img")
         })
+
+        this.scrollPosition = 0
+
         console.log("created cv card")
     }
       
     hideCv(){
       if(!$( "#cv_frame" ).hasClass("hidden")){
         console.log("hiding cv card")
+        $( window ).off("scroll", this.lockOnCv);
         $( "#cv_frame" ).addClass( "hidden" )
         anime({
             targets: $( "#cv_frame")[0],
@@ -74,6 +78,8 @@ export default class cvCard{
     ShowCv(){
         if($( "#cv_frame" ).hasClass("hidden")){
             console.log("showing cv card")
+            this.scrollPosition = $(document).scrollTop()
+            $( window ).on("scroll", {scroll:this.scrollPosition} ,this.lockOnCv);
             $( "#cv_frame" ).removeClass( "hidden" )
             anime({
                 targets: $( "#cv_frame")[0],
@@ -114,5 +120,9 @@ export default class cvCard{
                 { value: 0 }
             ],
         });
+    }
+
+    lockOnCv(event){
+        window.scrollTo(0, event.data.scroll);
     }
 }
