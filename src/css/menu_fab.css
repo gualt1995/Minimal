@@ -56,7 +56,7 @@
 @media screen and (max-width: 450px) {
     /* when the viewport is 450px or smaller */
     .menu_flex_wrapper{
-        padding: 8px;
+        display: none;
     }
 }
 

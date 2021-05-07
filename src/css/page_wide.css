@@ -15,10 +15,13 @@ html{
     color: var(--white);
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
+    height: 100vh;
 }
 
 body{
     margin: 0px;
+    height: 100vh;
+
 }
 
 .view_port_frame{
