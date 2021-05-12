@@ -17,7 +17,7 @@ export default class project{
             ],
             "links": [
                 { url: "https://github.com/gualt1995/Minimal", name: "Code on Github", icon: "fa-github"},
-                { url: "https://www.figma.com", name: "Designed in Figma", icon: "fa-figma"}
+                { url: "https://www.figma.com/file/eOlA7GPhKIEvAMr9xMryEE/Minimalist-version?node-id=302%3A426", name: "Designed in Figma", icon: "fa-figma"}
             ],
         };
         var html = template(website)

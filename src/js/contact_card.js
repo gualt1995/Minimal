@@ -40,13 +40,13 @@ export default class contactCard{
                 that.HideContact(true)
             }
         });
-        $( "#contact_fab_copy" ).on('mouseenter, touchstart',() => {
+        $( "#contact_fab_copy" ).on('mouseenter touchstart',() => {
             that.shake("contact_fab_copy_img")
         })
-        $( "#contact_fab_close" ).on('mouseenter, touchstart',() =>{
+        $( "#contact_fab_close" ).on('mouseenter touchstart',() =>{
             that.shake("contact_fab_close_img")
         })
-        $( ".email, .contact_link_frame a" ).on('mouseenter, touchstart',(e) => {
+        $( ".email, .contact_link_frame a" ).on('mouseenter touchstart',(e) => {
             anime({
                 targets: e.target,
                 duration: 100,
@@ -54,7 +54,7 @@ export default class contactCard{
                 background: "linear-gradient(to top, var(--red) 100%, transparent 0)",
             });
         })
-        $( ".email, .contact_link_frame a" ).on('mouseleave, touchmove, click',(e) => {
+        $( ".email, .contact_link_frame a" ).on('mouseleave touchmove click',(e) => {
             anime({
                 targets: e.target,
                 duration:100,
@@ -64,7 +64,7 @@ export default class contactCard{
         })
 
         this.scrollPosition = 0
-        
+
         console.log("created contact card")
     }
       

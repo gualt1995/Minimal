@@ -3,7 +3,6 @@
     --black:#000000;
     --white:#ffffff;
     --red:#B90000;
-    --orange:#F36139;
 }
 
 html{
@@ -11,17 +10,17 @@ html{
     justify-content: center;
     scroll-behavior: smooth;
     font-size: 18px;
-    background-color: var(--black);
     color: var(--white);
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    height: 100vh;
 }
 
 body{
     margin: 0px;
-    height: 100vh;
-
+    opacity: 1;
+    background-color: var(--black);
+    /*background-image: radial-gradient(var(--red) 0.4px, var(--black) 0.4px);
+    background-size: 8px 8px;*/
 }
 
 .view_port_frame{

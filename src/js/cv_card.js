@@ -30,13 +30,21 @@ export default class cvCard{
                 that.hideCv(true)
             }
         });
-        $( "#cv_fab_download" ).on('mouseenter, touchstart',function() {
+        $( "#cv_fab_download" ).on('mouseenter touchstart',function() {
             that.shake("cv_fab_download_img")
         })
         $("#cv_fab_download").on('click',function() {
-            // // hope the server sets Content-Disposition: attachment!
+            anime({
+                targets: $( "#cv_fab_download")[0],
+                easing: 'linear',
+                backgroundColor: [
+                    { value: 'rgba(255, 255, 255,0.5)', duration: 0 },
+                    { value: 'rgba(0, 0, 0)', duration: 200,}
+                ]
+            });
         });
-        $( "#cv_fab_close" ).on('mouseenter, touchstart',function() {
+        
+        $( "#cv_fab_close" ).on('mouseenter touchstart',function() {
             that.shake("cv_fab_close_img")
         })
 

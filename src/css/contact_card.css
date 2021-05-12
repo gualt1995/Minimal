@@ -57,7 +57,7 @@
 
 .contact_name{
     position: relative;
-    font-size: 1.333rem;
+    font-size: 1.333em;
 }
 
 .links_frame{
@@ -100,7 +100,7 @@
 }
 
 .email{
-    font-size: 1.333rem;
+    font-size: 1.333em;
     margin-right: 12px;
     font-weight: bold;
     text-decoration-line: none;

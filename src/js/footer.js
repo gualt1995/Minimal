@@ -20,7 +20,7 @@ export default class footer{
                 { value: 1, duration: 1000},
               ],
             opacity: [
-                { value: 0.8, duration: 2000 },
+                { value: 0.6, duration: 2000 },
                 { value: 1, duration: 1000},
             ],
             loop: true,
