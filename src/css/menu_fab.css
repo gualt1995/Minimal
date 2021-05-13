@@ -38,11 +38,13 @@
 }
 
 .menu{
+    position: relative;
     display: flex;
     font-style: normal;
     text-align: center;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    z-index: 10;
 }
 
 .menu_btn{

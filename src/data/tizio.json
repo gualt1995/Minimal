@@ -1,0 +1,14 @@
+{ 
+    "title" : "[ This ]", 
+    "subtitle" : "WEB DEV",
+    "body" : "Build with the classic trio, HTML, CSS and Js, partly generated with Handlebars and animated with anime.js, this is my storefront to the world ! Feel free to check out the code on github, and the prototypes in figma, mostly used to make sure that this page would look good on all devices; no matter their body shape…",
+    "tags" : [
+        "Frontend",
+        "Web",
+        "anime.js"
+    ],
+    "links": [
+        { "url": "https://github.com/gualt1995/Minimal", "name": "Code on Github", "icon": "fa-github"},
+        { "url": "https://www.figma.com/file/eOlA7GPhKIEvAMr9xMryEE/Minimalist-version?node-id=302%3A426", "name": "Designed in Figma", "icon": "fa-figma"}
+    ]
+}

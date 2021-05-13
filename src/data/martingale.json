@@ -1,0 +1,14 @@
+{ 
+    "title" : "Martingale", 
+    "subtitle" : "Mobile App",
+    "body" : "La martingale is the companion App to a set of worksheets desgined to help metidical student Pass the French ECNi exam. The app allows flexible access to the Knowledge base, both on Android and iOS, thanks to unlock tokens printed in each copy of the book. Feel free to check it out on App stores !",
+    "tags" : [
+        "Mobile",
+        "Java",
+        "Swift"
+    ],
+    "links": [
+        { "url": "https://apps.apple.com/fr/app/la-martingale/id1460836735", "name": "App Store", "icon": "fa-apple"},
+        { "url": "https://play.google.com/store/apps/details?id=com.agency55.laMartingale&hl=en&gl=US", "name": "Play Store", "icon": "fa-google-play"}
+    ]
+}

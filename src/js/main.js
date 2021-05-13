@@ -11,6 +11,8 @@ import bits from './bits.js';
 import project from './project.js';
 import martingale from './p_martingale.js';
 import tizio from './p_tizio.js';
+import k7 from './p_k7.js';
+
 
 new tabs();
 new title_screen();
@@ -23,5 +25,4 @@ new bits();
 new project();
 new tizio();
 new martingale();
-
-
+new k7();

@@ -6,40 +6,19 @@ import arrow from '../assets/arrow_link.svg';
 export default class project{
     constructor(){  
         var template = require("../templates/project.handlebars");
-        var website = { 
-            "title" : "[ This ]", 
-            "subtitle" : "WEB DEV",
-            "body" : "Build with the classic trio, HTML, CSS and Js, partly generated with Handlebars and animated with anime.js, this is my storefront to the world ! Feel free to check out the code on github, and the prototypes in figma, mostly used to make sure that this page would look good on all devices; no matter their body shape…",
-            "tags" : [
-                "Frontend",
-                "Web",
-                "anime.js",
-            ],
-            "links": [
-                { url: "https://github.com/gualt1995/Minimal", name: "Code on Github", icon: "fa-github"},
-                { url: "https://www.figma.com/file/eOlA7GPhKIEvAMr9xMryEE/Minimalist-version?node-id=302%3A426", name: "Designed in Figma", icon: "fa-figma"}
-            ],
-        };
+
+        var website = require('../data/tizio.json');
         var html = template(website)
         $('#project_description_web').html(html)
 
-        var website = { 
-            "title" : "Martingale", 
-            "subtitle" : "Mobile App",
-            "body" : "La martingale is the companion App to a set of worksheets desgined to help metidical student Pass the French ECNi exam. The app allows flexible access to the Knowledge base, both on Android and iOS, thanks to unlock tokens printed in each copy of the book. Feel free to check it out on App stores !",
-            "tags" : [
-                "Mobile",
-                "Java",
-                "Swift",
-            ],
-            "links": [
-                { url: "https://apps.apple.com/fr/app/la-martingale/id1460836735", name: "App Store", icon: "fa-apple"},
-                { url: "https://play.google.com/store/apps/details?id=com.agency55.laMartingale&hl=en&gl=US", name: "Play Store", icon: "fa-google-play"}
-            ],
-        };
+        var website = require('../data/martingale.json');
         var html = template(website)
         $('#project_description_martigale').html(html)
 
+        var website = require('../data/k7.json');
+        var html = template(website)
+        $('#project_description_k7').html(html)
+        
         anime({
             targets: ".project_link",
             duration: 1,
