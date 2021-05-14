@@ -741,6 +741,17 @@ eval("module.exports = __webpack_require__.p + \"9701bc945cdedf20c8cb.png\";\n\n
 
 /***/ }),
 
+/***/ "./src/assets/thumbnail_saab.png":
+/*!***************************************!*\
+  !*** ./src/assets/thumbnail_saab.png ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"33c9bff78b018fc347d0.png\";\n\n//# sourceURL=webpack://minimal/./src/assets/thumbnail_saab.png?");
+
+/***/ }),
+
 /***/ "./src/assets/tizio - off.png":
 /*!************************************!*\
   !*** ./src/assets/tizio - off.png ***!
@@ -771,6 +782,17 @@ eval("module.exports = __webpack_require__.p + \"864f63146661c4de4c23.png\";\n\n
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"f20302861e5ed4cc61ea.png\";\n\n//# sourceURL=webpack://minimal/./src/assets/wip.png?");
+
+/***/ }),
+
+/***/ "./src/data/bits.json":
+/*!****************************!*\
+  !*** ./src/data/bits.json ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = JSON.parse('{\"bits\":[{\"title\":\"MUGGE\",\"url\":\"https://www.figma.com/community/file/968632724189976512/Mugge\",\"description\":\"Finnish Album art\",\"bits_img_class_name\":\"img_mugge\"},{\"title\":\"TYKHO.3\",\"url\":\"https://www.figma.com/community/file/968550486589020045/TYKHO.3\",\"description\":\"Lexon\\'s Radio\",\"bits_img_class_name\":\"img_lexon\"},{\"title\":\"SAAB\",\"url\":\"https://www.figma.com/community/file/972240072451635265/Saab-900-turbo\",\"description\":\"900 turbo, Straight from 1985\",\"bits_img_class_name\":\"img_saab\"}]}');\n\n//# sourceURL=webpack://minimal/./src/data/bits.json?");
 
 /***/ }),
 
@@ -814,7 +836,7 @@ eval("module.exports = JSON.parse('{\"title\":\"[ This ]\",\"subtitle\":\"WEB DE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ bits)\n/* harmony export */ });\n/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs/lib/anime.es.js */ \"./node_modules/animejs/lib/anime.es.js\");\n/* harmony import */ var _assets_thumbnail_mugge_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/thumbnail_mugge.png */ \"./src/assets/thumbnail_mugge.png\");\n/* harmony import */ var _assets_thumbnail_lexon_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/thumbnail_lexon.png */ \"./src/assets/thumbnail_lexon.png\");\n/* harmony import */ var _assets_arrow_bits_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/arrow_bits.svg */ \"./src/assets/arrow_bits.svg\");\n/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n__webpack_require__(/*! ../css/bits.css */ \"./src/css/bits.css\");\n\n\n\n\n\nclass bits{\n    constructor(){\n        var template = __webpack_require__(/*! ../templates/bits.handlebars */ \"./src/templates/bits.handlebars\");\n        var context = \n        { \n            \"bits\" : \n            [\n                { \n                    \"title\" : \"MUGGE\", \n                    \"url\" : \"https://www.figma.com/community/file/968632724189976512/Mugge\",\n                    \"description\" : \"Album art\",\n                    \"bits_img_class_name\" : \"img_mugge\"\n                },\n                {\n                    \"title\" : \"TYKHO.3\", \n                    \"url\" : \"https://www.figma.com/community/file/968550486589020045/TYKHO.3\",\n                    \"description\" : \"Lexon's Radio\",\n                    \"bits_img_class_name\" : \"img_lexon\"\n                }    \n            ]\n        }\n        var html = template(context)\n        $('.bits_flex_wrapper').html(html);\n        $(\".bits_arrow\").attr(\"src\", _assets_arrow_bits_svg__WEBPACK_IMPORTED_MODULE_3__);\n\n        $(\".img_mugge\").attr(\"src\", _assets_thumbnail_mugge_png__WEBPACK_IMPORTED_MODULE_1__);\n        $(\".img_lexon\").attr(\"src\", _assets_thumbnail_lexon_png__WEBPACK_IMPORTED_MODULE_2__);\n\n        $( \".bits_card\" ).on('mouseenter touchstart',function(e) {\n            $(this).css('z-index', 1);\n            (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({\n                targets: e.currentTarget,\n                scale:1.15,\n                duration: 300,\n                easing: 'easeOutElastic(1, .6)'\n            });\n        });\n\n        $( \".bits_card\" ).on('mouseleave touchmove click',function(e) {\n            $(this).css('z-index', 0);\n            (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({\n                targets: e.currentTarget,\n                scale:1,\n                duration: 300,\n                easing: 'easeOutElastic(1, .6)'\n            });\n        });\n\n    }\n}\n\n//# sourceURL=webpack://minimal/./src/js/bits.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ bits)\n/* harmony export */ });\n/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs/lib/anime.es.js */ \"./node_modules/animejs/lib/anime.es.js\");\n/* harmony import */ var _assets_thumbnail_mugge_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/thumbnail_mugge.png */ \"./src/assets/thumbnail_mugge.png\");\n/* harmony import */ var _assets_thumbnail_lexon_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/thumbnail_lexon.png */ \"./src/assets/thumbnail_lexon.png\");\n/* harmony import */ var _assets_thumbnail_saab_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/thumbnail_saab.png */ \"./src/assets/thumbnail_saab.png\");\n/* harmony import */ var _assets_arrow_bits_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/arrow_bits.svg */ \"./src/assets/arrow_bits.svg\");\n/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n__webpack_require__(/*! ../css/bits.css */ \"./src/css/bits.css\");\n\n\n\n\n\n\n\nclass bits{\n    constructor(){\n        var template = __webpack_require__(/*! ../templates/bits.handlebars */ \"./src/templates/bits.handlebars\");\n        var context = __webpack_require__(/*! ../data/bits.json */ \"./src/data/bits.json\");\n\n        var html = template(context)\n        $('.bits_flex_wrapper').html(html);\n        $(\".bits_arrow\").attr(\"src\", _assets_arrow_bits_svg__WEBPACK_IMPORTED_MODULE_4__);\n\n        $(\".img_mugge\").attr(\"src\", _assets_thumbnail_mugge_png__WEBPACK_IMPORTED_MODULE_1__);\n        $(\".img_lexon\").attr(\"src\", _assets_thumbnail_lexon_png__WEBPACK_IMPORTED_MODULE_2__);\n        $(\".img_saab\").attr(\"src\", _assets_thumbnail_saab_png__WEBPACK_IMPORTED_MODULE_3__);\n\n\n        $( \".bits_card\" ).on('mouseenter touchstart',function(e) {\n            $(this).css('z-index', 1);\n            (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({\n                targets: e.currentTarget,\n                scale:1.15,\n                duration: 300,\n                easing: 'easeOutElastic(1, .6)'\n            });\n        });\n\n        $( \".bits_card\" ).on('mouseleave touchmove click',function(e) {\n            $(this).css('z-index', 0);\n            (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__.default)({\n                targets: e.currentTarget,\n                scale:1,\n                duration: 300,\n                easing: 'easeOutElastic(1, .6)'\n            });\n        });\n\n    }\n}\n\n//# sourceURL=webpack://minimal/./src/js/bits.js?");
 
 /***/ }),
 
