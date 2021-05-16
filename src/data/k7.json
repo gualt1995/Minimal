@@ -4,11 +4,12 @@
     "body" : "Work In Progress // Lavori in Corso // Trabajo en progreso // Travaux en cours // In Arbeit // Työn alla // Verk í vinnslu // Arbeid pågår // Pабота в процессе // Praca w toku // U travagliu in corsu",
     "tags" : [
         "skeuomorphism",
-        "Prototype",
-        "Mobile"
+        "Web prototype"
     ],
     "links": [
-        { "url": "https://apps.apple.com/fr/app/la-martingale/id1460836735", "name": "App Store", "icon": "fa-apple"},
-        { "url": "https://play.google.com/store/apps/details?id=com.agency55.laMartingale&hl=en&gl=US", "name": "Play Store", "icon": "fa-google-play"}
+        { "url": "https://www.mottola.fr/pages/index.html", "name": "Web Prototype", "icon": "fab fa-js-square"},
+        { "url": "https://play.google.com/store/apps/details?id=com.agency55.laMartingale&hl=en&gl=US", "name": "Code on Github", "icon": "fa-github"},
+        { "url": "https://www.figma.com/file/U70KV21ludKv6soeWuQ66H/Norm?node-id=0%3A1", "name": "Designed in Figma", "icon": "fa-figma"}
     ]
 }
+

@@ -4,20 +4,28 @@
         { 
             "title" : "MUGGE", 
             "url" : "https://www.figma.com/community/file/968632724189976512/Mugge",
-            "description" : "Finnish Album art",
+            "description" : "Album art and LP.",
             "bits_img_class_name" : "img_mugge"
         },
         {
             "title" : "TYKHO.3", 
             "url" : "https://www.figma.com/community/file/968550486589020045/TYKHO.3",
-            "description" : "Lexon's Radio",
+            "description" : "Lexon's Radio as SVG.",
             "bits_img_class_name" : "img_lexon"
         },
         {
             "title" : "SAAB", 
             "url" : "https://www.figma.com/community/file/972240072451635265/Saab-900-turbo",
-            "description" : "900 turbo, Straight from 1985",
+            "description" : "900 turbo, Straight from 1985.",
             "bits_img_class_name" : "img_saab"
+        },
+        {
+            "title" : "A reachable browser", 
+            "url" : "https://www.figma.com/file/GvnSXCAqdBDD8BZbrCUhdp/Search?node-id=513%3A509",
+            "description" : "Different twist on the search bar.",
+            "bits_img_class_name" : "img_browser"
         }
     ]
 }
+
+

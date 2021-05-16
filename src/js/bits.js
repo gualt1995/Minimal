@@ -3,6 +3,8 @@ import anime from 'animejs/lib/anime.es.js';
 import mugge from '../assets/thumbnail_mugge.png';
 import lexon from '../assets/thumbnail_lexon.png';
 import saab from '../assets/thumbnail_saab.png';
+import browser from '../assets/missing_image.png';
+
 
 import arrow from '../assets/arrow_bits.svg';
 
@@ -18,6 +20,8 @@ export default class bits{
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);
         $(".img_saab").attr("src", saab);
+        $(".img_browser").attr("src", browser);
+
 
 
         $( ".bits_card" ).on('mouseenter touchstart',function(e) {
