@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 
 module.exports = {
@@ -14,6 +14,7 @@ module.exports = {
         clean: true,
     },
     plugins: [
+        new FaviconsWebpackPlugin('./src/assets/favicon.svg'),
         new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",
@@ -21,6 +22,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/html/index.html',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+              { from: "./src/assets/cv.pdf", to: "./" },
+            ],
         }),
     ],
     module: {
