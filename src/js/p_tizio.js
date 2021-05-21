@@ -5,12 +5,13 @@ import anime from 'animejs/lib/anime.es.js';
 import tizioOnMp3 from '../audio/tizio_on.mp3'; 
 import tizioOffMp3 from '../audio/tizio_off.mp3'; 
 
-
+import {Howl} from 'howler';
 
 export default class tizio{
     constructor(){
-        let soundOn = new Audio(tizioOnMp3);
-        let soundOff = new Audio(tizioOffMp3);
+
+        //let soundOn = new Audio(tizioOnMp3);
+        //let soundOff = new Audio(tizioOffMp3);
         $("#tizio_off").attr("src", tizioOff);
         $("#tizio_on").attr("src", tizioOn);
         anime({
@@ -21,7 +22,11 @@ export default class tizio{
         $( ".tizio_frame" ).on('click',function(e) {
             if($( ".tizio_frame" ).hasClass("off")){
                 $( ".tizio_frame" ).removeClass("off")
-                soundOn.play();
+                var sound = new Howl({
+                    src: [tizioOnMp3]  
+                });
+                sound.play();
+                //soundOn.play();
                 anime({
                     targets: $( "#tizio_on")[0],
                     easing: 'linear',
@@ -35,7 +40,11 @@ export default class tizio{
                     opacity: 0,
                 });
             }else{
-                soundOff.play();
+                var sound = new Howl({
+                    src: [tizioOffMp3]  
+                });
+                sound.play();
+                //soundOff.play();
                 $( ".tizio_frame" ).addClass("off")
                 anime({
                     targets: $( "#tizio_on")[0],
