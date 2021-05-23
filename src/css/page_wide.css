@@ -20,6 +20,7 @@ body{
     margin: 0px;
     opacity: 1;
     background-color: var(--black);
+    overflow-x: hidden;
     /*background-image: radial-gradient(var(--red) 0.4px, var(--black) 0.4px);
     background-size: 8px 8px;*/
 }
