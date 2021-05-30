@@ -17,7 +17,7 @@
     max-width: 380px;
     max-height: 630px;
     border-radius: 10px;
-    border: 2px solid var(--white);
+    border: 2px solid var(--type);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,8 +36,8 @@
 .contact_fab{
     height: 52px;
     width: 52px;
-    border: 2px solid var(--white);
-    background-color: var(--black);
+    border: 2px solid var(--type);
+    background-color: var(--background);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -69,8 +69,8 @@
     position: relative;
     bottom: 0px;
     width: 100%;
-    border-top: solid 2px var(--white);
-    background-color: var(--black);
+    border-top: solid 2px var(--type);
+    background-color: var(--background);
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -87,7 +87,7 @@
 .contact_link_frame a{
     letter-spacing: 0.12em;
     text-decoration-line: underline;
-    color: var(--white);
+    color: var(--type);
     font-weight: 300;
 }
 
@@ -104,7 +104,7 @@
     margin-right: 12px;
     font-weight: bold;
     text-decoration-line: none;
-    color: var(--white);
+    color: var(--type);
 }
 
 .toast_contact{
@@ -116,5 +116,5 @@
     top: 50%;
     padding: 2px 5px;
     border-radius: 5px;
-    background-color: var(--black);
+    background-color: var(--background);
 }

@@ -3,6 +3,7 @@
     <head>
         <title>Gualti</title>
         <meta charset="UTF-8">
+        <meta name="Gualtiero's Portfolio, Figma Files, Icon packs and various illustrations | Product Designer / Creative Developer">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -10,24 +11,13 @@
     </head>
     <body>
         <div class="tabs_frame">
-            <div class="tab_wrapper" id="tab_project">
-                <div class="tab">
-                    <span class="unselectable">Works</span>
-                    <div class="underline" id="underline_projects"></div>
-                </div>
-            </div>
-            <div class="tab_wrapper" id="tab_bit">
-                <div class="tab">
-                    <span class="unselectable">Bits</span>
-                    <div class="underline" id="underline_bits"></div>
-                </div>
-            </div>
+            <!-- populated by handlebars template -->
         </div>
-        <div class="projects_frame" id="projects_frame">
-
+        <div class="projects_frame" id="tab_projects_frame">
             <div class="view_port_frame project_frame">
                 <div class="project_content_frame">
                     <div class="project_description" id="project_description_k7">
+                        <!-- populated by handlebars template -->
                     </div>
                     <div class="project_illustration k7_frame">
                         <img class="wip_img" id="wip_img" alt="Image work in progress">
@@ -38,7 +28,7 @@
             <div class="view_port_frame project_frame project_martingale">
                 <div class="project_content_frame ">
                     <div class="project_description" id="project_description_martigale">
-
+                        <!-- populated by handlebars template -->
                     </div>
                     <div class="project_illustration">
                         <div class="vitals_books_container">
@@ -47,9 +37,11 @@
                     </div>
                 </div>
             </div>
+            
             <div class="view_port_frame project_frame">
                 <div class="project_content_frame">
                     <div class="project_description" id="project_description_web">
+                        <!-- populated by handlebars template -->
                     </div>
                     <div class="project_illustration tizio_frame">
                         <img class="tizio_img" id="tizio_off" alt="Tizio off">
@@ -58,11 +50,29 @@
                 </div>
             </div>
         </div>
-        <div class="bits_frame" id="bits_frame">
+
+        <div class="view_port_frame icons_frame" id="tab_icons_frame">
+            <div class="icons_content">
+                <div class="icons_group">
+                    <div class="icons_group_title">Monitoring</div>
+                    <div class="icons_group_list" id="icons_group_monitoring">
+                        <!-- populated by handlebars template -->
+                    </div>
+                </div>
+                <div class="icons_spacer"></div>
+                <div class="icons_preview_frame">
+                    <svg class="icons_preview_image" width="300" height="300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2C2.44772 2 2 2.44772 2 3V20C2 21.1046 2.89543 22 4 22H21C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20H5C4.44772 20 4 19.5523 4 19V3C4 2.44772 3.55228 2 3 2ZM18.7541 8.17138C19.5693 6.82764 20.3139 5.60033 21 5V18C21 18.5523 20.5523 19 20 19H6C5.44772 19 5 18.5523 5 18V14.2177C5 14.0743 5.03022 13.9323 5.09243 13.803C6.25854 11.3794 8.40028 9.21597 10.7143 12C14.0191 15.9761 16.627 11.6774 18.7541 8.17138Z"/>
+                    </svg>
+                    <div class="icons_preview_name">Icon_name_24px</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bits_frame" id="tab_bits_frame">
             <div class="bits_content">
-                <p class="bits_intro">Other miscellaneous things that I feel like sharing</p>
                 <div class="bits_flex_wrapper">
-                
+                    <!-- populated by handlebars template -->
                 </div>  
             </div>
         </div>    

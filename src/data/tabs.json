@@ -1,0 +1,20 @@
+{ 
+    "tab" : 
+    [
+        { 
+            "tab_id" : "tab_projects", 
+            "tab_name": "works",
+            "underline_id" : "underline_projects"
+        },
+        { 
+            "tab_id" : "tab_icons", 
+            "tab_name": "icons",
+            "underline_id" : "underline_icons"
+        },
+        { 
+            "tab_id" : "tab_bits", 
+            "tab_name": "bits",
+            "underline_id" : "underline_bits"
+        }
+    ]
+}

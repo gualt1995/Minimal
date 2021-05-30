@@ -33,7 +33,7 @@
     display: block;
     height: 444px;
     border-radius: 2px 4px 4px 2px;
-    background: var(--black);
+    background: var(--background);
     -webkit-box-shadow: 13px 13px 8px 0px rgba(0, 0, 0, 0.50);
     -moz-box-shadow: 13px 13px 8px 0px rgba(0, 0, 0, 0.50);
     box-shadow: 13px 13px 8px 0px rgba(0, 0, 0, 0.50);

@@ -3,30 +3,50 @@ import anime from 'animejs/lib/anime.es.js';
 
 export default class tabs{
     constructor(){
-        $( "#tab_project" ).addClass( "selected" )
+        var template = require("../templates/tabs.handlebars");
+        var context = require('../data/tabs.json');
+        var html = template(context)
+        $('.tabs_frame').html(html);
+
+        $( "#tab_projects" ).addClass( "selected" )
         anime({
-            targets: $( "#underline_bits")[0],
+            targets: [$( "#underline_bits")[0],$( "#underline_icons")[0]],
             opacity : 0,
             scaleX: 0,
             duration: 0,
         });
         anime({
-            targets: $( "#bits_frame")[0],
+            targets: $( "#tab_bits_frame, #tab_icons_frame")[0],
             opacity : 0,
             scale: 0.95,
             duration: 0,
         });
-        $( "#bits_frame" ).hide()
+        $( "#tab_bits_frame" ).hide()
+        $( "#tab_icons_frame" ).hide()
         console.log("created tabs")
         var that = this;
-        $( "#tab_project" ).on('click', function() {
+
+        $( ".tab_wrapper" ).on('click', function(e) {
+            if(! $(e.currentTarget).hasClass("selected")){
+                var prevTab = $(".tabs_frame").find(".selected")
+                var nextTab =  $(e.currentTarget)
+                prevTab.removeClass("selected")
+                that.hideUnderline(prevTab.find(".underline").attr("id"))
+                nextTab.addClass("selected")
+                that.showUnderline( $(e.currentTarget).find(".underline").attr("id"))
+                that.switchTabs( prevTab.attr("id") + "_frame", nextTab.attr("id") + "_frame" );
+            }
+        });
+
+
+
+        /*$( "#tab_project" ).on('click', function() {
             if(!$( "#tab_project" ).hasClass("selected")){
                 console.log("switching to projects tab")
                 $( "#tab_project" ).addClass( "selected" )
                 $( "#tab_bit" ).removeClass( "selected" )
                 that.hideUnderline("underline_bits")
                 that.showUnderline("underline_projects")
-                that.switchTabs("bits_frame","projects_frame")
 
             }
         });
@@ -39,7 +59,7 @@ export default class tabs{
                 that.showUnderline("underline_bits")
                 that.switchTabs("projects_frame","bits_frame")
             }
-        });
+        });*/
     }
 
     hideUnderline(id) {

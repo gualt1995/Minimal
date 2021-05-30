@@ -15,14 +15,12 @@ export default class bits{
 
         var html = template(context)
         $('.bits_flex_wrapper').html(html);
-        $(".bits_arrow").attr("src", arrow);
 
+        $(".bits_arrow").attr("src", arrow);
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);
         $(".img_saab").attr("src", saab);
         $(".img_browser").attr("src", browser);
-
-
 
         $( ".bits_card" ).on('mouseenter touchstart',function(e) {
             $(this).css('z-index', 1);

@@ -1,0 +1,79 @@
+.icons_frame{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.icons_content{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:row;
+}
+
+.icons_group{
+    width: 45%;
+}
+
+.icons_group_title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.333em;
+    text-transform: uppercase;
+}
+
+.icons_group_list{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.icons_icon{
+    fill: var(--type);
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+
+.icons_spacer{
+    height: 100%;
+    width: 1px;
+    background: var(--type);
+}    
+
+.icons_preview_frame{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons_preview_image{
+    width: 80%;
+    height: 60%;
+    fill: var(--type);
+}
+
+.icons_preview_name{
+    font-weight: 500;
+}
+
+@media screen and (max-width: 650px) {
+    /* when the viewport is 650px or smaller */
+    .icons_preview_frame{
+        display: none;
+    }
+
+    .icons_spacer{
+        display: none;
+    }
+
+    .icons_group{
+        width: 100%;
+    }
+}

@@ -1,8 +1,8 @@
 :root{
     /* Color styles */
-    --black:#000000;
-    --white:#ffffff;
-    --red:#B90000;
+    --background:#000000;
+    --type:#ffffff;
+    --accent:#B90000;
     --hover: #F1F1F1;
 }
 
@@ -11,7 +11,7 @@ html{
     justify-content: center;
     scroll-behavior: smooth;
     font-size: 18px;
-    color: var(--white);
+    color: var(--type);
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
 }
@@ -19,9 +19,9 @@ html{
 body{
     margin: 0px;
     opacity: 1;
-    background-color: var(--black);
+    background-color: var(--background);
     overflow-x: hidden;
-    /*background-image: radial-gradient(var(--red) 0.4px, var(--black) 0.4px);
+    /*background-image: radial-gradient(var(--accent) 0.4px, var(--background) 0.4px);
     background-size: 8px 8px;*/
 }
 
@@ -31,7 +31,7 @@ body{
 }
 
 .dot{
-    color: var(--red);
+    color: var(--accent);
 }
 
 .unselectable{

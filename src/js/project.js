@@ -22,7 +22,7 @@ export default class project{
         anime({
             targets: ".project_link",
             duration: 1,
-            background: "linear-gradient(to right, var(--white) 0%, var(--black) 0%)",
+            background: "linear-gradient(to right, var(--type) 0%, var(--background) 0%)",
         });
 
         $(".project_link_icon").attr("src", arrow);
@@ -35,7 +35,7 @@ export default class project{
                 color: "#000000",
                 translateX: 10,
                 duration: 200,
-                background: "linear-gradient(to right, var(--white) 100%, var(--black) 0%)",
+                background: "linear-gradient(to right, var(--type) 100%, var(--background) 0%)",
             });
         })
         $( ".project_link" ).on("mouseleave touchmove click",function(e) {
@@ -45,7 +45,7 @@ export default class project{
                 translateX: 0,
                 color: "#FFFFFF",
                 duration: 200,
-                background: "linear-gradient(to right, var(--white) 0%, var(--black) 0%)",
+                background: "linear-gradient(to right, var(--type) 0%, var(--background) 0%)",
             });
         })
     }

@@ -16,14 +16,14 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    background: linear-gradient(0deg, var(--black)  0%, rgba(0, 0, 0, 0.37) 20%, rgba(0, 0, 0, 0) 50%);
+    background: linear-gradient(0deg, var(--background)  0%, rgba(0, 0, 0, 0.37) 20%, rgba(0, 0, 0, 0) 50%);
 }
 
 .menu_fab{
     height: 52px;
     width: 52px;
-    border: 2px solid var(--white);
-    background-color: var(--black);
+    border: 2px solid var(--type);
+    background-color: var(--background);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@
     padding: 2px 5px;
     border-radius: 5px;
     margin-left: 20px;
-    background-color: var(--black);
+    background-color: var(--background);
     cursor: pointer;
 }
 

@@ -51,7 +51,7 @@ export default class contactCard{
                 targets: e.target,
                 duration: 100,
                 easing: 'linear',
-                background: "linear-gradient(to top, var(--red) 100%, transparent 0)",
+                background: "linear-gradient(to top, var(--accent) 100%, transparent 0)",
             });
         })
         $( ".email, .contact_link_frame a" ).on('mouseleave touchmove click',(e) => {
@@ -59,7 +59,7 @@ export default class contactCard{
                 targets: e.target,
                 duration:100,
                 easing: 'linear',
-                background: "linear-gradient(to top, var(--red) 0%, transparent 0)",
+                background: "linear-gradient(to top, var(--accent) 0%, transparent 0)",
             });
         })
 

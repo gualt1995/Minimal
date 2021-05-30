@@ -30,7 +30,7 @@
     background-size: contain;
     background-position: center;
     border-radius: 10px;
-    background-color: var(--white);
+    background-color: var(--type);
     z-index: 3;
 }
 

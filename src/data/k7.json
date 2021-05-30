@@ -1,10 +1,10 @@
 { 
     "title" : "k7", 
-    "subtitle" : "UI experiment",
+    "subtitle" : "Music player",
     "body" : "Work In Progress // Lavori in Corso // Trabajo en progreso // Travaux en cours // In Arbeit // Työn alla // Verk í vinnslu // Arbeid pågår // Pабота в процессе // Praca w toku // U travagliu in corsu",
     "tags" : [
-        "skeuomorphism",
-        "Web prototype"
+        "Skeuomorphism",
+        "Prototyping"
     ],
     "links": [
         { "url": "https://www.mottola.fr/pages/index.html", "name": "Web Prototype", "icon": "fab fa-js-square"},

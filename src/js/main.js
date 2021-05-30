@@ -12,6 +12,7 @@ import project from './project.js';
 import martingale from './p_martingale.js';
 import tizio from './p_tizio.js';
 import k7 from './p_k7.js';
+import icons from './icons.js';
 
 
 new tabs();
@@ -21,6 +22,7 @@ var theContactCard = new contactCard();
 new menuFab(theContactCard,theCvCard); 
 new footer(theContactCard,theCvCard); 
 new bits();
+new icons();
 
 new project();
 new tizio();

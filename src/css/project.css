@@ -13,7 +13,7 @@
     flex-direction: row; 
     align-items: center;
     justify-content: space-between;
-    background-color: var(--black);
+    background-color: var(--background);
     border-radius: 10px;
 }
 
@@ -53,7 +53,7 @@
 
 .tag{
     padding: 6px 10px;
-    border: 2px solid var(--red);
+    border: 2px solid var(--accent);
     border-radius: 5px; 
     margin-right: 10px;
     margin-bottom: 10px;
@@ -76,7 +76,7 @@
 
 .project_links_frame a{
     text-decoration: none;
-    color: var(--white);
+    color: var(--type);
 }
 
 .project_links_frame > *{
@@ -84,7 +84,7 @@
 }
 
 .project_link{
-    border: 2px solid var(--white);
+    border: 2px solid var(--type);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -101,12 +101,13 @@
 }
 
 .project_link_icon{
-    background-color: var(--white);
+    background-color: var(--type);
     padding: 10px;
+    fill: var(--background);
 }
 
 @media screen and (max-width: 1200px) {
-    /* when the viewport is 1180px or smaller */
+    /* when the viewport is 1200px or smaller */
     .project_illustration{
         display: none;
     }
