@@ -36,9 +36,12 @@ export default class title_screen{
     this.works_animation.play();
 
     //html structure forces several classes so that we do not inherit the rotation from the background
-    $( ".title_btn_works_outline, .title_text_gualti, .title_arrow" ).on('click', () => {
-      this.startupAnimation()
-    });
+    $( ".title_btn_works_outline, .title_text_gualti, .title_arrow" ).on('click', this.startupAnimation);
+
+    $( window ).on( "load", () => { 
+      $( ".title_btn_works_outline, .title_text_gualti, .title_arrow" ).off('click', this.startupAnimation);
+      this.startupAnimation();
+    })
   }
 
   startupAnimation(){

@@ -24,6 +24,12 @@
             "url" : "https://www.figma.com/file/GvnSXCAqdBDD8BZbrCUhdp/Search?node-id=513%3A509",
             "description" : "Different twist on the search bar.",
             "bits_img_class_name" : "img_browser"
+        },
+        {
+            "title" : "Logs Monitoring", 
+            "url" : "https://www.figma.com/file/ybiUWRbjZnvfRVD2TipraV/Mobile-App-logs?node-id=754%3A1871",
+            "description" : "A Logs Monitoring App on Mobile.",
+            "bits_img_class_name" : "img_logs"
         }
     ]
 }

@@ -74,21 +74,18 @@
     flex-direction: column;
 }
 
-.project_links_frame a{
-    text-decoration: none;
-    color: var(--type);
-}
-
 .project_links_frame > *{
     margin: 0px 0px 12px 0px;
 }
 
 .project_link{
-    border: 2px solid var(--type);
+    border-bottom: 1px solid var(--type);
+    border-radius: 6px;
     display: flex;
     align-items: center;
     cursor: pointer;
-
+    text-decoration: none;
+    color: var(--type);
 }
 
 .project_link i{
@@ -101,9 +98,8 @@
 }
 
 .project_link_icon{
-    background-color: var(--type);
     padding: 10px;
-    fill: var(--background);
+    fill: var(--type);
 }
 
 @media screen and (max-width: 1200px) {

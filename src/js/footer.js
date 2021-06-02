@@ -3,6 +3,13 @@ import anime from 'animejs/lib/anime.es.js';
 
 export default class footer{
     constructor(contactCard,cvCard){
+        var template = require("../templates/footer.handlebars");
+        var context = require('../data/footer.json');
+
+        var html = template(context)
+        $('.footer_btn_flex').html(html);
+
+
         var that = this
         $( "#footer_btn_resume" ).on('click',function() {
             cvCard.ShowCv()
@@ -14,25 +21,29 @@ export default class footer{
             that.share()
         })
         anime({
-            targets: '.circle',
-            scale: [
-                { value: 1.05, duration: 2000 },
-                { value: 1, duration: 1000},
-              ],
-            opacity: [
-                { value: 0.6, duration: 2000 },
-                { value: 1, duration: 1000},
-            ],
-            loop: true,
-            easing: 'cubicBezier(0.365, 0.115, 0.530, 0.860)',
-            delay: anime.stagger(600) // increase delay by 100ms for each elements.
-        });
-        anime({
             targets: $( "#toast_footer")[0],
             opacity : 0,
             translateY: "-100%",
             duration: 0,
         });
+
+        $( ".footer_btn" ).on("mouseenter touchstart",(e) => {
+            anime({
+                targets:e.currentTarget.getElementsByClassName('footer_btn_background')[0],
+                easing: 'easeOutExpo',
+                opacity: 1,
+                duration: 300,
+            });
+        })
+        
+        $( ".footer_btn" ).on("mouseleave touchmove click",(e) =>  {
+            anime({
+                targets: e.currentTarget.getElementsByClassName('footer_btn_background')[0],
+                easing: 'easeInOutQuad',
+                opacity: 0.5,
+                duration: 300,
+            });
+        })
     }
 
     share(){

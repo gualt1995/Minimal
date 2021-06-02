@@ -25,6 +25,10 @@ body{
     background-size: 8px 8px;*/
 }
 
+a{
+    text-decoration: none;
+}
+
 .view_port_frame{
     width: 100vw;
     height: 100vh;
@@ -40,6 +44,13 @@ body{
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 }
+
+::selection {
+    background: var(--accent); /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: var(--accent); /* Gecko Browsers */
+  }
 
 @media screen and (max-width: 450px) {
     /* when the viewport is 450px or smaller */

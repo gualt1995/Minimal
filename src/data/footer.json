@@ -1,0 +1,17 @@
+{ 
+    "footer_btn" : 
+    [
+        { 
+            "footer_btn_id" : "footer_btn_connect", 
+            "footer_btn_name": "Connect"
+        },
+        { 
+            "footer_btn_id" : "footer_btn_share", 
+            "footer_btn_name": "Share"
+        },
+        { 
+            "footer_btn_id" : "footer_btn_resume", 
+            "footer_btn_name": "Resume"
+        }
+    ]
+}

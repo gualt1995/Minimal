@@ -1,7 +1,6 @@
 require('../css/project.css');
 
 import anime from 'animejs/lib/anime.es.js';
-import arrow from '../assets/arrow_link.svg';
 
 export default class project{
     constructor(){  
@@ -18,34 +17,38 @@ export default class project{
         var website = require('../data/k7.json');
         var html = template(website)
         $('#project_description_k7').html(html)
-        
-        anime({
-            targets: ".project_link",
-            duration: 1,
-            background: "linear-gradient(to right, var(--type) 0%, var(--background) 0%)",
-        });
 
-        $(".project_link_icon").attr("src", arrow);
+        var typecolor = getComputedStyle(document.body).getPropertyValue('--type')
+        var bgcolor = getComputedStyle(document.body).getPropertyValue('--background')
 
-        $( ".project_link" ).on("mouseenter touchstart",function(e) {
-            //do note use variavbles for colors in here, these do not work within the SVG.
+        $( ".project_link" ).on("mouseenter touchstart",(e) => {
+            anime({
+                targets:e.currentTarget.getElementsByTagName('svg')[0],
+                easing: 'easeOutExpo',
+                fill: bgcolor,
+                duration: 300,
+            });
             anime({
                 targets: e.currentTarget,
-                easing: 'linear',
-                color: "#000000",
-                translateX: 10,
-                duration: 200,
-                background: "linear-gradient(to right, var(--type) 100%, var(--background) 0%)",
+                easing: 'easeOutExpo',
+                color: bgcolor,
+                duration: 300,
+                background: typecolor,
             });
         })
-        $( ".project_link" ).on("mouseleave touchmove click",function(e) {
+        $( ".project_link" ).on("mouseleave touchmove click",(e) =>  {
             anime({
                 targets: e.currentTarget,
-                easing: 'linear',
-                translateX: 0,
-                color: "#FFFFFF",
-                duration: 200,
-                background: "linear-gradient(to right, var(--type) 0%, var(--background) 0%)",
+                easing: 'easeInOutQuad',
+                color: typecolor,
+                duration: 300,
+                background: bgcolor,
+            });
+            anime({
+                targets:e.currentTarget.getElementsByTagName('svg')[0],
+                easing: 'easeOutExpo',
+                fill: typecolor,
+                duration: 300,
             });
         })
     }

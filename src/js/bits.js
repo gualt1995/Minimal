@@ -3,10 +3,9 @@ import anime from 'animejs/lib/anime.es.js';
 import mugge from '../assets/thumbnail_mugge.png';
 import lexon from '../assets/thumbnail_lexon.png';
 import saab from '../assets/thumbnail_saab.png';
+import logs from '../assets/thumbnail_logs.png';
+
 import browser from '../assets/missing_image.png';
-
-
-import arrow from '../assets/arrow_bits.svg';
 
 export default class bits{
     constructor(){
@@ -16,19 +15,20 @@ export default class bits{
         var html = template(context)
         $('.bits_flex_wrapper').html(html);
 
-        $(".bits_arrow").attr("src", arrow);
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);
         $(".img_saab").attr("src", saab);
         $(".img_browser").attr("src", browser);
+        $(".img_logs").attr("src", logs);
+
 
         $( ".bits_card" ).on('mouseenter touchstart',function(e) {
             $(this).css('z-index', 1);
             anime({
                 targets: e.currentTarget,
-                scale:1.15,
+                scale:1.1,
                 duration: 300,
-                easing: 'easeOutElastic(1, .6)'
+                easing: 'easeOutExpo'
             });
         });
 
@@ -38,7 +38,7 @@ export default class bits{
                 targets: e.currentTarget,
                 scale:1,
                 duration: 300,
-                easing: 'easeOutElastic(1, .6)'
+                easing: 'easeInOutQuad'
             });
         });
 
