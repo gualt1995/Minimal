@@ -14,6 +14,19 @@ import tizio from './p_tizio.js';
 import k7 from './p_k7.js';
 import icons from './icons.js';
 
+import { datadogRum } from '@datadog/browser-rum';
+
+datadogRum.init({
+    applicationId: 'e983b6d8-44f6-4b4a-9eb2-4779bce65db4',
+    clientToken: 'pub41de64be7532355e415f738c0a6fa36c',
+    site: 'datadoghq.com',
+    service:'rum-test-app',
+    // Specify a version number to identify the deployed version of your application in Datadog 
+    // version: '1.0.0',
+    sampleRate: 100,
+    trackInteractions: true
+});
+
 
 new tabs();
 new title_screen();
