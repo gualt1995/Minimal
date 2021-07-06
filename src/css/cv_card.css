@@ -10,6 +10,7 @@
     height: 100vh;
     background-color: 'rgba(0, 0, 0, 0)';
     z-index: 2;
+    transition: background-color 200ms;
 }
 
 .cv_content{

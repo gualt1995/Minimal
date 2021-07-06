@@ -21,7 +21,7 @@
         },
         {
             "title" : "A reachable browser", 
-            "url" : "https://www.figma.com/file/GvnSXCAqdBDD8BZbrCUhdp/Search?node-id=513%3A509",
+            "url" : "https://www.figma.com/community/file/986711141586791297/Chromium-Mobile",
             "description" : "Different twist on the search bar.",
             "bits_img_class_name" : "img_browser"
         },
@@ -30,6 +30,12 @@
             "url" : "https://www.figma.com/file/ybiUWRbjZnvfRVD2TipraV/Mobile-App-logs?node-id=754%3A1871",
             "description" : "A Logs Monitoring App on Mobile.",
             "bits_img_class_name" : "img_logs"
+        },
+        {
+            "title" : "Almost Home", 
+            "url" : "https://www.figma.com/community/file/992084203052226929/Almost-Home",
+            "description" : "Crew entering the atmosphere ",
+            "bits_img_class_name" : "img_space"
         }
     ]
 }

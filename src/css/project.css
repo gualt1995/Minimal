@@ -88,6 +88,7 @@
     cursor: pointer;
     text-decoration: none;
     color: var(--type);
+    transition: all 300ms;
 }
 
 .project_link i{

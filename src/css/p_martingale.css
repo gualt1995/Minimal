@@ -1,9 +1,9 @@
 .vitals_book_v1{
-    --book_color:linear-gradient(180deg, #160040 0%, #25006C 43.75%, #000000 92.19%); ;
+    --book_color:#8353E1 ;
 }
 
 .vitals_book_v2{
-    --book_color:linear-gradient(180deg, #400000 0%, #6C0000 43.75%, #000000 92.19%); ;
+    --book_color:#CF2929 ;
 }
 
 .vitals_books_container{
@@ -14,41 +14,32 @@
     align-items: center;
     width: 90%;
     height: 100%;
-    background: linear-gradient(89.9deg, #000000 0.08%, rgba(0, 0, 0, 0) 28.62%), linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 15.01%), linear-gradient(180deg, #000000 0%, #333333 53.65%, #000000 94.81%);
 }
   
 .vitals_book_container {
     position: relative;
     max-width: 314px;
     width: 48%;
-    z-index: 1;
     perspective:3000px;
     color: var(--hover);
     margin: 0 10px;
 }
   
+/* use to compute the shadow of the book*/ 
 .vitals_book {
     cursor: pointer;
     position: relative;
+    border-radius: 2px 8px 8px 2px;
+    box-shadow: 4px 2px 6px rgba(0, 0, 0, 0.12), 0px 0px 20px rgba(0, 0, 0, 0.12), 12px 6px 8px rgba(0, 0, 0, 0.12);
     display: block;
     height: 444px;
-    border-radius: 2px 4px 4px 2px;
     background: var(--background);
-    -webkit-box-shadow: 13px 13px 8px 0px rgba(0, 0, 0, 0.50);
-    -moz-box-shadow: 13px 13px 8px 0px rgba(0, 0, 0, 0.50);
-    box-shadow: 13px 13px 8px 0px rgba(0, 0, 0, 0.50);
     font-weight: 400;   
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform .5s;
-    -moz-transition: -moz-transform .5s;
-    transition: transform .5s;
+    transition: all 400ms;
 }
   
 .vitals_book:hover {
-    -webkit-transform: rotate3d(0,1,0,35deg);
-    -moz-transform: rotate3d(0,1,0,35deg);
     transform: rotate3d(0,1,0,35deg);
 }
   
@@ -57,38 +48,40 @@
     display: block;
     position: absolute;
 }
-  
+
+
+/* if you want to change the book thinckness, you need ot change 
+    transform: translate3d(0,0,40px); of vitals_book_front
+    and     
+    width: 40px; of .vitals_book_spine
+    The values need to match.
+    make sure to adjust the text position as well.
+*/ 
+
 .vitals_book_front {
     width: 100%;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transform-origin: 0% 50%;
-    -moz-transform-origin: 0% 50%;
     transform-origin: 0% 50%;
-    -webkit-transition: -webkit-transform .5s;
-    -moz-transition: -moz-transform .5s;
     transition: transform .5s;
-    -webkit-transform: translate3d(0,0,20px);
-    -moz-transform: translate3d(0,0,20px);
-    transform: translate3d(0,0,20px);
-    z-index: 10;
+    transform: translate3d(0,0,40px);
+
 }
   
 .vitals_book_front > div {
     width: 100%;
     height: 444px;
+    border-radius: 0 8px 8px 0;
 }
   
 .vitals_book_spine{
+    position: relative;
     width: 40px;
-    left: -20px;
     height: 444px;
     background: var(--book_color);
     box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.05);  
-    -webkit-transform: rotate3d(0,1,0,-90deg);
-    -moz-transform: rotate3d(0,1,0,-90deg);
     transform: rotate3d(0,1,0,-90deg);
+    transform-origin: left;
+    border-radius: 2px;
 }
   
 .vitals_cover_title{
@@ -112,11 +105,6 @@
     font-weight: normal;
     font-size: 1em;
     text-transform: capitalize;
-}
-  
-.vitals_book_front > div {
-    border-radius: 0 3px 3px 0;
-    box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.13);
 }
   
 .vitals_book_front:after {
@@ -147,16 +135,14 @@
     line-height: 40px;
     padding-right: 10px;
     text-align: right;
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
     transform-origin: 0 0;
-    -webkit-transform: rotate(90deg) translateY(-40px);
-    -moz-transform: rotate(90deg) translateY(-40px);
     transform: rotate(90deg) translateY(-40px);
   }
   
   .vitals_book_cover {
-    background:  radial-gradient(213.02% 78.63% at 12.78% 49.89%, rgba(0, 0, 0, 0) 0.01%, #212121 0.02%, #000000 100%);
+    background: var(--background);
+    box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.19), inset 0px 4px 4px rgba(255, 255, 255, 0.14), inset 0px 0px 16px rgba(255, 255, 255, 0.14);
+
 }
   .vitals_book_spine h2 span:first-child {
     font-weight: 400;

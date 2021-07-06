@@ -9,6 +9,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 2;
+    transition: background-color 200ms;
 }
 
 .contact_card{
@@ -46,6 +47,14 @@
     cursor: pointer;
 }
 
+.contact_fab > svg{
+    fill: var(--type)
+}
+
+.contact_fab_close > svg{
+    fill: var(--accent)
+}
+
 .contact_head_frame{
     display: flex;
     flex-direction: row;
@@ -55,9 +64,11 @@
     margin-top: 10px;
 }
 
+/* Do not use variable here, this is on a photo, it should not change with theme. */
 .contact_name{
     position: relative;
     font-size: 1.333em;
+    color: #FFF;
 }
 
 .links_frame{

@@ -1,7 +1,7 @@
 { 
-    "title" : "k7", 
-    "subtitle" : "Music player",
-    "body" : "Work In Progress // Lavori in Corso // Trabajo en progreso // Travaux en cours // In Arbeit // Työn alla // Verk í vinnslu // Arbeid pågår // Pабота в процессе // Praca w toku // U travagliu in corsu",
+    "title" : "ON AIR", 
+    "subtitle" : "Tangible music",
+    "body" : "A music platform where user own individual tracks, tracks are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc, each track is assigned an non-fungible token (NFT) to ensure it's authenticity. The quality of the audio may depend on the chosen format. Tracks can be used to create mixtapes, these can be lent/gifted to other users, or even exported to their corresponding physical format in which case the Mixtape becomes unavailable in the app.",
     "tags" : [
         "Skeuomorphism",
         "Prototyping"

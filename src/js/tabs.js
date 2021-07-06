@@ -23,7 +23,6 @@ export default class tabs{
         });
         $( "#tab_bits_frame" ).hide()
         $( "#tab_icons_frame" ).hide()
-        console.log("created tabs")
         var that = this;
 
         $( ".tab_wrapper" ).on('click', function(e) {

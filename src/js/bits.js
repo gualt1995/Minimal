@@ -1,11 +1,11 @@
 require('../css/bits.css');
 import anime from 'animejs/lib/anime.es.js';
-import mugge from '../assets/thumbnail_mugge.png';
-import lexon from '../assets/thumbnail_lexon.png';
-import saab from '../assets/thumbnail_saab.png';
-import logs from '../assets/thumbnail_logs.png';
-
-import browser from '../assets/missing_image.png';
+import mugge from '../thumbnails/Mugge.png';
+import lexon from '../thumbnails/Lexon.png';
+import saab from '../thumbnails/Saab.png';
+import logs from '../thumbnails/Logs.png';
+import chrome from '../thumbnails/Chrome.png';
+import space from '../thumbnails/Space.png';
 
 export default class bits{
     constructor(){
@@ -18,9 +18,9 @@ export default class bits{
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);
         $(".img_saab").attr("src", saab);
-        $(".img_browser").attr("src", browser);
+        $(".img_browser").attr("src", chrome);
         $(".img_logs").attr("src", logs);
-
+        $(".img_space").attr("src", space);
 
         $( ".bits_card" ).on('mouseenter touchstart',function(e) {
             $(this).css('z-index', 1);

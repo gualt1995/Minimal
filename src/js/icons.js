@@ -9,6 +9,11 @@ export default class icons{
         var html = template(context)
         $('#icons_group_monitoring').html(html);
 
+        var context = require('../data/icons_formats_rounded.json');
+        var html = template(context)
+        $('#icons_group_formats').html(html);
+
+
         $( ".icons_icon" ).on("mouseenter touchstart",function(e) {
             if($('.icons_preview_name').html() != e.currentTarget.id){
                 anime({

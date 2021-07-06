@@ -1,9 +1,11 @@
 :root{
     /* Color styles */
+    --theme:night;
     --background:#000000;
     --type:#ffffff;
     --accent:#B90000;
     --hover: #F1F1F1;
+    --selected: #b46161;
 }
 
 html{
@@ -21,8 +23,6 @@ body{
     opacity: 1;
     background-color: var(--background);
     overflow-x: hidden;
-    /*background-image: radial-gradient(var(--accent) 0.4px, var(--background) 0.4px);
-    background-size: 8px 8px;*/
 }
 
 a{
@@ -46,10 +46,10 @@ a{
 }
 
 ::selection {
-    background: var(--accent); /* WebKit/Blink Browsers */
+    background: var(--selected); /* WebKit/Blink Browsers */
   }
   ::-moz-selection {
-    background: var(--accent); /* Gecko Browsers */
+    background: var(--selected); /* Gecko Browsers */
   }
 
 @media screen and (max-width: 450px) {

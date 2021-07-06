@@ -42,13 +42,14 @@
     color: var(--background);
 }
 
-.title_text_gualti{
-    margin-right: 10px;
+.title_arrow{
     z-index: 1;
     cursor: pointer;
+    fill: var(--background);
 }
 
-.title_arrow{
+.title_text_gualti{
+    margin-right: 10px;
     z-index: 1;
     cursor: pointer;
 }

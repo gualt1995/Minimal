@@ -1,11 +1,9 @@
 require('../css/title_screen.css');
 import anime from 'animejs/lib/anime.es.js';
-import arrow from '../assets/arrow_works.svg';
 
 
 export default class title_screen{
   constructor(){
-    $("#title_screen_arrow").attr("src", arrow);
     anime({
       targets: '.title_btn_works_halo',
       opacity: 1,
@@ -35,7 +33,7 @@ export default class title_screen{
     });
     this.works_animation.play();
 
-    //html structure forces several classes so that we do not inherit the rotation from the background
+    //html structure forces to use several classes so that we do not inherit the rotation from the background
     $( ".title_btn_works_outline, .title_text_gualti, .title_arrow" ).on('click', this.startupAnimation);
 
     $( window ).on( "load", () => { 
@@ -46,14 +44,13 @@ export default class title_screen{
 
   startupAnimation(){
     $( window ).off("scroll",this.lockToTop)
-    this.works_animation.pause();
+    //this.works_animation.pause();
     var tl = anime.timeline({
       complete: function(anim) {
         $( ".title_screen_frame" ).hide();
       }
     });
-    tl
-    .add({
+    tl.add({
       targets: '.title_arrow,  .title_text_gualti',
       opacity: 0, 
       scale:0,

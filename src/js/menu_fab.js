@@ -1,13 +1,9 @@
 require('../css/menu_fab.css');
 import anime from 'animejs/lib/anime.es.js';
-import close from '../assets/close.svg';
-import more from '../assets/more_horiz.svg';
 
 
 export default class menuFab{
     constructor(contactCard,cvCard){
-        $("#menu_btn_close").attr("src", close);
-        $("#menu_btn_dots").attr("src", more);
         $( "#menu_fab" ).addClass("closed")
         anime({
             targets: $( "#menu_btn_close")[0],
@@ -32,7 +28,6 @@ export default class menuFab{
         })
         $("#menu_btn_contact").css("pointer-events","none");
         $("#menu_btn_resume").css("pointer-events","none");
-        console.log("created menu fab")
         var that = this
         $( "#menu_fab" ).on('click',function() {
             if($( "#menu_fab" ).hasClass("closed")){
@@ -76,7 +71,6 @@ export default class menuFab{
     }
 
     showMenu(){
-        console.log("menu fab is being opened")
         $( "#menu_fab" ).removeClass("closed")
         var easing = 'spring(1, 100, 10, 5)'
         $("#menu_btn_contact").css("pointer-events","auto");
@@ -109,7 +103,7 @@ export default class menuFab{
     }
 
     hideMenu(){
-        console.log("menu fab is being closed")
+        console.log(" is being closed")
         $( "#menu_fab" ).addClass("closed")
         $("#menu_btn_contact").css("pointer-events","none");
         $("#menu_btn_resume").css("pointer-events","none");

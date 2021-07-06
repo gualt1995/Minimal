@@ -1,0 +1,61 @@
+.theme_switcher{
+    position: fixed;
+    top: 10%;
+    right: 0%;
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg);
+    padding: 8px;
+    margin-right: 2px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.theme_switcher svg{
+    fill: var(--type)
+}
+
+.theme_closed{
+    cursor: pointer;
+    position: relative;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme_open{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.theme_close_btn{
+    cursor: pointer;
+}
+
+.theme_widget{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--type);
+    border-radius: 2px;
+    margin: 0px 5px;
+}
+
+.theme_widget > * {
+    width: 12px;
+    height: 12px;
+    background: #000000;
+    border-radius: 50%;
+}

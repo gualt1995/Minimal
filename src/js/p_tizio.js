@@ -1,6 +1,8 @@
 require('../css/p_tizio.css');
-import tizioOff from '../assets/tizio - off.png';
-import tizioOn from '../assets/tizio - on.png';
+import tizioOffDark from '../png/tizio - off.png';
+import tizioOnDark from '../png/tizio - on.png';
+import tizioOffLight from '../png/tizio - alpha - off.png';
+import tizioOnLight from '../png/tizio - alpha - on.png';
 import anime from 'animejs/lib/anime.es.js';
 import tizioOnMp3 from '../audio/tizio_on.mp3'; 
 import tizioOffMp3 from '../audio/tizio_off.mp3'; 
@@ -9,57 +11,80 @@ import {Howl} from 'howler';
 
 export default class tizio{
     constructor(){
+        $("#tizio_off").attr("src", tizioOffDark);
+        $("#tizio_on").attr("src", tizioOnDark);
 
-        //let soundOn = new Audio(tizioOnMp3);
-        //let soundOff = new Audio(tizioOffMp3);
-        $("#tizio_off").attr("src", tizioOff);
-        $("#tizio_on").attr("src", tizioOn);
         anime({
             targets: $( "#tizio_off")[0],
             duration: 1,
             opacity: 0,
         });
-        $( ".tizio_frame" ).on('click',function(e) {
+
+        this.themeChangeObserver();
+
+        $( ".tizio_frame" ).on('click',() => {
             if($( ".tizio_frame" ).hasClass("off")){
                 $( ".tizio_frame" ).removeClass("off")
-                var sound = new Howl({
-                    src: [tizioOnMp3]  
-                });
-                sound.play();
-                //soundOn.play();
-                anime({
-                    targets: $( "#tizio_on")[0],
-                    easing: 'linear',
-                    duration: 100,
-                    opacity: 1,
-                });
-                anime({
-                    targets: $( "#tizio_off")[0],
-                    easing: 'linear',
-                    duration: 200,
-                    opacity: 0,
-                });
+                this.turnLightOn()
             }else{
-                var sound = new Howl({
-                    src: [tizioOffMp3]  
-                });
-                sound.play();
-                //soundOff.play();
                 $( ".tizio_frame" ).addClass("off")
-                anime({
-                    targets: $( "#tizio_on")[0],
-                    easing: 'linear',
-                    duration: 50,
-                    opacity: 0,
-                });
-                anime({
-                    targets: $( "#tizio_off")[0],
-                    easing: 'cubicBezier(0.000, 0.345, 0.450, 0.070)',
-                    duration: 500,
-                    opacity: 1,
-                });
-
+                this.turnLightOff()
             }
         })
+    }
+
+    turnLightOn(){
+        var sound = new Howl({
+            src: [tizioOnMp3]  
+        });
+        sound.play();
+        anime({
+            targets: "#tizio_on",
+            easing: 'linear',
+            duration: 100,
+            opacity: 1,
+        });
+        anime({
+            targets: "#tizio_off",
+            easing: 'linear',
+            duration: 200,
+            opacity: 0,
+        });
+    }
+
+    turnLightOff(){
+        var sound = new Howl({
+            src: [tizioOffMp3]  
+        });
+        sound.play();
+        anime({
+            targets: "#tizio_on",
+            easing: 'linear',
+            duration: 200,
+            opacity: 0,
+        });
+        anime({
+            targets: "#tizio_off",
+            easing: 'linear',
+            duration: 100,
+            opacity: 1,
+        });
+    }
+
+    themeChangeObserver(){   
+
+        var observer = new MutationObserver(() => {
+            var currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme');
+            if(currentTheme === 'night'){
+                $("#tizio_off").attr("src", tizioOffDark);
+                $("#tizio_on").attr("src", tizioOnDark);            
+            }else{
+                $("#tizio_off").attr("src", tizioOffLight);
+                $("#tizio_on").attr("src", tizioOnLight);      
+            }  
+        });
+        
+        var target = document.getElementsByClassName('theme_open')[0]   
+        observer.observe(target, { childList : true});
     }
 }

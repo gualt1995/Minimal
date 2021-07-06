@@ -1,0 +1,21 @@
+{ 
+    "themes" : 
+    [
+        { 
+            "name" : "night", 
+            "background": "#000000",
+            "type": "#FFFFFF",
+            "accent" : "#B90000",
+            "hover" : "#F1F1F1",
+            "selected" : "#b46161"
+        },
+        { 
+            "name" : "sunny", 
+            "background": "#FFEC36",
+            "type": "#000000",
+            "accent" : "#00D4C5",
+            "hover" : "#2F2F2F",
+            "selected" : "#FFFFFF"
+        }
+    ]
+}

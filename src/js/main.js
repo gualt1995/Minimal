@@ -7,6 +7,8 @@ import menuFab from './menu_fab.js';
 import footer from './footer.js';
 import title_screen from './title_screen.js';
 import bits from './bits.js';
+import theme from './theme_switcher';
+
 
 import project from './project.js';
 import martingale from './p_martingale.js';
@@ -32,10 +34,10 @@ new tabs();
 new title_screen();
 var theCvCard = new cvCard();
 var theContactCard = new contactCard();
-new menuFab(theContactCard,theCvCard); 
 new footer(theContactCard,theCvCard); 
 new bits();
 new icons();
+new theme();
 
 new project();
 new tizio();

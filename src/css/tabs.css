@@ -3,7 +3,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: linear-gradient(180deg, var(--background) 0%, rgba(0, 0, 0, 0.37) 71.35%, rgba(0, 0, 0, 0) 100%);
     padding-top: 12px;
     pointer-events: none;
 }
