@@ -15,8 +15,19 @@
     flex-direction:row;
 }
 
-.icons_group{
+.icons_scroll_frame{
+    overflow: auto;
     width: 45%;
+    height: 100%;
+    display: flex;
+}
+
+.icons_group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .icons_group_title{
@@ -65,15 +76,23 @@
 
 @media screen and (max-width: 650px) {
     /* when the viewport is 650px or smaller */
+
+    .icons_content{
+        flex-direction:column-reverse;
+    }
+
     .icons_preview_frame{
-        display: none;
+        width: 100%;
     }
 
     .icons_spacer{
-        display: none;
+        width: 100%;
+        height: 1px;
+        margin: 10px 0px;
     }
 
-    .icons_group{
+    .icons_scroll_frame{
         width: 100%;
+        display: block;
     }
 }

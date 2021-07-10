@@ -6,7 +6,7 @@
             "background": "#000000",
             "type": "#FFFFFF",
             "accent" : "#B90000",
-            "hover" : "#F1F1F1",
+            "hover" : "#FFCDCD",
             "selected" : "#b46161"
         },
         { 
@@ -14,8 +14,16 @@
             "background": "#FFEC36",
             "type": "#000000",
             "accent" : "#00D4C5",
-            "hover" : "#2F2F2F",
+            "hover" : "#565120",
             "selected" : "#FFFFFF"
+        },
+        { 
+            "name" : "pippin", 
+            "background": "#B5D8B4",
+            "type": "#000000",
+            "accent" : "#FA6B04",
+            "hover" : "#545A41",
+            "selected" : "#FFC69D"
         }
     ]
 }

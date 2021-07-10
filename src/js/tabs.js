@@ -18,7 +18,6 @@ export default class tabs{
         anime({
             targets: $( "#tab_bits_frame, #tab_icons_frame")[0],
             opacity : 0,
-            scale: 0.95,
             duration: 0,
         });
         $( "#tab_bits_frame" ).hide()
@@ -37,28 +36,13 @@ export default class tabs{
             }
         });
 
+        $( ".tab_wrapper" ).on("mouseenter touchstart",(e) => {
+            e.currentTarget.getElementsByTagName('span')[0].style.color="var(--hover)"
+        })
+        $( ".tab_wrapper" ).on("mouseleave touchmove click",(e) =>  {
+            e.currentTarget.getElementsByTagName('span')[0].style.color=""
+        })
 
-
-        /*$( "#tab_project" ).on('click', function() {
-            if(!$( "#tab_project" ).hasClass("selected")){
-                console.log("switching to projects tab")
-                $( "#tab_project" ).addClass( "selected" )
-                $( "#tab_bit" ).removeClass( "selected" )
-                that.hideUnderline("underline_bits")
-                that.showUnderline("underline_projects")
-
-            }
-        });
-        $( "#tab_bit" ).on('click', function() {
-            if(!$( "#tab_bit" ).hasClass("selected" )){
-                console.log("switching to bits tab")
-                $( "#tab_bit" ).addClass( "selected" )
-                $( "#tab_project" ).removeClass( "selected")
-                that.hideUnderline("underline_projects")
-                that.showUnderline("underline_bits")
-                that.switchTabs("projects_frame","bits_frame")
-            }
-        });*/
     }
 
     hideUnderline(id) {
