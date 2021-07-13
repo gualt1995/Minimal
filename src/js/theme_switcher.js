@@ -54,7 +54,7 @@ export default class theme_switcher{
         var currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme');
         for (let i = 0, len = this.themes.length; i < len; i++){
             if(this.themes[i]['name'] != currentTheme){
-                $( "<div  style=\"background-color:" + this.themes[i]['background'] + ";\" class=\"theme_widget\" id=\""+ this.themes[i]['name'] +"\"> <div></div> </div>" ).insertBefore( ".theme_close_btn" );
+                $( "<div style=\"background-color:" + this.themes[i]['background'] + ";\"class=\"theme_widget\" id=\""+ this.themes[i]['name'] +"\"> <div  style=\"background-color:"+  this.themes[i]['type'] +"\";></div> </div>" ).insertBefore( ".theme_close_btn" );
             }
         }
         $('.theme_widget').on('click',(e) => {
@@ -64,19 +64,87 @@ export default class theme_switcher{
     }
 
     setTheme(themeToSet){
+
+        var currentThemeName = getComputedStyle(document.documentElement).getPropertyValue('--theme');
+        var currentBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background');
+        var currentTypeColor = getComputedStyle(document.documentElement).getPropertyValue('--type');
+        
+        var tl = anime.timeline()
+        tl.add({
+            targets: '.theme_transition',
+            opacity: 0,
+            duration: 0,
+        }, 0);
+        tl.add({
+            targets: '.theme_name_display',
+            scale: 1,
+            duration: 0,
+            opacity: 1,
+        }, 0);
+        tl.add({
+            targets: '.theme_new_name_display',
+            translateY: - $(window).height(),
+            duration: 0
+        }, 0)
+
+        $('.theme_name_display').text(currentThemeName)
+        $('.theme_new_name_display').text(themeToSet)
+        $('.theme_transition').css('background', currentBackgroundColor)
+        $('.theme_transition').css('display','flex')
+        $('.theme_name_display').css('color', currentTypeColor)
+
         let root = document.documentElement;
         for (let i = 0, len = this.themes.length; i < len; i++){
             if(themeToSet === this.themes[i]['name']){
-                root.style.setProperty('--theme', this.themes[i]['name']);
-                root.style.setProperty('--background', this.themes[i]['background']);
-                root.style.setProperty('--type', this.themes[i]['type']);
-                root.style.setProperty('--accent', this.themes[i]['accent']);
-                root.style.setProperty('--hover', this.themes[i]['hover']);
-                root.style.setProperty('--selected', this.themes[i]['selected']);
+                $('.theme_new_name_display').css('color', this.themes[i]['type'])
+                var tl = anime.timeline({
+                    complete: () => {
+                        $('.theme_transition').hide()
+                    }
+                });
+                tl.add({
+                    targets: '.theme_transition',
+                    opacity: 1,
+                    easing: "easeInSine",
+                    duration: 400,
+                });
+                tl.add({
+                    targets: '.theme_transition',
+                    easing: "linear",
+                    opacity: 1,
+                    background: this.themes[i]['background'],
+                    duration: 800,
+                }, 400);
+                tl.add({
+                    targets: '.theme_name_display',
+                    scale: 0.6,
+                    easing: "linear",
+                    duration: 200,
+                    opacity: 0,
+                    complete: () => {
+                        root.style.setProperty('--theme', this.themes[i]['name']);
+                        root.style.setProperty('--background', this.themes[i]['background']);
+                        root.style.setProperty('--type', this.themes[i]['type']);
+                        root.style.setProperty('--accent', this.themes[i]['accent']);
+                        root.style.setProperty('--hover', this.themes[i]['hover']);
+                        root.style.setProperty('--selected', this.themes[i]['selected']);
+                        this.hideThemeMenu();
+                        this.generateThemeButtons();
+                    }
+                }, 400)
+                tl.add({
+                    targets: '.theme_new_name_display',
+                    easing: "spring(1, 80, 12, 0)",
+                    translateY: 0 
+                }, 600) 
+                tl.add({
+                    targets: '.theme_transition',
+                    opacity: 0,
+                    easing: "easeOutSine",
+                    duration: 400,
+                }, '-=400')
             }
         }
-        this.hideThemeMenu();
-        this.generateThemeButtons();
     }
     
     hideThemeMenu(){

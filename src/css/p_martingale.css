@@ -21,7 +21,7 @@
     max-width: 314px;
     width: 48%;
     perspective:3000px;
-    color: var(--hover);
+    color: var(--type);
     margin: 0 10px;
 }
   
