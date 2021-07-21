@@ -14,16 +14,130 @@
 }
 
 .cv_content{
-    width: 90vw;
-    height: 98vh;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    max-width: 755px;
+    height: 100%;
 }
 
+.cv_title{
+    font-size: 2.667em;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    padding-bottom: 10px;
+}
+
+.cv_timeline{
+    overflow: scroll;
+}
+
+.exp_frame{
+    width: 100%;
+    color: var(--type);
+    display: flex;
+    flex-direction: row;
+}
+
+.exp_date_frame_desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 78px;
+}
+
+.exp_date_desktop{
+    font-style: normal;
+    font-weight: 300;
+    text-align: right;
+}
+
+.exp_date_duration_desktop{
+    font-weight: bold;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.exp_timeline_frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.exp_timeline_head{
+    width: 2px;
+    height: 4px;
+    background: var(--type);
+}
+
+.exp_frame:first-child > .exp_timeline_frame > .exp_timeline_head{
+    opacity:0;
+}
+
+.exp_frame:last-child > .exp_timeline_frame > .exp_timeline_body{
+    background: linear-gradient(180deg, var(--type), rgba(255,0,0,0));
+}
+
+.exp_timeline_dot{
+    width: 10px;
+    height: 10px;    
+    background: var(--accent);
+    border: 2px solid var(--type);
+    border-radius: 100%;
+}
+
+.exp_timeline_body{
+    width: 2px;
+    background: var(--type);
+    flex-grow: 1;
+}
+
+.exp_content_frame{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.exp_title_frame{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.exp_company{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.exp_job_title{    
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 10px;
+}
+
+.exp_date_mobile{
+    font-weight: 300;
+    display: none;
+    white-space: pre-line;
+}
+
+.exp_body{
+    font-weight: 300;
+}
+
+.exp_body > p{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+/* 
 .cv_img{
-    /* Calcuating the correct aspect ratio for an A4 paper to fill in the screen */
+    DO NOT DELETE : this could be useful : Calcuating the correct aspect ratio for an A4 paper to fill in the screen 
     height: calc(min(90vw, (98vh - 64px) * 0.70707070707) * 1.41428571429);
     width: min(90vw, (98vh - 64px) * 0.70707070707);
     background-image: url(../assets/cv.png);
@@ -34,9 +148,10 @@
     background-color: var(--type);
     z-index: 3;
 }
+*/
 
 .cv_btn_frame{
-    margin-top: 10px;
+    margin: 6px;
     display: flex;
     width: 185px;
     flex-direction: row;
@@ -44,6 +159,22 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width: 700px) {
+    .exp_date_frame_desktop{
+        display: none;
+    }
+
+    .exp_date_mobile{
+        display: block;
+    }
+
+    .exp_title_frame{
+        flex-direction: column;
+    }
+    .exp_job_title{
+        margin: 2px 0;
+    }
+}
 
 
 

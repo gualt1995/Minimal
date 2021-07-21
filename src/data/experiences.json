@@ -1,0 +1,33 @@
+{ 
+    "experiences" : 
+    [
+        { 
+            "start_date" : "Jan 2020 ", 
+            "duration" : "Present",
+            "company" : "Datadog",
+            "job_title" : "Solution engineer",
+            "description" : "Responsible for helping our clients understand our product,  and help them integrate Datadog in their stack, provided support through tickets and live chat. <p> Worked with account executives to demo our product and showcase Datadog features <p> Developed a Mobile quiz app, to be used as tool to learn about the product."
+        },
+        { 
+            "start_date" : "Fev 2019 ", 
+            "duration" : "6m",
+            "company" : "SoftBank Robotics",
+            "job_title" : "Android Developer",
+            "description" : "Worked closely with the Design team, built four Android apps showcasing the features of the Robot.<p>Developed Chatbots with Dialog Flow and Softbank’s Robotics proprietary language (QiChat).<p>Answered tickets related to development on the robots, offered feedback technically and UX/UI wise.<p>Represented the company at NAO challenge in Rome."
+        },
+        { 
+            "start_date" : "Jul 2014 ", 
+            "duration" : "2m",
+            "company" : "UC Berkeley",
+            "job_title" : "Research Intern",
+            "description" : "Wrote a peak finding algorithm to detect plasma concentration spikes in solar wind sensor data.<p> Coded the algorithm in IDL to be loaded on an FPGA in the Satellite."
+        },
+        { 
+            "start_date" : "Jul 2013 ", 
+            "duration" : "6y",
+            "company" : "Sorbonne University",
+            "job_title" : "Computer Science",
+            "description" : "Masters of Computer Science :  HCI, AI, Machine Learning, Operations research and Bioinformatics <p> Bachelor in Computer Science, Including two years of  study of theoretical Physics with a mechanical engineering Minor"
+        }
+    ]
+}

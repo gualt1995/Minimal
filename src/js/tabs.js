@@ -37,10 +37,10 @@ export default class tabs{
         });
 
         $( ".tab_wrapper" ).on("mouseenter touchstart",(e) => {
-            e.currentTarget.getElementsByTagName('span')[0].style.fill="var(--background)"
+            e.currentTarget.getElementsByTagName('span')[0].style.color="var(--hover)"
         })
-        $( ".project_link" ).on("mouseleave touchmove click",(e) =>  {
-            e.currentTarget.getElementsByTagName('span')[0].style.fill=""
+        $( ".tab_wrapper" ).on("mouseleave touchmove click",(e) =>  {
+            e.currentTarget.getElementsByTagName('span')[0].style.color=""
         })
 
     }

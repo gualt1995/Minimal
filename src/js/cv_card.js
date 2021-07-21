@@ -3,6 +3,10 @@ import anime from 'animejs/lib/anime.es.js';
 
 export default class cvCard{
     constructor(){
+        var template = require("../templates/experience.handlebars");
+        var context = require('../data/experiences.json');
+        var html = template(context)
+        $('.cv_timeline').html(html);
         $( "#cv_frame" ).addClass( "hidden" )
         anime({
             targets: "#cv_frame",
@@ -29,12 +33,9 @@ export default class cvCard{
             that.shake("cv_fab_download_img")
         })
         $("#cv_fab_download").on('click',function() {
-
             this.typecolor = getComputedStyle(document.body).getPropertyValue('--type')
             this.bgcolor = getComputedStyle(document.body).getPropertyValue('--background')
-
             anime({
-                
                 targets:"#cv_fab_download",
                 easing: 'linear',
                 backgroundColor: [
@@ -51,7 +52,6 @@ export default class cvCard{
         $( "#cv_fab_close" ).on('mouseenter touchstart',function() {
             that.shake("cv_fab_close_img")
         })
-
         this.scrollPosition = 0
     }
       
@@ -68,13 +68,13 @@ export default class cvCard{
             opacity : 0,
             translateY: "-100%",
             duration: 150,
-        }).add({
+        },0).add({
             targets: "#cv_frame",
             easing: "easeInBack",
             opacity : 0,
             translateY: "-100%",
             duration: 300,
-        })
+        },0)
       }
     }
   
@@ -85,15 +85,13 @@ export default class cvCard{
             $( window ).on("scroll", {scroll:this.scrollPosition} ,this.lockOnCv);
             $( "#cv_frame" ).removeClass( "hidden" )
             var tl = anime.timeline();
+            document.getElementById('cv_frame').style.backgroundColor="var(--background)"
             tl.add({
                 targets: "#cv_frame",
                 easing: "easeOutCirc",
                 opacity : 1,
                 translateY: 0,
                 duration: 400,
-                complete: () => {
-                    document.getElementById('cv_frame').style.backgroundColor="var(--background)"
-                }
             }).add({
                 targets: "#cv_btn_frame",
                 easing: "easeOutBack",

@@ -1,0 +1,21 @@
+{{#each experiences}}
+    <div class="exp_frame">
+        <div class="exp_date_frame_desktop">
+            <div class="exp_date_desktop"> {{start_date}}</div>
+            <div class="exp_date_duration_desktop">{{duration}}</div>
+        </div>
+        <div class="exp_timeline_frame">
+            <div class="exp_timeline_head"></div>
+            <div class="exp_timeline_dot"></div>
+            <div class="exp_timeline_body"></div>
+        </div>
+        <div class="exp_content_frame">
+            <div class="exp_title_frame">
+                <div class="exp_company">{{company}}</div>
+                <div class="exp_job_title">{{job_title}}</div>
+                <div class="exp_date_mobile">{{start_date}} - {{duration}}</div>
+            </div>
+            <div class="exp_body">{{{description}}}</div>
+        </div>    
+    </div>
+{{/each}}
