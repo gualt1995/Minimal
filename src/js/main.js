@@ -1,9 +1,9 @@
 require('../css/page_wide.css');
+import anime from 'animejs/lib/anime.es.js';
 
 import tabs from './tabs.js';
 import cvCard from './cv_card.js';
 import contactCard from './contact_card.js';
-import menuFab from './menu_fab.js';
 import footer from './footer.js';
 import title_screen from './title_screen.js';
 import bits from './bits.js';
@@ -13,7 +13,7 @@ import theme from './theme_switcher';
 import project from './project.js';
 import martingale from './p_martingale.js';
 import tizio from './p_tizio.js';
-import k7 from './p_k7.js';
+import onair from './p_onair.js';
 import icons from './icons.js';
 
 import { datadogRum } from '@datadog/browser-rum';
@@ -29,7 +29,6 @@ datadogRum.init({
     trackInteractions: true
 });
 
-
 new tabs();
 new title_screen();
 var theCvCard = new cvCard();
@@ -42,4 +41,25 @@ new theme();
 new project();
 new tizio();
 new martingale();
-new k7();
+new onair();
+
+function shake(idTarget){
+    var xMax = 16;
+    anime({
+        targets: "#" + idTarget + " > svg",
+        easing: 'easeInOutSine',
+        duration: 300,
+        rotate: [
+            { value: xMax * -1, },
+            { value: xMax, },
+            { value: xMax/-2, },
+            { value: xMax/2, },
+            { value: 0 }
+        ],
+    });
+}
+
+$( ".icon_btn" ).on('mouseenter touchstart',function(e) {
+    shake(e.currentTarget.id)
+})
+

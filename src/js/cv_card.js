@@ -21,7 +21,7 @@ export default class cvCard{
             duration: 0,
         });
         var that = this
-        $( "#cv_fab_close" ).on('click',function() {
+        $( "#icon_btn_cv_close" ).on('click',function() {
             that.hideCv(true)
         });
         $( "#cv_frame" ).on('click',function(e) {
@@ -29,14 +29,11 @@ export default class cvCard{
                 that.hideCv(true)
             }
         });
-        $( "#cv_fab_download" ).on('mouseenter touchstart',function() {
-            that.shake("cv_fab_download_img")
-        })
-        $("#cv_fab_download").on('click',function() {
+        $("#icon_btn_download").on('click',function() {
             this.typecolor = getComputedStyle(document.body).getPropertyValue('--type')
             this.bgcolor = getComputedStyle(document.body).getPropertyValue('--background')
             anime({
-                targets:"#cv_fab_download",
+                targets:"#icon_btn_download",
                 easing: 'linear',
                 backgroundColor: [
                     { value: this.typecolor, duration: 0 },
@@ -44,20 +41,15 @@ export default class cvCard{
                 ],
                 complete: () => {
                     //Animating to an empty value does not seem to work in anime.js
-                    document.getElementById('cv_fab_download').style.backgroundColor=""
+                    document.getElementById('icon_btn_download').style.backgroundColor=""
                 }
             });
         });
-        
-        $( "#cv_fab_close" ).on('mouseenter touchstart',function() {
-            that.shake("cv_fab_close_img")
-        })
         this.scrollPosition = 0
     }
       
     hideCv(){
       if(!$( "#cv_frame" ).hasClass("hidden")){
-        console.log("hiding cv card")
         $( window ).off("scroll", this.lockOnCv);
         $( "#cv_frame" ).addClass( "hidden" )
         var tl = anime.timeline();
@@ -80,7 +72,6 @@ export default class cvCard{
   
     ShowCv(){
         if($( "#cv_frame" ).hasClass("hidden")){
-            console.log("showing cv card")
             this.scrollPosition = $(document).scrollTop()
             $( window ).on("scroll", {scroll:this.scrollPosition} ,this.lockOnCv);
             $( "#cv_frame" ).removeClass( "hidden" )
@@ -100,22 +91,6 @@ export default class cvCard{
                 duration: 400,
             });
         }
-    }
-
-    shake(idTarget){
-        var xMax = 16;
-        anime({
-            targets: "#"+idTarget,
-            easing: 'easeInOutSine',
-            duration: 300,
-            rotate: [
-                { value: xMax * -1, },
-                { value: xMax, },
-                { value: xMax/-2, },
-                { value: xMax/2, },
-                { value: 0 }
-            ],
-        });
     }
 
     lockOnCv(event){

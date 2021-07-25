@@ -4,8 +4,27 @@
     --background:#000000;
     --type:#ffffff;
     --accent:#B90000;
-    --hover: #FFCDCD;
-    --selected: #b46161;
+    --hover:#FFCDCD;
+    --selected:#b46161;
+
+    --tag_border:1px solid var(--accent);
+    --tag_corners:6px;
+
+    --btn_link_border: 0;
+    --btn_link_border_bottom:1px solid var(--type);
+    --btn_link_corners:6px;
+    --btn_link_background_image: "0";
+    --btn_link_background_size: "0";
+
+    --bits_card_corners: 0px 6px 6px 6px;
+    --bits_card_border: 1px solid var(--type);
+    --bits_strip_corners: 6px 6px 0px 0px;
+
+    --footer_border:1px solid var(--accent);
+
+    --contact_card_border: 1px solid var(--type);
+
+    --tab_frame_border: 1px solid var(--type);
 }
 
 html{
@@ -38,6 +57,27 @@ a{
     color: var(--accent);
 }
 
+.icon_btn{
+    height: 52px;
+    width: 52px;
+    border: 2px solid var(--type);
+    background-color: var(--background);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.icon_btn > svg{
+    fill: var(--type)
+}
+
+.icon_btn_close > svg{
+    fill: var(--accent)
+}
+
 .unselectable{
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -47,10 +87,12 @@ a{
 
 ::selection {
     background: var(--selected); /* WebKit/Blink Browsers */
-  }
-  ::-moz-selection {
+}
+  
+::-moz-selection {
     background: var(--selected); /* Gecko Browsers */
-  }
+}
+
 
 @media screen and (max-width: 450px) {
     /* when the viewport is 450px or smaller */

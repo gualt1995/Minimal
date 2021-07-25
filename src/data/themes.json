@@ -2,28 +2,86 @@
     "themes" : 
     [
         { 
-            "name" : "night", 
+            "theme" : "night", 
             "background": "#000000",
             "type": "#FFFFFF",
             "accent" : "#B90000",
             "hover" : "#FFCDCD",
-            "selected" : "#b46161"
+            "selected" : "#b46161",
+
+            "tag_border": "1px solid var(--accent)",
+            "tag_corners":"6px",
+        
+            "btn_link_border": "none",
+            "btn_link_border_bottom":"1px solid var(--type)",
+            "btn_link_corners":"6px",
+            "btn_link_background_image": "0",
+            "btn_link_background_size": "0",
+        
+            "bits_card_corners": "0px 6px 6px 6px",
+            "bits_card_border": "1px solid var(--type)",
+            "bits_strip_corners": "6px 6px 0px 0px",
+        
+            "footer_border":"1px solid var(--accent)",
+        
+            "contact_card_border": "1px solid var(--type)",
+
+            "tab_frame_border": "1px solid var(--type)"
+
         },
         { 
-            "name" : "sunny", 
-            "background": "#FFEC36",
+            "theme" : "construction", 
+            "background": "#FFD000",
             "type": "#000000",
-            "accent" : "#00D4C5",
+            "accent" : "#74A0F4",
             "hover" : "#565120",
-            "selected" : "#FFFFFF"
+            "selected" : "#FFFFFF",
+
+            "tag_border": "2px solid var(--accent)",
+            "tag_corners":"6px",
+        
+            "btn_link_border": "2px solid var(--type)",
+            "btn_link_border_bottom":"2px solid var(--type)",
+            "btn_link_corners":"6px",
+            "btn_link_background_image": "0",
+            "btn_link_background_size": "0",
+        
+            "bits_card_corners": "0px 6px 6px 6px",
+            "bits_card_border": "2px solid var(--type)",
+            "bits_strip_corners": "6px 6px 0px 0px",
+        
+            "footer_border":"2px solid var(--accent)",
+        
+            "contact_card_border": "2px solid var(--type)",
+
+            "tab_frame_border": "2px solid var(--type)"
+
         },
         { 
-            "name" : "pippin", 
-            "background": "#B5D8B4",
-            "type": "#000000",
-            "accent" : "#FA6B04",
-            "hover" : "#545A41",
-            "selected" : "#FFC69D"
+            "theme" : "soviet", 
+            "background": "#E8DAC8",
+            "type": "#2B1300",
+            "accent" : "#FE3A20",
+            "hover" : "#532603",
+            "selected" : "#FCF5ED",
+
+            "tag_border": "3px solid var(--accent)",
+            "tag_corners":"0px",
+        
+            "btn_link_border": "3px solid var(--type)",
+            "btn_link_border_bottom":"3px solid var(--type)",
+            "btn_link_corners":"0px",
+            "btn_link_background_image": "radial-gradient(var(--accent) 1px, var(--background) 1px)",
+            "btn_link_background_size": "4px 4px",
+            "bits_card_corners": "0px",
+            "bits_card_border": "3px solid var(--type)",
+            "bits_strip_corners": "0px",
+        
+            "footer_border":"3px solid var(--accent)",
+        
+            "contact_card_border": "3px solid var(--type)",
+
+            "tab_frame_border": "2px dashed var(--type)"
         }
     ]
 }

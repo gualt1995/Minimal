@@ -4,17 +4,13 @@ export default class project{
     constructor(){  
         var template = require("../templates/project.handlebars");
 
-        var website = require('../data/tizio.json');
-        var html = template(website)
-        $('#project_description_web').html(html)
-
-        var website = require('../data/martingale.json');
-        var html = template(website)
+        var website = require('../data/projects.json');
+        var html = template(website[0])
+        $('#project_description_onair').html(html)
+        html = template(website[1])
         $('#project_description_martigale').html(html)
-
-        var website = require('../data/k7.json');
-        var html = template(website)
-        $('#project_description_k7').html(html)
+        html = template(website[2])
+        $('#project_description_web').html(html)
 
         this.typecolor = getComputedStyle(document.body).getPropertyValue('--type')
         this.bgcolor = getComputedStyle(document.body).getPropertyValue('--background')

@@ -1,4 +1,8 @@
 
+.projects_frame{
+    width: 100vw;
+}
+
 .project_frame{
     display: flex;
     align-items: center;
@@ -55,8 +59,8 @@
 
 .tag{
     padding: 6px 10px;
-    border: 2px solid var(--accent);
-    border-radius: 5px; 
+    border: var(--tag_border);
+    border-radius: var(--tag_corners);; 
     margin-right: 10px;
     margin-bottom: 10px;
 }
@@ -81,14 +85,18 @@
 }
 
 .project_link{
-    border-bottom: 1px solid var(--type);
-    border-radius: 6px;
+    border: var(--btn_link_border);
+    border-bottom: var(--btn_link_border_bottom);
+    border-radius: var(--btn_link_corners);
+    background-image: var(--btn_link_background_image);
+    background-size: var(--btn_link_background_size);
     display: flex;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     color: var(--type);
     transition: all 300ms;
+    
 }
 
 .project_link i{

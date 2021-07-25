@@ -4,7 +4,7 @@
     right: 0%;
     transform-origin: 100% 100%;
     transform: rotate(-90deg);
-    padding: 8px;
+    padding: 4px;
     margin-right: 2px;
     font-style: normal;
     font-weight: 300;
@@ -32,7 +32,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 4px;
 }
 
 .theme_close_btn{

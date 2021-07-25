@@ -17,8 +17,8 @@
     height: calc(90vw * 1.65);
     max-width: 380px;
     max-height: 630px;
-    border-radius: 10px;
-    border: 2px solid var(--type);
+    border-radius: 6px;
+    border: var(--contact_card_border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,29 +30,8 @@
     z-index: 3;
 }
 
-.contact_fab_frame{
+.contact_icon_btn_frame{
     margin-top: 20px;
-}
-
-.contact_fab{
-    height: 52px;
-    width: 52px;
-    border: 2px solid var(--type);
-    background-color: var(--background);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-.contact_fab > svg{
-    fill: var(--type)
-}
-
-.contact_fab_close > svg{
-    fill: var(--accent)
 }
 
 .contact_head_frame{
@@ -80,9 +59,9 @@
     position: relative;
     bottom: 0px;
     width: 100%;
-    border-top: solid 2px var(--type);
+    border-top: var(--contact_card_border);
     background-color: var(--background);
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 6px 6px;
 }
 
 .contact_link_frame{
@@ -126,6 +105,6 @@
     box-sizing: border-box;
     top: 50%;
     padding: 2px 5px;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: var(--background);
 }

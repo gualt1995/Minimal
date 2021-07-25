@@ -12,7 +12,7 @@ export default class contactCard{
             duration: 1
         });
         anime({
-            targets: "#contact_fab_close",
+            targets: "#icon_btn_contact_close",
             opacity : 0,
             translateY: "-100%",
             duration: 1,
@@ -25,10 +25,10 @@ export default class contactCard{
         });
 
         var that = this
-        $( "#contact_fab_copy" ).on('click',() => {
+        $( "#icon_btn_copy" ).on('click',() => {
             that.CopyEmail()
         });
-        $( "#contact_fab_close" ).on('click',() => {
+        $( "#icon_btn_contact_close" ).on('click',() => {
             that.HideContact(true)
         });
         $( "#contact_card_frame" ).on('click',(e) => {
@@ -36,12 +36,6 @@ export default class contactCard{
                 that.HideContact(true)
             }
         });
-        $( "#contact_fab_copy" ).on('mouseenter touchstart',() => {
-            that.shake("contact_fab_copy_img")
-        })
-        $( "#contact_fab_close" ).on('mouseenter touchstart',() =>{
-            that.shake("contact_fab_close_img")
-        })
         $( ".email, .contact_link_frame a" ).on('mouseenter touchstart',(e) => {
             anime({
                 targets: e.target,
@@ -65,12 +59,11 @@ export default class contactCard{
     HideContact(){
       if(!$( "#contact_card_frame" ).hasClass("hidden")){
         $( window ).off("scroll", this.lockOnCard);
-        console.log("hiding contact card")
         $( "#contact_card_frame" ).addClass( "hidden" )
         document.getElementById("contact_card_frame").style.backgroundColor=""
         var tl = anime.timeline();
         tl.add({
-            targets: "#contact_fab_close",
+            targets: "#icon_btn_contact_close",
             easing: "easeOutCirc",
             opacity : 0,
             translateY: "-100%",
@@ -101,7 +94,7 @@ export default class contactCard{
                     document.getElementById('contact_card_frame').style.backgroundColor="var(--background)"
                 }
             }).add({
-                targets: "#contact_fab_close",
+                targets: "#icon_btn_contact_close",
                 easing: "easeOutBack",
                 opacity : 1,
                 translateY: 0,
@@ -118,7 +111,7 @@ export default class contactCard{
         this.bgcolor = getComputedStyle(document.body).getPropertyValue('--background')
 
         anime({
-            targets:"#contact_fab_copy",
+            targets:"#icon_btn_copy",
             easing: 'linear',
             backgroundColor: [
                 { value: this.typecolor, duration: 0 },
@@ -126,7 +119,7 @@ export default class contactCard{
             ],
             complete: () => {
                 //Animating to an empty value does not seem to work in anime.js
-                document.getElementById('contact_fab_copy').style.backgroundColor=""
+                document.getElementById('icon_btn_copy').style.backgroundColor=""
             }
         });
         var tl = anime.timeline();
@@ -145,21 +138,6 @@ export default class contactCard{
         }, 400)
     }
 
-    shake(idTarget){
-        var xMax = 16;
-        anime({
-            targets: "#"+idTarget,
-            easing: 'easeInOutSine',
-            duration: 300,
-            rotate: [
-                { value: xMax * -1, },
-                { value: xMax, },
-                { value: xMax/-2, },
-                { value: xMax/2, },
-                { value: 0 }
-            ],
-        });
-    }
     lockOnCard(event){
         window.scrollTo(0, event.data.scroll);
     }

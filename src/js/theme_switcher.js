@@ -53,8 +53,8 @@ export default class theme_switcher{
         $( ".theme_widget" ).remove();
         var currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme');
         for (let i = 0, len = this.themes.length; i < len; i++){
-            if(this.themes[i]['name'] != currentTheme){
-                $( "<div style=\"background-color:" + this.themes[i]['background'] + ";\"class=\"theme_widget\" id=\""+ this.themes[i]['name'] +"\"> <div  style=\"background-color:"+  this.themes[i]['type'] +"\";></div> </div>" ).insertBefore( ".theme_close_btn" );
+            if(this.themes[i]['theme'] != currentTheme){
+                $( "<div style=\"background-color:" + this.themes[i]['background'] + ";\"class=\"theme_widget\" id=\""+ this.themes[i]['theme'] +"\"> <div  style=\"background-color:"+  this.themes[i]['type'] +"\";></div> </div>" ).insertBefore( ".theme_close_btn" );
             }
         }
         $('.theme_widget').on('click',(e) => {
@@ -95,7 +95,7 @@ export default class theme_switcher{
 
         let root = document.documentElement;
         for (let i = 0, len = this.themes.length; i < len; i++){
-            if(themeToSet === this.themes[i]['name']){
+            if(themeToSet === this.themes[i]['theme']){
                 $('.theme_new_name_display').css('color', this.themes[i]['type'])
                 var tl = anime.timeline({
                     complete: () => {
@@ -122,12 +122,10 @@ export default class theme_switcher{
                     duration: 200,
                     opacity: 0,
                     complete: () => {
-                        root.style.setProperty('--theme', this.themes[i]['name']);
-                        root.style.setProperty('--background', this.themes[i]['background']);
-                        root.style.setProperty('--type', this.themes[i]['type']);
-                        root.style.setProperty('--accent', this.themes[i]['accent']);
-                        root.style.setProperty('--hover', this.themes[i]['hover']);
-                        root.style.setProperty('--selected', this.themes[i]['selected']);
+                        for (const [key, value] of Object.entries(this.themes[i])) {
+                            root.style.setProperty('--'+key , this.themes[i][key]);
+                            console.log(key,value)
+                          }
                         this.hideThemeMenu();
                         this.generateThemeButtons();
                     }
