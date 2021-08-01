@@ -6,6 +6,7 @@ import saab from '../thumbnails/Saab.png';
 import logs from '../thumbnails/Logs.png';
 import chrome from '../thumbnails/Chrome.png';
 import space from '../thumbnails/Space.png';
+import storm from '../thumbnails/Storm.png';
 
 export default class bits{
     constructor(){
@@ -21,6 +22,7 @@ export default class bits{
         $(".img_browser").attr("src", chrome);
         $(".img_logs").attr("src", logs);
         $(".img_space").attr("src", space);
+        $(".img_storm").attr("src", storm);
 
         $( ".bits_card" ).on('mouseenter touchstart',function(e) {
             $(this).css('z-index', 1);

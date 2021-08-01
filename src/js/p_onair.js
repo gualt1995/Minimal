@@ -14,9 +14,9 @@ export default class onair{
     themeChangeObserver(){   
         var observer = new MutationObserver(() => {
             var currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme');
-            if(currentTheme === 'night'){
+            if(currentTheme === 'night' || currentTheme === 'matrix'){
                 $(".wip_img").attr("src", neon_dark);
-            }else if(currentTheme === 'construction'){
+            }else if(currentTheme === 'metro'){
                 $(".wip_img").attr("src", neon_light);
             }else{
                 $(".wip_img").attr("src", neon_soviet);

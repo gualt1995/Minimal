@@ -15,6 +15,7 @@
             "btn_link_border": "none",
             "btn_link_border_bottom":"1px solid var(--type)",
             "btn_link_corners":"6px",
+            "btn_link_color": "var(--type)",
             "btn_link_background_image": "0",
             "btn_link_background_size": "0",
         
@@ -23,6 +24,10 @@
             "bits_strip_corners": "6px 6px 0px 0px",
         
             "footer_border":"1px solid var(--accent)",
+            "footer_background_size": 0,
+            "footer_background": "var(--background)",
+            "footer_border_radius":"50%",
+            "footer_box_shadow":"inset 0px 0px 50px 2px var(--accent)",
         
             "contact_card_border": "1px solid var(--type)",
 
@@ -30,7 +35,7 @@
 
         },
         { 
-            "theme" : "construction", 
+            "theme" : "metro", 
             "background": "#FFD000",
             "type": "#000000",
             "accent" : "#74A0F4",
@@ -43,6 +48,7 @@
             "btn_link_border": "2px solid var(--type)",
             "btn_link_border_bottom":"2px solid var(--type)",
             "btn_link_corners":"6px",
+            "btn_link_color": "var(--type)",
             "btn_link_background_image": "0",
             "btn_link_background_size": "0",
         
@@ -51,6 +57,10 @@
             "bits_strip_corners": "6px 6px 0px 0px",
         
             "footer_border":"2px solid var(--accent)",
+            "footer_background_size": "none",
+            "footer_background": "repeating-linear-gradient( 45deg, var(--background), var(--background) 8px, var(--accent) 4px, var(--accent) 16px )",
+            "footer_border_radius":"12px",
+            "footer_box_shadow":"0px",
         
             "contact_card_border": "2px solid var(--type)",
 
@@ -58,19 +68,20 @@
 
         },
         { 
-            "theme" : "soviet", 
+            "theme" : "Cartoon", 
             "background": "#E8DAC8",
             "type": "#2B1300",
             "accent" : "#FE3A20",
             "hover" : "#532603",
             "selected" : "#FCF5ED",
 
-            "tag_border": "3px solid var(--accent)",
+            "tag_border": "3px dashed var(--accent)",
             "tag_corners":"0px",
         
             "btn_link_border": "3px solid var(--type)",
             "btn_link_border_bottom":"3px solid var(--type)",
             "btn_link_corners":"0px",
+            "btn_link_color": "var(--type)",
             "btn_link_background_image": "radial-gradient(var(--accent) 1px, var(--background) 1px)",
             "btn_link_background_size": "4px 4px",
             "bits_card_corners": "0px",
@@ -78,10 +89,47 @@
             "bits_strip_corners": "0px",
         
             "footer_border":"3px solid var(--accent)",
-        
+            "footer_background": "radial-gradient(var(--accent) 1px, var(--background) 1px)",
+            "footer_background_size": "4px 4px",
+            "footer_border_radius":"0",
+            "footer_box_shadow":"0px",
+
+
             "contact_card_border": "3px solid var(--type)",
 
             "tab_frame_border": "2px dashed var(--type)"
+        },
+        { 
+            "theme" : "matrix", 
+            "background": "#000000",
+            "type": "#FFFFFF",
+            "accent" : "#008f11",
+            "hover" : "#83C99C",
+            "selected" : "#3D4640",
+
+            "tag_border": "2px solid var(--accent)",
+            "tag_corners":"100px",
+        
+            "btn_link_border": "2px solid var(--accent)",
+            "btn_link_border_bottom":"2px solid var(--accent)",
+            "btn_link_corners":"100px",
+            "btn_link_color": "var(--type)",
+            "btn_link_background_image": "linear-gradient(0deg, var(--accent) 0%, var(--background) 100%)",
+            "btn_link_background_size": "none",
+
+            "bits_card_corners": "0px 6px 6px 6px",
+            "bits_card_border": "2px solid var(--type)",
+            "bits_strip_corners": "6px 6px 0px 0px",
+        
+            "footer_border":"2px solid var(--accent)",
+            "footer_background_size": "none",
+            "footer_background": "linear-gradient(0deg, var(--accent) 0%, var(--background) 100%)",
+            "footer_border_radius":"100%",
+            "footer_box_shadow":"0px",
+
+            "contact_card_border": "2px solid var(--type)",
+
+            "tab_frame_border": "2px solid var(--accent)"
         }
     ]
 }

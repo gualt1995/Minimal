@@ -13,6 +13,7 @@
     --btn_link_border: 0;
     --btn_link_border_bottom:1px solid var(--type);
     --btn_link_corners:6px;
+    --btn_link_color: var(--type);
     --btn_link_background_image: "0";
     --btn_link_background_size: "0";
 
@@ -20,7 +21,11 @@
     --bits_card_border: 1px solid var(--type);
     --bits_strip_corners: 6px 6px 0px 0px;
 
-    --footer_border:1px solid var(--accent);
+    --footer_border: 1px solid var(--accent);
+    --footer_background: var(--background);
+    --footer_background_size: none;
+    --footer_border_radius: 50%;
+    --footer_box_shadow: inset 0px 0px 50px 2px var(--accent);
 
     --contact_card_border: 1px solid var(--type);
 

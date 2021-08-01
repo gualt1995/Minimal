@@ -75,7 +75,7 @@ export default class tizio{
 
         var observer = new MutationObserver(() => {
             var currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme');
-            if(currentTheme === 'night'){
+            if(currentTheme === 'night' || currentTheme === 'matrix'){
                 $("#tizio_off").attr("src", tizioOffDark);
                 $("#tizio_on").attr("src", tizioOnDark);            
             }else{

@@ -10,8 +10,7 @@
         ],
         "links": [
             { "url": "https://www.mottola.fr/pages/index.html", "name": "Web Prototype", "icon": "fab fa-js-square"},
-            { "url": "https://play.google.com/store/apps/details?id=com.agency55.laMartingale&hl=en&gl=US", "name": "Code on Github", "icon": "fa-github"},
-            { "url": "https://www.figma.com/file/U70KV21ludKv6soeWuQ66H/Norm?node-id=0%3A1", "name": "Designed in Figma", "icon": "fa-figma"}
+            { "url": "https://www.figma.com/community/file/999269207725738260/On-Air", "name": "Designed in Figma", "icon": "fa-figma"}
         ]
     },
     { 

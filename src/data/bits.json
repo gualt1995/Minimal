@@ -2,6 +2,13 @@
     "bits" : 
     [
         { 
+            "title" : "Gaming Buttons", 
+            "url" : "https://www.figma.com/community/file/985862968836916854/Racing-Game-buttons",
+            "description" : "Mini UI kit focused on Gaming",
+            "bits_img_class_name" : "img_storm",
+            "type": "Buttons Kit"
+        },
+        { 
             "title" : "MUGGE", 
             "url" : "https://www.figma.com/community/file/968632724189976512/Mugge",
             "description" : "Album art and LP.",

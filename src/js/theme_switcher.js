@@ -54,7 +54,9 @@ export default class theme_switcher{
         var currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme');
         for (let i = 0, len = this.themes.length; i < len; i++){
             if(this.themes[i]['theme'] != currentTheme){
-                $( "<div style=\"background-color:" + this.themes[i]['background'] + ";\"class=\"theme_widget\" id=\""+ this.themes[i]['theme'] +"\"> <div  style=\"background-color:"+  this.themes[i]['type'] +"\";></div> </div>" ).insertBefore( ".theme_close_btn" );
+                var buttonsToAdd = "<div style=\"background-color:" + this.themes[i]['background'] + ";\"class=\"theme_widget\" id=\""+ this.themes[i]['theme'] +"\"> <div  style=\"background-color:"+  this.themes[i]['accent'] +"\";></div> </div>"
+                $( buttonsToAdd ).insertBefore( ".theme_close_btn" );
+                $(".site_bar_themes").append(buttonsToAdd);
             }
         }
         $('.theme_widget').on('click',(e) => {
