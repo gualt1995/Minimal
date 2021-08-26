@@ -13,11 +13,12 @@
     justify-content: space-between;
     align-items: center;
     flex-direction:row;
+    max-width: 1200px;
 }
 
 .icons_scroll_frame{
     overflow: auto;
-    width: 45%;
+    width: 50%;
     height: 100%;
     display: flex;
 }
@@ -51,7 +52,7 @@
 }
 
 .icons_preview_frame{
-    width: 45%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;

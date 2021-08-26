@@ -9,6 +9,7 @@
 
     --tag_border:1px solid var(--accent);
     --tag_corners:6px;
+    --nav_bar_background: radial-gradient(#444F 1px, #0009 1px);
 
     --btn_link_border: 0;
     --btn_link_border_bottom:1px solid var(--type);
@@ -33,6 +34,7 @@
 }
 
 html{
+    height: 100%;
     display: flex;
     justify-content: center;
     scroll-behavior: smooth;
@@ -44,9 +46,27 @@ html{
 
 body{
     margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
     opacity: 1;
     background-color: var(--background);
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.main_scroll_view{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100%;
+}
+
+.tab_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 a{
@@ -103,5 +123,12 @@ a{
     /* when the viewport is 450px or smaller */
     html{
         font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    /* when the viewport is 450px or smaller */
+    html{
+        font-size: 20px;
     }
 }

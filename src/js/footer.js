@@ -20,12 +20,6 @@ export default class footer{
         $( "#footer_btn_share" ).on('click',function() {
             that.share()
         })
-        anime({
-            targets: $( "#toast_footer")[0],
-            opacity : 0,
-            translateY: "-100%",
-            duration: 0,
-        });
 
         $( ".footer_btn" ).on("mouseenter touchstart",(e) => {
             anime({
@@ -54,29 +48,26 @@ export default class footer{
                 url: 'http://mottola.fr/'
             })
         } else {
-            console.log("Copying Page url to clipboard")
             this.displayToast()
             navigator.clipboard.writeText("http://mottola.fr/");
         }
     }
 
     displayToast(){
+        $(".toast_footer").css("display", "flex")
         anime({
-            targets: $( "#toast_footer")[0],
-            easing:'easeOutBounce',
-            opacity : 1,
+            targets: ".toast_footer",
+            easing:'linear',
+            opacity: [
+                { value: 0, duration: 0},
+                { value: 1, duration: 100},
+                { value: 0, duration: 600, delay: 800 }
+            ],
             duration: 300,
-            translateY: 0,
             complete: function() {
-                anime({
-                    targets: $( "#toast_footer")[0],
-                    opacity : 0,
-                    translateY: "-100%",
-                    easing: 'cubicBezier(.5, .05, .1, .3)',
-                    duration: 200,
-                    delay: 800,
-                });
+                $(".toast_footer").css("display", "none")
             }
         });
+        
     }
 }

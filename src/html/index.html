@@ -10,108 +10,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
-
-        <div class="projects_frame" id="tab_projects_frame">
-            <div class="project_frame">
-                <div class="project_content_frame">
-                    <div class="project_description" id="project_description_onair">
-                        <!-- populated by handlebars template -->
-                    </div>
-                    <div class="project_illustration k7_frame">
-                        <img class="wip_img" id="wip_img" alt="Image work in progress">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project_frame project_martingale">
-                <div class="project_content_frame ">
-                    <div class="project_description" id="project_description_martigale">
-                        <!-- populated by handlebars template -->
-                    </div>
-                    <div class="project_illustration">
-                        <div class="vitals_books_container">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project_frame">
-                <div class="project_content_frame">
-                    <div class="project_description" id="project_description_web">
-                        <!-- populated by handlebars template -->
-                    </div>
-                    <div class="project_illustration tizio_frame">
-                        <img class="tizio_img" id="tizio_off" alt="Tizio off">
-                        <img class="tizio_img" id="tizio_on" alt="Tizio on">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="view_port_frame icons_frame" id="tab_icons_frame">
-            <div class="icons_content">
-                <div class="icons_scroll_frame">
-                    <div class="icons_group">
-                        <div class="icons_group_title">Monitoring</div>
-                        <div class="icons_group_list" id="icons_group_monitoring">
-                            <!-- populated by handlebars template -->
-                        </div>
-                        <div class="icons_group_title">Old formats</div>
-                        <div class="icons_group_list" id="icons_group_formats">
-                            <!-- populated by handlebars template -->
-                        </div>
-                    </div>
-                </div>
-                <div class="icons_spacer"></div>
-                <div class="icons_preview_frame">
-                    <svg class="icons_preview_image" width="300" height="300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2C2.44772 2 2 2.44772 2 3V20C2 21.1046 2.89543 22 4 22H21C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20H5C4.44772 20 4 19.5523 4 19V3C4 2.44772 3.55228 2 3 2ZM18.7541 8.17138C19.5693 6.82764 20.3139 5.60033 21 5V18C21 18.5523 20.5523 19 20 19H6C5.44772 19 5 18.5523 5 18V14.2177C5 14.0743 5.03022 13.9323 5.09243 13.803C6.25854 11.3794 8.40028 9.21597 10.7143 12C14.0191 15.9761 16.627 11.6774 18.7541 8.17138Z"/>
-                    </svg>
-                    <div class="icons_preview_name">Icon_name_24px</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bits_frame" id="tab_bits_frame">
-            <div class="bits_content">
-                <div class="bits_flex_wrapper">
-                    <!-- populated by handlebars template -->
-                </div>  
-            </div>
-        </div>    
-        <div class="footer_frame unselectable">
-            <div class="toast_footer" id="toast_footer">
-                <span>Your Browser does not support Sharing, URL copied to clipboard</span>
-            </div>
-            <div class="footer_btn_frame">
-                <div class="footer_btn_flex">
-                    <!-- populated by handlebars template -->
-                </div>
-            </div>
-            <div class="footer_notes_frames">
-                <div class="footer_notes_flex">
-                    <div class="footer_designer">
-                        <div>
-                            Designed / Built  by:
-                        </div>
-                        <div>
-                            Gualtiero Mottola
-                        </div>
-                    </div>
-                    <div class="footer_made_in">
-                        <div>
-                            Made in Paris-FR
-                        </div>
-                        <div>
-                            WIP
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="screen_space">
-            <div class="site_bar">
+        <div class="side_menu_frame unselectable">
+            <div class="side_menu">
                 <div  class="site_bar_logo_frame"> 
                     <svg width="33" height="33" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" class="">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M26.125 5.5C26.125 4.74061 26.7406 4.125 27.5 4.125C28.2594 4.125 28.875 4.74061 28.875 5.5C28.875 6.25939 28.2594 6.875 27.5 6.875C26.7406 6.875 26.125 6.25939 26.125 5.5ZM4.125 11C4.125 10.2406 4.74061 9.625 5.5 9.625C6.25939 9.625 6.875 10.2406 6.875 11C6.875 11.7594 6.25939 12.375 5.5 12.375C4.74061 12.375 4.125 11.7594 4.125 11ZM5.5 15.125C4.74061 15.125 4.125 15.7406 4.125 16.5C4.125 17.2594 4.74061 17.875 5.5 17.875C6.25939 17.875 6.875 17.2594 6.875 16.5C6.875 15.7406 6.25939 15.125 5.5 15.125ZM20.625 22C20.625 21.2406 21.2406 20.625 22 20.625C22.7594 20.625 23.375 21.2406 23.375 22C23.375 22.7594 22.7594 23.375 22 23.375C21.2406 23.375 20.625 22.7594 20.625 22ZM27.5 20.625C26.7406 20.625 26.125 21.2406 26.125 22C26.125 22.7594 26.7406 23.375 27.5 23.375C28.2594 23.375 28.875 22.7594 28.875 22C28.875 21.2406 28.2594 20.625 27.5 20.625ZM4.125 22C4.125 21.2406 4.74061 20.625 5.5 20.625C6.25939 20.625 6.875 21.2406 6.875 22C6.875 22.7594 6.25939 23.375 5.5 23.375C4.74061 23.375 4.125 22.7594 4.125 22ZM22 26.125C21.2406 26.125 20.625 26.7406 20.625 27.5C20.625 28.2594 21.2406 28.875 22 28.875C22.7594 28.875 23.375 28.2594 23.375 27.5C23.375 26.7406 22.7594 26.125 22 26.125ZM26.125 27.5C26.125 26.7406 26.7406 26.125 27.5 26.125C28.2594 26.125 28.875 26.7406 28.875 27.5C28.875 28.2594 28.2594 28.875 27.5 28.875C26.7406 28.875 26.125 28.2594 26.125 27.5ZM11 9.625C10.2406 9.625 9.625 10.2406 9.625 11C9.625 11.7594 10.2406 12.375 11 12.375C11.7594 12.375 12.375 11.7594 12.375 11C12.375 10.2406 11.7594 9.625 11 9.625ZM4.125 5.5C4.125 4.74061 4.74061 4.125 5.5 4.125H11C11.7594 4.125 12.375 4.74061 12.375 5.5C12.375 6.25939 11.7594 6.875 11 6.875H5.5C4.74061 6.875 4.125 6.25939 4.125 5.5ZM16.5 9.625C15.7406 9.625 15.125 10.2406 15.125 11C15.125 11.7594 15.7406 12.375 16.5 12.375H22C22.7594 12.375 23.375 11.7594 23.375 11C23.375 10.2406 22.7594 9.625 22 9.625H16.5ZM9.625 16.5C9.625 15.7406 10.2406 15.125 11 15.125H16.5C17.2594 15.125 17.875 15.7406 17.875 16.5C17.875 17.2594 17.2594 17.875 16.5 17.875H11C10.2406 17.875 9.625 17.2594 9.625 16.5ZM11 20.625C10.2406 20.625 9.625 21.2406 9.625 22C9.625 22.7594 10.2406 23.375 11 23.375H16.5C17.2594 23.375 17.875 22.7594 17.875 22C17.875 21.2406 17.2594 20.625 16.5 20.625H11ZM4.125 27.5C4.125 26.7406 4.74061 26.125 5.5 26.125H11C11.7594 26.125 12.375 26.7406 12.375 27.5C12.375 28.2594 11.7594 28.875 11 28.875H5.5C4.74061 28.875 4.125 28.2594 4.125 27.5ZM16.5 4.125C15.7406 4.125 15.125 4.74061 15.125 5.5C15.125 6.25939 15.7406 6.875 16.5 6.875H22C22.7594 6.875 23.375 6.25939 23.375 5.5C23.375 4.74061 22.7594 4.125 22 4.125H16.5Z"/>
@@ -120,7 +20,164 @@
                         Gualti
                     </div>
                 </div>
+                <div class="side_menu_category">
+                    <div class="side_menu_separator"></div>
+                    <span>Navigation</span>
+                </div>
+                
+                <div class="side_menu_tab_selector">
+                    <div class="side_menu_tab_item">
+                        <span>Works</span>
+                    </div>
+                    <div class="side_menu_tab_item">
+                        <span>Icons</span>
+                    </div>
+                    <div class="side_menu_tab_item">
+                        <span>Bits</span>
+                    </div>
+                </div>
+                <div class="side_menu_category">
+                    <div class="side_menu_separator"></div>
+                    <span>Themes</span>
+                </div>                    
+                <div class="side_menu_themes">
+                     <!-- populated by handlebars template -->
+                </div>
+                <div class="side_menu_category">
+                    <div class="side_menu_separator"></div>
+                    <span>Actions</span>
+                </div>    
+                <div class="side_menu_action_btn_frame">
+                    <div class="side_menu_action_btn" id="side_menu_btn_resume">
+                        Resume
+                    </div>
+                    <div class="side_menu_action_btn" id="side_menu_btn_contact">
+                        Contact
+                    </div>
+                    <div class="side_menu_action_btn" id="side_menu_btn_share">
+                        Share
+                    </div>
+                </div>
+                <div class="side_menu_category">
+                    <div class="side_menu_separator"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main_scroll_view">
+            <div class="tab_container">
+                <div class="projects_frame" id="tab_projects_frame">
+                    <div class="project_frame">
+                        <div class="project_content_frame">
+                            <div class="project_description" id="project_description_onair">
+                                <!-- populated by handlebars template -->
+                            </div>
+                            <div class="project_illustration k7_frame">
+                                <img class="wip_img" id="wip_img" alt="Image work in progress">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="project_frame project_martingale">
+                        <div class="project_content_frame ">
+                            <div class="project_description" id="project_description_martigale">
+                                <!-- populated by handlebars template -->
+                            </div>
+                            <div class="project_illustration">
+                                <div class="vitals_books_container">
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project_frame">
+                        <div class="project_content_frame">
+                            <div class="project_description" id="project_description_web">
+                                <!-- populated by handlebars template -->
+                            </div>
+                            <div class="project_illustration tizio_frame">
+                                <img class="tizio_img" id="tizio_off" alt="Tizio off">
+                                <img class="tizio_img" id="tizio_on" alt="Tizio on">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="view_port_frame icons_frame" id="tab_icons_frame">
+                    <div class="icons_content">
+                        <div class="icons_scroll_frame">
+                            <div class="icons_group">
+                                <div class="icons_group_title">Monitoring</div>
+                                <div class="icons_group_list" id="icons_group_monitoring">
+                                    <!-- populated by handlebars template -->
+                                </div>
+                                <div class="icons_group_title">Old formats</div>
+                                <div class="icons_group_list" id="icons_group_formats">
+                                    <!-- populated by handlebars template -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icons_spacer"></div>
+                        <div class="icons_preview_frame">
+                            <svg class="icons_preview_image" width="300" height="300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2C2.44772 2 2 2.44772 2 3V20C2 21.1046 2.89543 22 4 22H21C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20H5C4.44772 20 4 19.5523 4 19V3C4 2.44772 3.55228 2 3 2ZM18.7541 8.17138C19.5693 6.82764 20.3139 5.60033 21 5V18C21 18.5523 20.5523 19 20 19H6C5.44772 19 5 18.5523 5 18V14.2177C5 14.0743 5.03022 13.9323 5.09243 13.803C6.25854 11.3794 8.40028 9.21597 10.7143 12C14.0191 15.9761 16.627 11.6774 18.7541 8.17138Z"/>
+                            </svg>
+                            <div class="icons_preview_name">Icon_name_24px</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="bits_frame" id="tab_bits_frame">
+                    <div class="bits_content">
+                        <div class="bits_flex_wrapper">
+                            <!-- populated by handlebars template -->
+                        </div>  
+                    </div>
+                </div>    
+            </div>
+        
 
+            <div class="footer_frame unselectable">
+                <div class="footer_btn_frame">
+                    <div class="footer_btn_flex">
+                        <!-- populated by handlebars template -->
+                    </div>
+                </div>
+                <div class="footer_notes_frames">
+                    <div class="footer_notes_flex">
+                        <div class="footer_designer">
+                            <div>
+                                Designed / Built  by:
+                            </div>
+                            <div>
+                                Gualtiero Mottola
+                            </div>
+                        </div>
+                        <div class="footer_made_in">
+                            <div>
+                                Made in Paris-FR
+                            </div>
+                            <div>
+                                WIP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="screen_space">
+            <div class="toast_footer" id="toast_footer">
+                <span>Your browser does not support sharing, URL copied to clipboard</span>
+            </div>
+            <div class="site_bar">
+                <div class="site_bar_logo_frame"> 
+                    <svg width="33" height="33" viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" class="">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.125 5.5C26.125 4.74061 26.7406 4.125 27.5 4.125C28.2594 4.125 28.875 4.74061 28.875 5.5C28.875 6.25939 28.2594 6.875 27.5 6.875C26.7406 6.875 26.125 6.25939 26.125 5.5ZM4.125 11C4.125 10.2406 4.74061 9.625 5.5 9.625C6.25939 9.625 6.875 10.2406 6.875 11C6.875 11.7594 6.25939 12.375 5.5 12.375C4.74061 12.375 4.125 11.7594 4.125 11ZM5.5 15.125C4.74061 15.125 4.125 15.7406 4.125 16.5C4.125 17.2594 4.74061 17.875 5.5 17.875C6.25939 17.875 6.875 17.2594 6.875 16.5C6.875 15.7406 6.25939 15.125 5.5 15.125ZM20.625 22C20.625 21.2406 21.2406 20.625 22 20.625C22.7594 20.625 23.375 21.2406 23.375 22C23.375 22.7594 22.7594 23.375 22 23.375C21.2406 23.375 20.625 22.7594 20.625 22ZM27.5 20.625C26.7406 20.625 26.125 21.2406 26.125 22C26.125 22.7594 26.7406 23.375 27.5 23.375C28.2594 23.375 28.875 22.7594 28.875 22C28.875 21.2406 28.2594 20.625 27.5 20.625ZM4.125 22C4.125 21.2406 4.74061 20.625 5.5 20.625C6.25939 20.625 6.875 21.2406 6.875 22C6.875 22.7594 6.25939 23.375 5.5 23.375C4.74061 23.375 4.125 22.7594 4.125 22ZM22 26.125C21.2406 26.125 20.625 26.7406 20.625 27.5C20.625 28.2594 21.2406 28.875 22 28.875C22.7594 28.875 23.375 28.2594 23.375 27.5C23.375 26.7406 22.7594 26.125 22 26.125ZM26.125 27.5C26.125 26.7406 26.7406 26.125 27.5 26.125C28.2594 26.125 28.875 26.7406 28.875 27.5C28.875 28.2594 28.2594 28.875 27.5 28.875C26.7406 28.875 26.125 28.2594 26.125 27.5ZM11 9.625C10.2406 9.625 9.625 10.2406 9.625 11C9.625 11.7594 10.2406 12.375 11 12.375C11.7594 12.375 12.375 11.7594 12.375 11C12.375 10.2406 11.7594 9.625 11 9.625ZM4.125 5.5C4.125 4.74061 4.74061 4.125 5.5 4.125H11C11.7594 4.125 12.375 4.74061 12.375 5.5C12.375 6.25939 11.7594 6.875 11 6.875H5.5C4.74061 6.875 4.125 6.25939 4.125 5.5ZM16.5 9.625C15.7406 9.625 15.125 10.2406 15.125 11C15.125 11.7594 15.7406 12.375 16.5 12.375H22C22.7594 12.375 23.375 11.7594 23.375 11C23.375 10.2406 22.7594 9.625 22 9.625H16.5ZM9.625 16.5C9.625 15.7406 10.2406 15.125 11 15.125H16.5C17.2594 15.125 17.875 15.7406 17.875 16.5C17.875 17.2594 17.2594 17.875 16.5 17.875H11C10.2406 17.875 9.625 17.2594 9.625 16.5ZM11 20.625C10.2406 20.625 9.625 21.2406 9.625 22C9.625 22.7594 10.2406 23.375 11 23.375H16.5C17.2594 23.375 17.875 22.7594 17.875 22C17.875 21.2406 17.2594 20.625 16.5 20.625H11ZM4.125 27.5C4.125 26.7406 4.74061 26.125 5.5 26.125H11C11.7594 26.125 12.375 26.7406 12.375 27.5C12.375 28.2594 11.7594 28.875 11 28.875H5.5C4.74061 28.875 4.125 28.2594 4.125 27.5ZM16.5 4.125C15.7406 4.125 15.125 4.74061 15.125 5.5C15.125 6.25939 15.7406 6.875 16.5 6.875H22C22.7594 6.875 23.375 6.25939 23.375 5.5C23.375 4.74061 22.7594 4.125 22 4.125H16.5Z"/>
+                    </svg>
+                    <div>
+                        Gualti
+                    </div>
+                </div>
                 <div class="tabs_frame">
                     <!-- populated by handlebars template -->
                 </div>

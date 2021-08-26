@@ -67,6 +67,7 @@
 }
 
 .title_btn_works_halo{
+    display: none;
     position: absolute;
     width: 120px;
     height: 120px;

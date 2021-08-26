@@ -5,6 +5,7 @@ export default class theme_switcher{
 
     constructor(){
         var themes_data = require('../data/themes.json');
+        this.template = require("../templates/themes.handlebars");
         this.themes = themes_data['themes']
 
         anime({
@@ -50,16 +51,17 @@ export default class theme_switcher{
     }
 
     generateThemeButtons(){
-        $( ".theme_widget" ).remove();
+        $( ".theme_widget_frame" ).remove();
         var currentTheme = getComputedStyle(document.documentElement).getPropertyValue('--theme');
         for (let i = 0, len = this.themes.length; i < len; i++){
             if(this.themes[i]['theme'] != currentTheme){
-                var buttonsToAdd = "<div style=\"background-color:" + this.themes[i]['background'] + ";\"class=\"theme_widget\" id=\""+ this.themes[i]['theme'] +"\"> <div  style=\"background-color:"+  this.themes[i]['accent'] +"\";></div> </div>"
+                var buttonsToAdd = this.template(this.themes[i])
                 $( buttonsToAdd ).insertBefore( ".theme_close_btn" );
                 $(".site_bar_themes").append(buttonsToAdd);
+                $(".side_menu_themes").append(buttonsToAdd);
             }
         }
-        $('.theme_widget').on('click',(e) => {
+        $('.theme_widget_frame').on('click',(e) => {
             var themeName = e.currentTarget.id
             this.setTheme(themeName);
         });
