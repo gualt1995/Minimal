@@ -1,32 +1,17 @@
-.cv_frame{
-    position: fixed;
+.resume_frame{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: 'rgba(0, 0, 0, 0)';
-    z-index: 2;
-    transition: background-color 200ms;
+    width: 100%;
 }
 
 .cv_content{
-    width: 80vw;
+    width: 90%;
+    max-width: 1150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 755px;
-    height: 100%;
-}
-
-.cv_title{
-    font-size: 2.667em;
-    font-weight: bold;
-    letter-spacing: 0.02em;
-    padding-bottom: 10px;
 }
 
 .cv_timeline{
@@ -35,7 +20,7 @@
 
 .exp_frame{
     width: 100%;
-    color: var(--type);
+    color: var(--text);
     display: flex;
     flex-direction: row;
 }
@@ -70,7 +55,7 @@
 .exp_timeline_head{
     width: 2px;
     height: 4px;
-    background: var(--type);
+    background: var(--text);
 }
 
 .exp_frame:first-child > .exp_timeline_frame > .exp_timeline_head{
@@ -78,20 +63,20 @@
 }
 
 .exp_frame:last-child > .exp_timeline_frame > .exp_timeline_body{
-    background: linear-gradient(180deg, var(--type), rgba(255,0,0,0));
+    background: linear-gradient(180deg, var(--text), rgba(255,0,0,0));
 }
 
 .exp_timeline_dot{
     width: 10px;
     height: 10px;    
     background: var(--accent);
-    border: 2px solid var(--type);
+    border: 2px solid var(--text);
     border-radius: 100%;
 }
 
 .exp_timeline_body{
     width: 2px;
-    background: var(--type);
+    background: var(--text);
     flex-grow: 1;
 }
 

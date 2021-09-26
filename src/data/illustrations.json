@@ -1,53 +1,53 @@
 { 
-    "bits" : 
+    "illustrations" : 
     [
         { 
             "title" : "Gaming Buttons", 
             "url" : "https://www.figma.com/community/file/985862968836916854/Racing-Game-buttons",
             "description" : "Mini UI kit focused on Gaming",
-            "bits_img_class_name" : "img_storm",
+            "illustrations_img_class_name" : "img_storm",
             "type": "Buttons Kit"
         },
         { 
             "title" : "MUGGE", 
             "url" : "https://www.figma.com/community/file/968632724189976512/Mugge",
             "description" : "Album art and LP.",
-            "bits_img_class_name" : "img_mugge",
+            "illustrations_img_class_name" : "img_mugge",
             "type": "Illustration"
         },
         {
             "title" : "TYKHO.3", 
             "url" : "https://www.figma.com/community/file/968550486589020045/TYKHO.3",
             "description" : "Lexon's Radio as SVG.",
-            "bits_img_class_name" : "img_lexon",
+            "illustrations_img_class_name" : "img_lexon",
             "type": "Illustration"
         },
         {
             "title" : "SAAB", 
             "url" : "https://www.figma.com/community/file/972240072451635265/Saab-900-turbo",
             "description" : "900 turbo, Straight from 1985.",
-            "bits_img_class_name" : "img_saab",
+            "illustrations_img_class_name" : "img_saab",
             "type": "Illustration"
         },
         {
             "title" : "A reachable browser", 
             "url" : "https://www.figma.com/community/file/986711141586791297/Chromium-Mobile",
             "description" : "Different twist on the search bar.",
-            "bits_img_class_name" : "img_browser",
+            "illustrations_img_class_name" : "img_browser",
             "type": "UI / Exploration"
         },
         {
             "title" : "Logs Monitoring", 
             "url" : "https://www.figma.com/file/ybiUWRbjZnvfRVD2TipraV/Mobile-App-logs?node-id=754%3A1871",
             "description" : "A Logs Monitoring App on Mobile.",
-            "bits_img_class_name" : "img_logs",
+            "illustrations_img_class_name" : "img_logs",
             "type": "UI / Mobile"
         },
         {
             "title" : "Almost Home", 
             "url" : "https://www.figma.com/community/file/992084203052226929/Almost-Home",
             "description" : "Crew entering the atmosphere ",
-            "bits_img_class_name" : "img_space",
+            "illustrations_img_class_name" : "img_space",
             "type": "Illustration"
         }
     ]

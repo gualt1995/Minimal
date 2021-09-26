@@ -3,6 +3,11 @@ import anime from 'animejs/lib/anime.es.js';
 
 export default class contactCard{
     constructor(){
+
+        var template = require("../templates/contact_card.handlebars");
+        var html = template()
+        $('.screen_space').append(html);
+
         $( "#contact_card_frame" ).addClass( "hidden" )
 
         anime({

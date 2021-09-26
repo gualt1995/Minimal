@@ -1,21 +1,37 @@
-{{#each experiences}}
-    <div class="exp_frame">
-        <div class="exp_date_frame_desktop">
-            <div class="exp_date_desktop"> {{start_date}}</div>
-            <div class="exp_date_duration_desktop">{{duration}}</div>
-        </div>
-        <div class="exp_timeline_frame">
-            <div class="exp_timeline_head"></div>
-            <div class="exp_timeline_dot"></div>
-            <div class="exp_timeline_body"></div>
-        </div>
-        <div class="exp_content_frame">
-            <div class="exp_title_frame">
-                <div class="exp_company">{{company}}</div>
-                <div class="exp_job_title">{{job_title}}</div>
-                <div class="exp_date_mobile">{{start_date}} - {{duration}}</div>
+<div class="cv_content">
+    <div class="cv_timeline">
+        {{#each experiences}}
+            <div class="exp_frame">
+                <div class="exp_date_frame_desktop">
+                    <div class="exp_date_desktop"> {{start_date}}</div>
+                    <div class="exp_date_duration_desktop">{{duration}}</div>
+                </div>
+                <div class="exp_timeline_frame">
+                    <div class="exp_timeline_head"></div>
+                    <div class="exp_timeline_dot"></div>
+                    <div class="exp_timeline_body"></div>
+                </div>
+                <div class="exp_content_frame">
+                    <div class="exp_title_frame">
+                        <div class="exp_company">{{company}}</div>
+                        <div class="exp_job_title">{{job_title}}</div>
+                        <div class="exp_date_mobile">{{start_date}} - {{duration}}</div>
+                    </div>
+                    <div class="exp_body">{{{description}}}</div>
+                </div>    
             </div>
-            <div class="exp_body">{{{description}}}</div>
-        </div>    
+        {{/each}}
     </div>
-{{/each}}
+    <div class="cv_btn_frame unselectable" id="cv_btn_frame">
+        <div class="icon_btn icon_btn_close" id="icon_btn_cv_close">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" alt="close" id="icon_btn_cv_close_img">
+                <path d="M18.3 5.70999C18.1131 5.52274 17.8595 5.41751 17.595 5.41751C17.3305 5.41751 17.0768 5.52274 16.89 5.70999L12 10.59L7.10997 5.69999C6.92314 5.51274 6.66949 5.40751 6.40497 5.40751C6.14045 5.40751 5.8868 5.51274 5.69997 5.69999C5.30997 6.08999 5.30997 6.71999 5.69997 7.10999L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.10999C18.68 6.72999 18.68 6.08999 18.3 5.70999Z"/>
+            </svg>   
+        </div>
+        <a class="icon_btn" id="icon_btn_download" href="./cv.pdf"  download="Gualti.pdf" > 
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon_btn_download_img">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 7.5L13.25 13.25V3H10.75V13.25L5 7.5V11L12 18L19 11V7.5ZM20 21V19H4V21H20Z"/>
+            </svg>                                   
+        </a>
+    </div>
+</div>

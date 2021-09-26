@@ -1,15 +1,49 @@
 :root{
     /* Color styles */
-    --theme:night;
-    --background:#000000;
-    --type:#ffffff;
+    --theme:light;
+
+    --background:rgb(255, 255, 255);
+    --background_secondary:rgb(245, 245, 245);
+    --background_tertiary:rgb(223, 223, 223);
+    --background_faded: rgba(255, 255, 255, 0.533);
+
+    --color_interaction:rgb(169, 209, 255);
+    --border_color:rgb(161, 161, 161);
+
+    --text:rgb(0, 0, 0);
+    --text_secondary:rgba(0, 0, 0, 0.486);
+    --text_tertiary:rgba(0, 0, 0, 0.171);
+    --text_interaction:rgb(23, 0, 156);
+
+    --border_raduis_small: 6px;
+    --border_raduis_medium: 12px;
+    --border_raduis_large: 18px;
+
+    --shadow_surface: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    --shadow_surface_inverted: 0px 0px 6px rgba(0, 0, 0, 0.25);
+
+    --border_surface_small: solid 1px var(--border_color);
+    --border_surface_small_selected: solid 1px var(--text_interaction);
+    --border_surface_large: solid 1px var(--border_color);
+
+    --background_image_pattern: radial-gradient(var(--background_tertiary) 1px, var(--background) 1px);
+    --background-size_pattern: 8px 8px;
+
     --accent:#B90000;
-    --hover:#FFCDCD;
-    --selected:#b46161;
+    --negative:rgb(255, 0, 0);
+    --selected:#b7c2fd;
+
+    --spacing_xxs : 6px;
+    --spacing_xs : 8px;
+    --spacing_s : 12px;
+    --spacing_m : 20px;
+    --spacing_l : 24px;
+    --spacing_xl : 32px;
+    --spacing_xxl : 48px;
 
     --tag_border:1px solid var(--accent);
     --tag_corners:6px;
-    --nav_bar_background: radial-gradient(#444F 1px, #0009 1px);
+    --nav_bar_background: radial-gradient(var(--background_tertiary) 1px, var(--background) 1px);
 
     --btn_link_border: 0;
     --btn_link_border_bottom:1px solid var(--type);
@@ -18,9 +52,9 @@
     --btn_link_background_image: "0";
     --btn_link_background_size: "0";
 
-    --bits_card_corners: 0px 6px 6px 6px;
-    --bits_card_border: 1px solid var(--type);
-    --bits_strip_corners: 6px 6px 0px 0px;
+    --illustrations_card_corners: 0px 6px 6px 6px;
+    --illustrations_card_border: 1px solid var(--type);
+    --illustrations_strip_corners: 6px 6px 0px 0px;
 
     --footer_border: 1px solid var(--accent);
     --footer_background: var(--background);
@@ -39,7 +73,7 @@ html{
     justify-content: center;
     scroll-behavior: smooth;
     font-size: 18px;
-    color: var(--type);
+    color: var(--text);
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
 }
@@ -47,20 +81,15 @@ html{
 body{
     margin: 0px;
     width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     opacity: 1;
     background-color: var(--background);
-    overflow: hidden;
 }
 
 .main_scroll_view{
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    overflow: auto;
-    height: 100%;
 }
 
 .tab_container{
@@ -69,38 +98,9 @@ body{
     flex-direction: row;
 }
 
-a{
-    text-decoration: none;
-}
-
 .view_port_frame{
     width: 100vw;
     height: 100vh;
-}
-
-.dot{
-    color: var(--accent);
-}
-
-.icon_btn{
-    height: 52px;
-    width: 52px;
-    border: 2px solid var(--type);
-    background-color: var(--background);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: auto;
-    cursor: pointer;
-}
-
-.icon_btn > svg{
-    fill: var(--type)
-}
-
-.icon_btn_close > svg{
-    fill: var(--accent)
 }
 
 .unselectable{
@@ -118,8 +118,60 @@ a{
     background: var(--selected); /* Gecko Browsers */
 }
 
+.text_light{
+    font-weight: 300;
+}
 
-@media screen and (max-width: 450px) {
+.text_regular{
+    font-weight: 400;
+}
+
+.text_medium_spaced_upper{
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.text_display_small_spaced{
+    font-weight: 500;
+    font-size: 1.333em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.text_display_small{
+    font-weight: bold;
+    font-size: 1.333em;
+    text-transform: uppercase;
+}
+
+.site_bar_spacer{
+    width: 100%;
+    min-height: 100px;
+    padding-bottom: 10px;
+}
+
+.toast{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: -100px;
+    left: 0%;
+    width: 100%;
+    z-index: 10;
+}
+
+.toast_container{
+    padding: 10px;
+    border-radius: var(--border_raduis_small);
+    background: var(--text);
+    color: var(--background);
+    border: 1px solid var(--background_tertiary);
+}
+
+
+@media screen and (max-width: 768px) {
     /* when the viewport is 450px or smaller */
     html{
         font-size: 16px;

@@ -1,49 +1,77 @@
-[ 
-    { 
-        "title" : "ON AIR", 
-        "id" : "link_to_on_air",
-        "subtitle" : "Tangible music",
-        "body" : "A music platform where user own individual tracks, tracks are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc, each track is assigned an non-fungible token (NFT) to ensure it's authenticity. The quality of the audio may depend on the chosen format. Tracks can be used to create mixtapes, these can be lent/gifted to other users, or even exported to their corresponding physical format in which case the Mixtape becomes unavailable in the app.",
-        "tags" : [
-            "Skeuomorphism",
-            "Prototyping"
-        ],
-        "links": [
-            { "url": "https://www.mottola.fr/pages/index.html", "name": "Web Prototype", "icon": "fab fa-js-square"},
-            { "url": "https://www.figma.com/community/file/999269207725738260/On-Air", "name": "Designed in Figma", "icon": "fa-figma"}
-        ]
-    },
-    { 
-        "title" : "Martingale", 
-        "id" : "link_to_martingale",
-        "subtitle" : "Mobile App",
-        "body" : "La martingale is the companion App to a set of worksheets desgined to help metidical student Pass the French ECNi exam. The app allows flexible access to the Knowledge base, both on Android and iOS, thanks to unlock tokens printed in each copy of the book. Feel free to check it out on App stores !",
-        "tags" : [
-            "Mobile",
-            "Java",
-            "Swift"
-        ],
-        "links": [
-            { "url": "https://apps.apple.com/fr/app/la-martingale/id1460836735", "name": "App Store", "icon": "fa-apple"},
-            { "url": "https://play.google.com/store/apps/details?id=com.agency55.laMartingale&hl=en&gl=US", "name": "Play Store", "icon": "fa-google-play"}
-        ]
-    },
-    { 
-        "title" : "[ This ]", 
-        "id" : "link_to_tizio",
-        "subtitle" : "WEB DEV",
-        "body" : "Build with the classic trio, HTML, CSS and Js, partly generated with Handlebars and animated with anime.js, this is my storefront to the world ! Feel free to check out the code on github, and the prototypes in figma, mostly used to make sure that this page would look good on all devices; no matter their body shape…",
-        "tags" : [
-            "Frontend",
-            "Web",
-            "anime.js"
-        ],
-        "links": [
-            { "url": "https://github.com/gualt1995/Minimal", "name": "Code on Github", "icon": "fa-github"},
-            { "url": "https://www.figma.com/file/eOlA7GPhKIEvAMr9xMryEE/Minimalist-version?node-id=302%3A426", "name": "Designed in Figma", "icon": "fa-figma"}
-        ]
-    }
-]
-
+{
+    "project" : 
+    [ 
+        { 
+            "title" : "ON AIR", 
+            "id" : "link_to_on_air",
+            "subtitle" : "Tangible music",
+            "body" : "A music platform where user own individual tracks, tracks are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc, each track is assigned an non-fungible token (NFT) to ensure it's authenticity. The quality of the audio may depend on the chosen format. Tracks can be used to create mixtapes, these can be lent/gifted to other users, or even exported to their corresponding physical fromats.",
+            "tags" : [
+                "Skeuomorphism",
+                "Prototyping"
+            ],
+            "links": [
+                { "url": "https://www.mottola.fr/pages/index.html", "name": "Casette animation↗"},
+                { "url": "https://www.figma.com/community/file/999269207725738260/On-Air", "name": "Designed in Figma↗"}
+            ]
+        },
+        { 
+            "title" : "Chrome Mobile", 
+            "id" : "link_to_chromium",
+            "subtitle" : "Case Study",
+            "body" : "Experimenting with a few components for a hypothetical new fork of the chromium browser on mobile, mainly focused on improving reachability.",
+            "tags" : [
+                "Mobile",
+                "Redesign"
+            ],
+            "links": [
+                { "url": "https://www.figma.com/community/file/986711141586791297/Chromium-Mobile", "name": "Designed in Figma↗"}
+            ]
+        },
+        { 
+            "title" : "Logs App", 
+            "id" : "link_to_chromium",
+            "subtitle" : "Case Study",
+            "body" : "Experimenting with a few components for a hypothetical new fork of the chromium browser on mobile, mainly focused on improving reachability.",
+            "tags" : [
+                "Monitoring",
+                "Mobile"
+            ],
+            "links": [
+                { "url": "https://www.figma.com/community/file/986711141586791297/Chromium-Mobile", "name": "Designed in Figma↗"}
+            ]
+        },
+        { 
+            "title" : "La Martingale", 
+            "id" : "link_to_martingale",
+            "subtitle" : "Mobile App",
+            "body" : "La martingale is the companion App to a set of worksheets desgined to help medical students Pass the French ECNi exam. The app allows flexible access to the Knowledge base, both on Android and iOS, thanks to unlock tokens printed in each copy of the book. Feel free to check it out on App stores !",
+            "tags" : [
+                "Mobile",
+                "Java",
+                "Swift"
+            ],
+            "links": [
+                { "url": "https://apps.apple.com/fr/app/la-martingale/id1460836735", "name": "Apple Store↗"},
+                { "url": "https://play.google.com/store/apps/details?id=com.agency55.laMartingale&hl=en&gl=US", "name": "Google Play Store↗"}
+            ]
+        },
+        { 
+            "title" : "[ This ]", 
+            "id" : "link_to_tizio",
+            "subtitle" : "WEB DEV",
+            "body" : "Build with the classic trio, HTML, CSS and Js, partly generated with Handlebars and animated with anime.js, this is my storefront to the world ! Feel free to check out the code on github, and the prototypes in figma, mostly used to make sure that this page would look good on all devices; no matter their body shape…",
+            "tags" : [
+                "Frontend",
+                "Web",
+                "anime.js"
+            ],
+            "links": [
+                { "url": "https://github.com/gualt1995/Minimal", "name": "Code on Github↗"},
+                { "url": "https://www.figma.com/file/eOlA7GPhKIEvAMr9xMryEE/Minimalist-version?node-id=302%3A426", "name": "Designed in Figma↗"}
+            ]
+        }
+    ]
+}
 
 

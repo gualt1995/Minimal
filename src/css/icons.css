@@ -1,87 +1,138 @@
 .icons_frame{
-    width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
- 
-.icons_content{
-    width: 80%;
-    height: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction:row;
-    max-width: 1200px;
-}
-
-.icons_scroll_frame{
-    overflow: auto;
-    width: 50%;
-    height: 100%;
-    display: flex;
+    width: 100%;
 }
 
 .icons_group{
-    width: 100%;
+    width: 90%;
+    max-width: 1150px;
+    border: var(--border_surface_large);
+    background: var(--background_secondary);
+    box-shadow: var(--shadow_surface);
+    border-radius: var(--border_raduis_medium);
+    margin-bottom: var(--spacing_xxl);
     display: flex;
+    align-items: stretch;
     justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
 }
 
-.icons_group_title{
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.333em;
-    text-transform: uppercase;
+.icon_header{
+    display: grid;
+    margin: var(--spacing_m) var(--spacing_m) 0 var(--spacing_m);
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
 }
 
-.icons_group_list{
-    margin-top: 20px;
+.icon_group_title{
+    grid-column: 1;
+    margin-right: var(--spacing_xs);
+    margin-bottom: var(--spacing_xs);
+}
+
+.icon_btn_stlye_frame{
+    grid-column: 2;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
 }
 
-.icons_icon{
+.icon_btn_stlye_frame > .contained_button{
+    margin-right: var(--spacing_xs);
+}
+
+.icon_figma_link{
+    grid-column: 3;
+    justify-self: end;
+}
+
+.icon_group_list{
+    width: 100%;
+}
+
+.icon_style{
+    margin: var(--spacing_xxs) var(--spacing_m)  var(--spacing_m) var(--spacing_m);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+}
+
+.icon_display{
+    justify-self: center;
+    width: 110px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    border-radius: var(--border_raduis_medium);
+}
+
+.icon_display_selected{
+    background-color: var(--background_tertiary);
+}
+
+.icons_svg{
     fill: var(--type);
-    margin-right: 24px;
-    margin-bottom: 24px;
+    transform: scale(1.2);    
+    margin-bottom: 20px;
 }
 
 .icons_preview_frame{
-    width: 50%;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-origin: center;
+}
+
+.icons_preview_frame_active{
+    display: flex;
+    opacity: 1;
+}
+
+.icon_preview_container{
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 400px;
+    box-shadow: var(--shadow_surface);
+    background: var( --background);
+    border-radius: var( --border_raduis_large);
+    border: var( --border_surface_large);
 }
 
-.icons_preview_image{
-    width: 80%;
-    height: 60%;
-    fill: var(--type);
-}
+@media screen and (max-width: 658px) {
 
-.icons_preview_name{
-    font-weight: 500;
-}
-
-@media screen and (max-width: 650px) {
-    /* when the viewport is 650px or smaller */
-
-    .icons_content{
-        flex-direction:column-reverse;
+    .icons_group{
+        width: 100%;
+        background: none;
+        border: none;
+        box-shadow: none;
     }
 
-    .icons_preview_frame{
-        width: 100%;
+    .icon_header{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
     }
 
-    .icons_scroll_frame{
-        width: 100%;
-        display: block;
+    .icon_figma_link{
+        grid-column: 2;
+    }
+
+    .icon_btn_stlye_frame{
+        grid-column: 1;
+        grid-row: 2;
     }
 }

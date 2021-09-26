@@ -1,4 +1,4 @@
-require('../css/bits.css');
+require('../css/illustrations.css');
 import anime from 'animejs/lib/anime.es.js';
 import mugge from '../thumbnails/Mugge.png';
 import lexon from '../thumbnails/Lexon.png';
@@ -8,13 +8,13 @@ import chrome from '../thumbnails/Chrome.png';
 import space from '../thumbnails/Space.png';
 import storm from '../thumbnails/Storm.png';
 
-export default class bits{
+export default class illustrations{
     constructor(){
-        var template = require("../templates/bits.handlebars");
-        var context = require('../data/bits.json');
+        var template = require("../templates/illustrations.handlebars");
+        var context = require('../data/illustrations.json');
 
         var html = template(context)
-        $('.bits_flex_wrapper').html(html);
+        $('.illustrations_frame').html(html);
 
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);
@@ -24,7 +24,7 @@ export default class bits{
         $(".img_space").attr("src", space);
         $(".img_storm").attr("src", storm);
 
-        $( ".bits_card" ).on('mouseenter touchstart',function(e) {
+        $( ".illustrations_card" ).on('mouseenter touchstart',function(e) {
             $(this).css('z-index', 1);
             anime({
                 targets: e.currentTarget,
@@ -34,7 +34,7 @@ export default class bits{
             });
         });
 
-        $( ".bits_card" ).on('mouseleave touchmove click',function(e) {
+        $( ".illustrations_card" ).on('mouseleave touchmove click',function(e) {
             $(this).css('z-index', 0);
             anime({
                 targets: e.currentTarget,

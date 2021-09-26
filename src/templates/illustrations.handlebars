@@ -1,0 +1,25 @@
+<div class="illustrations_content">
+    <div class="illustrations_flex_wrapper">
+       {{#each illustrations}}
+            <div class="illustrations_card">
+                <div class="illustrations_strip">
+                    <span>{{type}}</span>
+                </div>
+                <div class="illustrations_card_content">
+                    <a href='{{url}}' target="_blank">
+                    <img loading="lazy" class="illustrations_card_img {{illustrations_img_class_name}}">
+                    <div class="illustrations_link_frame">
+                        <span>{{title}}</span>
+                        <svg class="illustrations_arrow" alt="Arrow_link" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.93359 5.04636C8.96953 5.0164 9.01484 5 9.06163 5H16.4892H18.9892V7.5L18.9892 14.9276C18.9892 14.9744 18.9728 15.0197 18.9428 15.0556L16.8428 17.5756C16.7231 17.7193 16.4892 17.6346 16.4892 17.4476V9.16962L6.87755 18.8794L5.10083 17.1206L14.6242 7.5H6.54163C6.35457 7.5 6.26989 7.26611 6.41359 7.14636L8.93359 5.04636Z"/>
+                        </svg>
+                    </div>
+                    <span class="illustrations_description">
+                        {{description}}
+                    </span>
+                    </a>
+                </div>
+            </div>
+        {{/each}}
+    </div>  
+</div>

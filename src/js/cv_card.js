@@ -6,8 +6,8 @@ export default class cvCard{
         var template = require("../templates/experience.handlebars");
         var context = require('../data/experiences.json');
         var html = template(context)
-        $('.cv_timeline').html(html);
-        $( "#cv_frame" ).addClass( "hidden" )
+        
+        $('.resume_frame').html(html);
         anime({
             targets: "#cv_frame",
             opacity : 0,

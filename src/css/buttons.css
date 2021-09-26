@@ -1,0 +1,70 @@
+.icon_btn{
+    height: 52px;
+    width: 52px;
+    background-color: var(--background);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+    background-position: -2px -2px;
+    background-size: 4px 4px;
+    background-image: radial-gradient(var(--text_secondary) 1px, #0000 1px);
+    box-shadow: inset 0px 0px 4px 1px var(--background);
+    transition: all 0.5s;
+}
+
+.icon_btn > svg{
+    fill: var(--text);
+    background: radial-gradient(var(--background_faded), #0000);
+    padding: var(--spacing_s);
+}
+
+.icon_btn_close > svg{
+    fill: var(--accent)
+}
+
+.text_btn{
+    cursor: pointer;
+}
+
+.contained_button{
+    padding: var(--spacing_xxs) var(--spacing_xs);
+    background: var(--background_tertiary);
+    border: var(--border_surface_small);
+    border-radius: var(--border_raduis_small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.contained_button > svg{
+    margin-right: var(--spacing_xxs);
+}
+
+.contained_button_hover{
+    background: var(--color_interaction);
+}
+
+.contained_button_selected{
+    background: var(--background_secondary);
+    border: var(--border_surface_small_selected);
+    color: var(--text_interaction);
+    fill: var(--text_interaction);
+    cursor: default;
+}
+
+.contained_button_disabled{
+    opacity: 50%;
+}
+
+a{
+    color: var(--text);
+    cursor: pointer;
+}
+
+.a_selected{
+    color: var(--text_interaction);
+}

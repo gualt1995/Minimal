@@ -39,26 +39,26 @@
     cursor: pointer;
 }
 
-.theme_widget_frame{
-    cursor: pointer;
-}
-
 .theme_widget{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: static;
-    width: 24px;
-    height: 24px;
-    border: 1px solid var(--type);
-    border-radius: 12px;
-    margin: 0px 5px;
+    width: 20px;
+    height: 80%;
+    cursor: pointer;
+    border-left: 1px solid var(--text);
+    border-right: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+    border-radius: 0 0 16px 16px;
+    margin-left: var(--spacing_s);
 }
 
 .theme_widget > * {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
+    margin-bottom: 4px;
     border-radius: 50%;
 }
 
@@ -91,5 +91,4 @@
     .theme_switcher{
         display: none;
     }
-
 }

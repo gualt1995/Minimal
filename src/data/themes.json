@@ -21,9 +21,9 @@
             "btn_link_background_image": "0",
             "btn_link_background_size": "0",
         
-            "bits_card_corners": "0px 6px 6px 6px",
-            "bits_card_border": "1px solid var(--type)",
-            "bits_strip_corners": "6px 6px 0px 0px",
+            "illustrations_card_corners": "0px 6px 6px 6px",
+            "illustrations_card_border": "1px solid var(--type)",
+            "illustrations_strip_corners": "6px 6px 0px 0px",
         
             "footer_border":"1px solid var(--accent)",
             "footer_background_size": 0,
@@ -55,9 +55,9 @@
             "btn_link_background_image": "0",
             "btn_link_background_size": "0",
         
-            "bits_card_corners": "0px 6px 6px 6px",
-            "bits_card_border": "2px solid var(--type)",
-            "bits_strip_corners": "6px 6px 0px 0px",
+            "illustrations_card_corners": "0px 6px 6px 6px",
+            "illustrations_card_border": "2px solid var(--type)",
+            "illustrations_strip_corners": "6px 6px 0px 0px",
         
             "footer_border":"2px solid var(--accent)",
             "footer_background_size": "none",
@@ -88,9 +88,9 @@
             "btn_link_color": "var(--type)",
             "btn_link_background_image": "radial-gradient(var(--accent) 1px, var(--background) 1px)",
             "btn_link_background_size": "4px 4px",
-            "bits_card_corners": "0px",
-            "bits_card_border": "3px solid var(--type)",
-            "bits_strip_corners": "0px",
+            "illustrations_card_corners": "0px",
+            "illustrations_card_border": "3px solid var(--type)",
+            "illustrations_strip_corners": "0px",
         
             "footer_border":"3px solid var(--accent)",
             "footer_background": "radial-gradient(var(--accent) 1px, var(--background) 1px)",
@@ -122,9 +122,9 @@
             "btn_link_background_image": "linear-gradient(0deg, var(--accent) 0%, var(--background) 100%)",
             "btn_link_background_size": "none",
 
-            "bits_card_corners": "0px 6px 6px 6px",
-            "bits_card_border": "2px solid var(--type)",
-            "bits_strip_corners": "6px 6px 0px 0px",
+            "illustrations_card_corners": "0px 6px 6px 6px",
+            "illustrations_card_border": "2px solid var(--type)",
+            "illustrations_strip_corners": "6px 6px 0px 0px",
         
             "footer_border":"2px solid var(--accent)",
             "footer_background_size": "none",

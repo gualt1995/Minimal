@@ -3,29 +3,30 @@ import anime from 'animejs/lib/anime.es.js';
 
 export default class navbar{
     constructor(contactCard,cvCard,footer){
-        var template = require("../templates/tabs.handlebars");
-        navbar.tabJsonData = require('../data/tabs.json');
-        var html = template(navbar.tabJsonData)
-        $('.tabs_frame').html(html);
-        $('.side_menu_tab_selector').html(html);
+        var template = require("../templates/nav_bar.handlebars");
+        var html = template()
+        $('.screen_space').append(html);
 
+
+        $('.side_menu_tab_selector').html(html);
         if(window.location.search){
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const tab = urlParams.get('tab')
-            this.hideTabsExcept(tab.replace("_frame", ""))
+            this.hideTabsExcept(tab)
 
         }else{
-            history.replaceState({tab: "tab_projects_frame"}, "tab_projects_frame", "?tab=tab_projects_frame");
-            this.hideTabsExcept("tab_projects")
+            history.replaceState({tab: "works"}, "works", "?tab=works");
+            this.hideTabsExcept("works")
         }
         var that = this;
 
-        $(".tabs_frame > *, .side_menu_tab_selector > *").on('click', function(e) {
-            var prevTab = $(document.body).find(".selected")
-            var nextTab =  $("#" + e.currentTarget.className + "_frame")
-            if(! nextTab.hasClass("selected")){
-                that.switchTabs( prevTab, nextTab, true);
+        $(".tabs_frame > div, .side_menu_tab_selector > *").on('click', function(e) {
+            var prevTabFrame = $(document.body).find(".selected")
+            console.log("." + e.currentTarget.className.replace("_tab_selector","_frame"))
+            var nextTabFrame =  $("." + e.currentTarget.className.replace("_tab_selector","_frame"))
+            if(! $(e.currentTarget).hasClass("tab_is_active")){
+                that.switchTabs( prevTabFrame, nextTabFrame, true);
             }
         });
 
@@ -39,19 +40,23 @@ export default class navbar{
             footer.share()
         })
 
-        $(".tabs_frame > *, .side_menu_tab_selector > *").on("mouseenter touchstart",(e) => {
-            var nextTab =  $("#" + e.currentTarget.className + "_frame")
-            if(! nextTab.hasClass("selected")){
-                $(e.currentTarget).css("color", "var(--hover)")
+        $(".tabs_frame > div").on("mouseenter touchstart",(e) => {
+            if(! $(e.currentTarget).hasClass("tab_is_active")){
+                $(e.currentTarget).css('text-decoration', 'underline')
             }
         })
         
-        $(".tabs_frame > *, .side_menu_tab_selector > *").on("mouseleave touchmove click",(e) =>  {
-            var nextTab =  $("#" + e.currentTarget.className + "_frame")
-            if(! nextTab.hasClass("selected")){
-                $(e.currentTarget).css("color", "")
-            }
+        $(".tabs_frame > div").on("mouseleave touchmove click",(e) =>  {
+            $(e.currentTarget).css("text-decoration", "")
         })
+
+        $( window ).on('scroll',function() {
+            if(window.scrollY < 20 ){
+                $(".site_bar").addClass("expanded_site_bar")
+            }else{
+                $(".site_bar").removeClass("expanded_site_bar")
+            }
+        });
 
         window.onpopstate = function(event) {
             if(event.state["tab"]){
@@ -65,40 +70,71 @@ export default class navbar{
     }
 
     hideTabsExcept(tabNotToHide){
-        $("#" + tabNotToHide + "_frame" ).addClass( "selected" )
-        $("."+ tabNotToHide).css("background", "var(--type)")
-        $("."+ tabNotToHide).css("color", "var(--background)")
-        navbar.tabJsonData["tab"].forEach(element => {
-            if( element["tab_id"] != tabNotToHide ){
-                $( "#" + element["tab_id"] + "_frame" ).hide()
-                $( "#" + element["tab_id"] + "_frame" ).css("opacity", "0")
+        $("." + tabNotToHide + "_frame" ).addClass( "selected" )
+        $("."+ tabNotToHide+ "_tab_selector").addClass("tab_is_active")
+
+        const tabs = ['works', 'icons','illustrations','resume']
+        tabs.forEach(item => {
+            if( item != tabNotToHide ){
+                $( "." + item + "_frame" ).hide()
+                $( "." + item + "_frame" ).css("opacity", "0")
             }
         });
     }
 
+    switchTabs(prevTabFrame, nextTabFrame, pushHistory){
+        prevTabFrame.removeClass("selected")
+        nextTabFrame.addClass("selected")
 
-    switchTabs(prevTab, nextTab, pushHistory){
-        prevTab.removeClass("selected")
-        nextTab.addClass("selected")
-       
-        var prevTabId = prevTab.attr("id")
-        var nextTabId = nextTab.attr("id") 
+        var prevTabId = prevTabFrame.attr("id")
+        var nextTabId = nextTabFrame.attr("id") 
 
         if(pushHistory){
             history.pushState({tab: nextTabId}, nextTabId, "?tab="+ nextTabId)
         }
+        var prevTabButtonClass = "." + prevTabId + "_tab_selector";
+        var nextTabButtonClass= "." + nextTabId + "_tab_selector";
 
-        var prevTabButtonClass = "." + prevTabId.replace('_frame','');
-        var nextTabButtonClass= "." + nextTabId.replace('_frame','');
-        $(nextTabButtonClass).css("background", "var(--type)")
-        $(nextTabButtonClass).css("color", "var(--background)")
-        $(prevTabButtonClass).css("background", "")
-        $(prevTabButtonClass).css("color", "var(--type)")
+        var tl = anime.timeline({
+            easing: 'easeOutCirc',
+        })
 
+        tl.add({
+            targets: nextTabButtonClass, 
+            translateY: "-100%",
+            opacity:0,
+            duration:200,
+        },0)
+
+        tl.add({
+            targets: prevTabButtonClass, 
+            translateY: 0,
+            opacity:0,
+            duration:200,
+            complete: function() {
+                $(nextTabButtonClass).addClass("tab_is_active")
+                $(prevTabButtonClass).removeClass("tab_is_active")
+            }
+        },0)
+        
+        tl.add({
+            targets: prevTabButtonClass, 
+            translateY: 0,
+            opacity:1,
+            duration:200,
+        },200)
+        tl.add({
+            targets: nextTabButtonClass, 
+            translateY: 0,
+            opacity:1,
+            duration:200,
+        },200)
+
+      
         anime({
-            targets: $( "#"+prevTabId)[0],
+            targets: "#"+prevTabId,
             opacity : 0,
-            duration: 100,
+            duration: 150,
             easing: 'linear',
             complete: function() {
                 $( "#"+prevTabId ).hide()
@@ -109,7 +145,6 @@ export default class navbar{
                     duration: 200,
                     easing: 'linear',
                 });
-
             }
         });
     }

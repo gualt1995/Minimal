@@ -2,13 +2,10 @@ require('../css/footer.css');
 import anime from 'animejs/lib/anime.es.js';
 
 export default class footer{
-    constructor(contactCard,cvCard){
-        var template = require("../templates/footer.handlebars");
-        var context = require('../data/footer.json');
-
-        var html = template(context)
-        $('.footer_btn_flex').html(html);
-
+    constructor(contactCard,cvCard){        
+        var footnote = require("../templates/footnote.handlebars");
+        var html = footnote()
+        $( ".footer_frame" ).append(html);
 
         var that = this
         $( "#footer_btn_resume" ).on('click',function() {
@@ -21,23 +18,26 @@ export default class footer{
             that.share()
         })
 
-        $( ".footer_btn" ).on("mouseenter touchstart",(e) => {
-            anime({
-                targets:e.currentTarget.getElementsByClassName('footer_btn_background')[0],
-                easing: 'easeOutExpo',
-                opacity: 1,
-                duration: 300,
-            });
+        $( "#icon_btn_to_top" ).on('click',function() {
+            window.scrollTo(0, 0);
         })
+        window.setInterval( () =>{
+            this.setCurrentParisTime()
+        }, 1000);
         
-        $( ".footer_btn" ).on("mouseleave touchmove click",(e) =>  {
-            anime({
-                targets: e.currentTarget.getElementsByClassName('footer_btn_background')[0],
-                easing: 'easeInOutQuad',
-                opacity: 0.5,
-                duration: 300,
-            });
-        })
+    }
+
+    setCurrentParisTime(){
+        let options = {
+            timeZone: 'Europe/Paris',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: false,
+          },
+          formatter = new Intl.DateTimeFormat([], options);
+        
+        $('.set_time_here').html(formatter.format(new Date()))
     }
 
     share(){
@@ -54,20 +54,17 @@ export default class footer{
     }
 
     displayToast(){
-        $(".toast_footer").css("display", "flex")
-        anime({
-            targets: ".toast_footer",
-            easing:'linear',
-            opacity: [
-                { value: 0, duration: 0},
-                { value: 1, duration: 100},
-                { value: 0, duration: 600, delay: 800 }
-            ],
+        var tl = anime.timeline();
+        tl.add({
+            targets: ".toast_container",
+            easing:'easeOutCirc',
             duration: 300,
-            complete: function() {
-                $(".toast_footer").css("display", "none")
-            }
-        });
-        
+            translateY: "150px",
+        }).add({
+            targets: ".toast_container",
+            translateY: 0,
+            easing: 'cubicBezier(.5, .05, .1, .3)',
+            duration: 200,
+        }, 1400)        
     }
 }

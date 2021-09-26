@@ -1,21 +1,29 @@
-<h1> {{title}} <span class="dot">.</span> </h1>
-<h3> {{subtitle}}  </h3>
-<p> {{body}} </p>
-<div class="project_tag_frame">
-    {{#each tags}}
-        <div class="tag"> {{this}} </div>
-    {{/each}}
-</div>
-<div class="project_links_frame">
-    {{#each links}}
-    <a href="{{url}}"target="_blank" >
-        <div class="project_link unselectable" > 
-            <i class="fab {{icon}}"></i>
-            <span> {{name}} </span>
-            <svg class="project_link_icon" alt="Arrow_right" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.93359 5.04636C8.96953 5.0164 9.01484 5 9.06163 5H16.4892H18.9892V7.5L18.9892 14.9276C18.9892 14.9744 18.9728 15.0197 18.9428 15.0556L16.8428 17.5756C16.7231 17.7193 16.4892 17.6346 16.4892 17.4476V9.16962L6.87755 18.8794L5.10083 17.1206L14.6242 7.5H6.54163C6.35457 7.5 6.26989 7.26611 6.41359 7.14636L8.93359 5.04636Z"/>
-            </svg>
+{{#each project}}
+    <div class="project_container">
+        <div class="project_image_frame">
+            
         </div>
-    </a>
-    {{/each}}
-</div>
+        <div class="project_header_container">
+            <div class="project_title_frame">
+                <span class="project_title text_display_small"> {{title}} </span>
+                <span class="project_subtitle text_light"> {{subtitle}} </span>
+            </div>
+            <div class="project_tag_frame">
+                {{#each tags}}
+                    <div class="tag"> {{this}} </div>
+                {{/each}}
+            </div>
+        </div>  
+        <div class="project_body"> {{body}} </div>
+        <div class="project_links_frame">
+            {{#each links}}
+                <div class="project_link" > 
+                    <svg class="project_link_icon" alt="Arrow_right" width="6" height="8" viewBox="0 0 6 8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.4134 0.706267L5.0034 3.29627C5.3934 3.68627 5.3934 4.31627 5.0034 4.70627L2.4134 7.29627C1.7834 7.92627 0.703398 7.47627 0.703398 6.58627L0.703398 1.40627C0.703398 0.516267 1.7834 0.0762671 2.4134 0.706267Z"/>
+                    </svg>
+                    <a href="{{url}}"target="_blank" > {{name}} </a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+{{/each}}
