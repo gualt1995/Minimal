@@ -41,30 +41,11 @@
     --spacing_xl : 32px;
     --spacing_xxl : 48px;
 
-    --tag_border:1px solid var(--accent);
-    --tag_corners:6px;
-    --nav_bar_background: radial-gradient(var(--background_tertiary) 1px, var(--background) 1px);
-
-    --btn_link_border: 0;
-    --btn_link_border_bottom:1px solid var(--type);
-    --btn_link_corners:6px;
-    --btn_link_color: var(--type);
-    --btn_link_background_image: "0";
-    --btn_link_background_size: "0";
-
     --illustrations_card_corners: 0px 6px 6px 6px;
-    --illustrations_card_border: 1px solid var(--type);
+    --illustrations_card_border: 1px solid var(--border_color);
     --illustrations_strip_corners: 6px 6px 0px 0px;
 
-    --footer_border: 1px solid var(--accent);
-    --footer_background: var(--background);
-    --footer_background_size: none;
-    --footer_border_radius: 50%;
-    --footer_box_shadow: inset 0px 0px 50px 2px var(--accent);
-
     --contact_card_border: 1px solid var(--type);
-
-    --tab_frame_border: 1px solid var(--type);
 }
 
 html{
@@ -142,7 +123,7 @@ body{
 .text_display_small{
     font-weight: bold;
     font-size: 1.333em;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .site_bar_spacer{

@@ -8,17 +8,18 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    z-index: 3;
     transition: background-color 200ms;
 }
 
 .contact_card{
+    overflow: hidden;
     width: 90vw;
     height: calc(90vw * 1.65);
     max-width: 380px;
     max-height: 630px;
-    border-radius: 6px;
-    border: var(--contact_card_border);
+    border-radius: var(--border_raduis_medium);
+    border: var(--border_surface_large);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,11 +28,11 @@
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    z-index: 3;
+    z-index: 4;
 }
 
 .contact_icon_btn_frame{
-    margin-top: 20px;
+    margin-top: var(--spacing_m);
 }
 
 .contact_head_frame{
@@ -46,7 +47,6 @@
 /* Do not use variable here, this is on a photo, it should not change with theme. */
 .contact_name{
     position: relative;
-    font-size: 1.333em;
     color: #FFF;
 }
 
@@ -61,7 +61,6 @@
     width: 100%;
     border-top: var(--contact_card_border);
     background-color: var(--background);
-    border-radius: 0px 0px 6px 6px;
 }
 
 .contact_link_frame{
@@ -72,13 +71,6 @@
     width: 80%;
     margin-top: 20px;
     text-align: center;
-}
-
-.contact_link_frame a{
-    letter-spacing: 0.12em;
-    text-decoration-line: underline;
-    color: var(--type);
-    font-weight: 300;
 }
 
 .email_container{
@@ -94,7 +86,6 @@
     margin-right: 12px;
     font-weight: bold;
     text-decoration-line: none;
-    color: var(--type);
 }
 
 .toast_contact{
@@ -107,4 +98,11 @@
     padding: 2px 5px;
     border-radius: 6px;
     background-color: var(--background);
+    border: var(--border_surface_small);
+    transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.toast_contact_hidden{
+    opacity : 0;
+    transform: translateY(-100%);
 }

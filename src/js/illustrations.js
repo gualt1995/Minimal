@@ -14,7 +14,7 @@ export default class illustrations{
         var context = require('../data/illustrations.json');
 
         var html = template(context)
-        $('.illustrations_frame').html(html);
+        $('.vector_frame').html(html);
 
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);

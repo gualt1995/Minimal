@@ -1,29 +1,45 @@
 .icon_btn{
-    height: 52px;
-    width: 52px;
-    background-color: var(--background);
+    height: var(--spacing_xxl);
+    width: var(--spacing_xxl);
+    background: var(--background_secondary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: auto;
     cursor: pointer;
-    background-position: -2px -2px;
-    background-size: 4px 4px;
-    background-image: radial-gradient(var(--text_secondary) 1px, #0000 1px);
-    box-shadow: inset 0px 0px 4px 1px var(--background);
-    transition: all 0.5s;
+    transition: all 0.4s;
+}
+
+.icon_btn::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    height: var(--spacing_xxl);
+    width: var(--spacing_xxl);
+    border: 1px solid var(--text);
+    transition: all 0.4s;
 }
 
 .icon_btn > svg{
     fill: var(--text);
-    background: radial-gradient(var(--background_faded), #0000);
     padding: var(--spacing_s);
 }
 
-.icon_btn_close > svg{
-    fill: var(--accent)
+.icon_btn_hover{
+    background: var(--text);
 }
+
+.icon_btn_hover > svg{
+    fill : var(--background);
+}
+
+.icon_btn_hover::after{
+    height: calc(var(--spacing_xxl)  - 8px);
+    width: calc(var(--spacing_xxl)  - 8px);
+    border: 1px solid var(--background);
+}
+
 
 .text_btn{
     cursor: pointer;

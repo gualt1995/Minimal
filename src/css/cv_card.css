@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 
 .cv_content{
@@ -160,6 +161,13 @@
         margin: 2px 0;
     }
 }
+
+@media screen and (min-width: 1600px) {
+    .exp_date_frame_desktop{
+        min-width: 90px;
+    }
+}
+
 
 
 

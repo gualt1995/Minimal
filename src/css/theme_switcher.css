@@ -1,18 +1,3 @@
-.theme_switcher{
-    position: fixed;
-    top: 10%;
-    right: 0%;
-    transform-origin: 100% 100%;
-    transform: rotate(-90deg);
-    padding: 4px;
-    margin-right: 2px;
-    font-style: normal;
-    font-weight: 300;
-}
-
-.theme_switcher svg{
-    fill: var(--type)
-}
 
 .theme_closed{
     cursor: pointer;
@@ -84,11 +69,4 @@
     font-weight: bold;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-}
-
-@media screen and (min-width: 650px) {
-    /* when the viewport is 650px or smaller */
-    .theme_switcher{
-        display: none;
-    }
 }

@@ -1,0 +1,17 @@
+{ 
+    "tabs" : 
+    [
+        { 
+            "name" : "works"
+        },
+        { 
+            "name" : "icons" 
+        },
+        { 
+            "name" : "vector"
+        },
+        { 
+            "name" : "resume" 
+        }
+    ]
+}

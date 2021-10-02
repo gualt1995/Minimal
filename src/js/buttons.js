@@ -3,7 +3,16 @@ import anime from 'animejs/lib/anime.es.js';
 
 export default class buttons{
     constructor(){
+
         $( ".icon_btn" ).on('mouseenter touchstart', (e) => {
+            $(e.currentTarget).addClass("icon_btn_hover")
+        })
+
+        $( ".icon_btn" ).on('mouseleave touchmove click', (e) => {
+            $(e.currentTarget).removeClass("icon_btn_hover")
+        })
+
+        $( ".icon_btn" ).on('click', (e) => {
             this.shake(e.currentTarget.id)
         })
 
@@ -11,7 +20,7 @@ export default class buttons{
             e.currentTarget.style.textDecoration="underline"
         })
 
-        $( ".text_btn" ).on('mouseleave touchmove', (e) => {
+        $( ".text_btn" ).on('mouseleave touchmove click', (e) => {
             e.currentTarget.style.textDecoration=""
         })
 
@@ -19,7 +28,7 @@ export default class buttons{
             $(e.currentTarget).addClass("contained_button_hover")
         })
 
-        $( ".contained_button" ).on('mouseleave touchmove', (e) => {
+        $( ".contained_button" ).on('mouseleave touchmove click', (e) => {
             $(e.currentTarget).removeClass("contained_button_hover")
         })
 
@@ -27,7 +36,7 @@ export default class buttons{
             $(e.currentTarget).addClass("a_selected")
         })
 
-        $( "a" ).on('mouseleave touchmove', (e) => {
+        $( "a" ).on('mouseleave touchmove click' , (e) => {
             $(e.currentTarget).removeClass("a_selected")
         })
 

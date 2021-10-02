@@ -30,7 +30,7 @@ new title_screen();
 var theCvCard = new cvCard();
 var theContactCard = new contactCard();
 var theFooter = new footer(theContactCard,theCvCard); 
-new navbar(theContactCard,theCvCard,theFooter);
+new navbar(theContactCard,theFooter);
 new illustrations();
 new icons();
 new theme();

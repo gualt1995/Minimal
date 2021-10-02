@@ -2,13 +2,11 @@ require('../css/nav_bar.css');
 import anime from 'animejs/lib/anime.es.js';
 
 export default class navbar{
-    constructor(contactCard,cvCard,footer){
+    constructor(contactCard,footer){
         var template = require("../templates/nav_bar.handlebars");
-        var html = template()
+        var data = require('../data/tabs_names.json');
+        var html = template(data)
         $('.screen_space').append(html);
-
-
-        $('.side_menu_tab_selector').html(html);
         if(window.location.search){
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
@@ -21,23 +19,37 @@ export default class navbar{
         }
         var that = this;
 
-        $(".tabs_frame > div, .side_menu_tab_selector > *").on('click', function(e) {
+        $(".tabs_frame > div, .side_menu_tab_frame > div").on('click', function(e) {
             var prevTabFrame = $(document.body).find(".selected")
-            console.log("." + e.currentTarget.className.replace("_tab_selector","_frame"))
             var nextTabFrame =  $("." + e.currentTarget.className.replace("_tab_selector","_frame"))
+            console.log("." + e.currentTarget.className.replace("_tab_selector","_frame"))
+            $(".side_menu").addClass("side_menu_hidden")
             if(! $(e.currentTarget).hasClass("tab_is_active")){
                 that.switchTabs( prevTabFrame, nextTabFrame, true);
             }
         });
 
-        $( "#side_menu_btn_resume" ).on('click',function() {
-            cvCard.ShowCv()
+        $(".side_menu_close_icon").on('click',function() {
+            $(".side_menu").addClass("side_menu_hidden");
         })
+
+        $( ".site_bar_logo_frame" ).on('click',function() {
+            $(".side_menu").toggleClass( "side_menu_hidden" );
+        })
+
         $( "#side_menu_btn_contact" ).on('click',function() {
+            $(".side_menu").addClass("side_menu_hidden")
             contactCard.ShowContact()
         })
         $( "#side_menu_btn_share" ).on('click',function() {
+            $(".side_menu").addClass("side_menu_hidden")
             footer.share()
+        })
+
+        $( ".side_menu" ).on('click',function(e) {
+            if($(e.target).hasClass("side_menu")){
+                $(".side_menu").addClass("side_menu_hidden")
+            }
         })
 
         $(".tabs_frame > div").on("mouseenter touchstart",(e) => {
@@ -51,11 +63,12 @@ export default class navbar{
         })
 
         $( window ).on('scroll',function() {
-            if(window.scrollY < 20 ){
+            if(window.scrollY < 20 && window.innerWidth > 768){
                 $(".site_bar").addClass("expanded_site_bar")
             }else{
                 $(".site_bar").removeClass("expanded_site_bar")
             }
+            $(".side_menu").addClass("side_menu_hidden");   
         });
 
         window.onpopstate = function(event) {
@@ -71,9 +84,9 @@ export default class navbar{
 
     hideTabsExcept(tabNotToHide){
         $("." + tabNotToHide + "_frame" ).addClass( "selected" )
-        $("."+ tabNotToHide+ "_tab_selector").addClass("tab_is_active")
+        $("."+ tabNotToHide + "_tab_selector").addClass("tab_is_active")
 
-        const tabs = ['works', 'icons','illustrations','resume']
+        const tabs = ['works', 'icons','vector','resume']
         tabs.forEach(item => {
             if( item != tabNotToHide ){
                 $( "." + item + "_frame" ).hide()
