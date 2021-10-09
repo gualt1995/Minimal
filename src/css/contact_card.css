@@ -84,7 +84,7 @@
 .email{
     font-size: 1.333em;
     margin-right: 12px;
-    font-weight: bold;
+    font-weight: var(--font_weight_xl);
     text-decoration-line: none;
 }
 

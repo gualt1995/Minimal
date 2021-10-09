@@ -34,13 +34,10 @@
 }
 
 .exp_date_desktop{
-    font-style: normal;
-    font-weight: 300;
     text-align: right;
 }
 
 .exp_date_duration_desktop{
-    font-weight: bold;
     text-align: right;
     text-transform: capitalize;
 }
@@ -56,7 +53,7 @@
 .exp_timeline_head{
     width: 2px;
     height: 4px;
-    background: var(--text);
+    background: var(--text_secondary);
 }
 
 .exp_frame:first-child > .exp_timeline_frame > .exp_timeline_head{
@@ -64,20 +61,20 @@
 }
 
 .exp_frame:last-child > .exp_timeline_frame > .exp_timeline_body{
-    background: linear-gradient(180deg, var(--text), rgba(255,0,0,0));
+    background: linear-gradient(180deg, var(--text_secondary), rgba(255,0,0,0));
 }
 
 .exp_timeline_dot{
     width: 10px;
     height: 10px;    
     background: var(--accent);
-    border: 2px solid var(--text);
+    border: 2px solid var(--text_secondary);
     border-radius: 100%;
 }
 
 .exp_timeline_body{
     width: 2px;
-    background: var(--text);
+    background: var(--text_secondary);
     flex-grow: 1;
 }
 
@@ -96,24 +93,18 @@
 }
 
 .exp_company{
-    font-weight: bold;
     text-transform: uppercase;
 }
 
 .exp_job_title{    
-    font-weight: 500;
+    font-weight: var(--font_weight_l);
     text-transform: capitalize;
     margin: 0 10px;
 }
 
 .exp_date_mobile{
-    font-weight: 300;
     display: none;
     white-space: pre-line;
-}
-
-.exp_body{
-    font-weight: 300;
 }
 
 .exp_body > p{
@@ -131,18 +122,26 @@
     background-size: contain;
     background-position: center;
     border-radius: 10px;
-    background-color: var(--type);
+    background-color: var(--text);
     z-index: 3;
 }
 */
 
 .cv_btn_frame{
-    margin: 6px;
+    padding: var(--spacing_m) var(--spacing_m);
+    border-radius: var(--border_raduis_medium);
+    box-shadow: var(--shadow_surface);
+    border: var(--border_surface_small);
     display: flex;
-    width: 185px;
+    max-width: 400px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: var(--spacing_l);
+}
+
+.cv_btn_frame > span{
+    margin-right: var(--spacing_m);
 }
 
 @media screen and (max-width: 700px) {

@@ -3,6 +3,7 @@
     background-image: var(--background_image_pattern);
     background-size: var(--background-size_pattern);
     box-shadow: var(--shadow_surface_inverted);
+    border-top: var(--border_surface_large);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +99,7 @@
 }
 
 .footnote_logo > svg {
-    fill: var(--type);
+    fill: var(--text);
     margin-right:  var(--spacing_xxs);
 }
 
@@ -111,7 +112,7 @@
 }
 
 .footnote_designer > *:nth-child(2) {
-    font-weight: normal;
+    font-weight: var(--font_weight_m);
     margin-left: var(--spacing_xxs);
 }
 
@@ -123,7 +124,7 @@
 }
 
 .footnote_made_in > *:nth-child(2) {
-    border: 1px solid var(--type);
+    border: 1px solid var(--text);
     margin-left: var(--spacing_xxs);
     padding: 2px;
 }

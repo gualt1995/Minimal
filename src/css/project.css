@@ -26,7 +26,8 @@
     grid-row-start: 1;
     grid-column-start: 1;
     grid-row-end: 4;
-    background: red;
+    object-fit: cover;
+    background: var(--background_tertiary);
     width: 100%;
     height: 100%;
     border-right: var(--border_surface_large);
@@ -92,7 +93,7 @@
 .project_link_icon {
     margin-right: var(--spacing_xxs);
     min-width: var(--spacing_xs);
-    fill: var(--text_secondary);
+    fill: var(--accent);
 }
 
 .project_link_url_display{
@@ -103,7 +104,8 @@
 }
 
 .tag{
-    padding: var(--spacing_xxs) var(--spacing_xs);
+    padding: var(--spacing_xxs) var(--spacing_s);
+    color: var(--text_secondary);
     margin: 0 0 0 var(--spacing_xs);
     border-radius: var(--border_raduis_small);
     background: var(--background_tertiary);

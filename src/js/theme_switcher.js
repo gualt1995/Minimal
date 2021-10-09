@@ -7,47 +7,8 @@ export default class theme_switcher{
         var themes_data = require('../data/themes.json');
         this.template = require("../templates/themes.handlebars");
         this.themes = themes_data['themes']
-
-        anime({
-            targets: '.theme_open',
-            easing: "easeOutCirc",
-            opacity : 0,
-            translateY: "100%",
-        });
-
+        this.loadThemeVars(0);
         this.generateThemeButtons();
-
-        $('.theme_closed').on('click',() => {
-            var tl = anime.timeline();
-            tl.add({
-                targets: '.theme_closed',
-                easing: "easeOutCirc",
-                opacity : 0,
-                duration: 200,
-            }).add({
-                targets: '.theme_open',
-                easing: "easeOutCirc",
-                opacity : 1,
-                translateY: 0,
-                duration: 150,
-            }).add({
-                targets: '.theme_open > *',
-                easing: 'easeInOutSine',
-                duration: 300,
-                rotate: [
-                    { value: -16, },
-                    { value: 16, },
-                    { value: 16/-2, },
-                    { value: 16/2, },
-                    { value: 0 }
-                ],
-                delay: anime.stagger(100),
-            }, '-=100')
-        });
-
-        $('#theme_close_btn').on('click',() => {
-            this.hideThemeMenu();
-        });
     }
 
     generateThemeButtons(){
@@ -61,10 +22,25 @@ export default class theme_switcher{
                 $(".side_menu_themes").append(buttonsToAdd);
             }
         }
+        $( ".theme_widget" ).on('mouseenter', (e) => {
+            console.log("test")
+            $(e.currentTarget).addClass("theme_widget_expanded")
+        })
+
+        $( ".theme_widget" ).on('mouseleave click', (e) => {
+            $(e.currentTarget).removeClass("theme_widget_expanded")
+        })    
         $('.theme_widget_frame').on('click',(e) => {
             var themeName = e.currentTarget.id
             this.setTheme(themeName);
         });
+    }
+
+    loadThemeVars(themeId){
+        let root = document.documentElement;
+        for (const [key, value] of Object.entries(this.themes[themeId])) {
+            root.style.setProperty('--'+key , this.themes[themeId][key]);
+        }
     }
 
     setTheme(themeToSet){
@@ -97,7 +73,6 @@ export default class theme_switcher{
         $('.theme_transition').css('display','flex')
         $('.theme_name_display').css('color', currentTypeColor)
 
-        let root = document.documentElement;
         for (let i = 0, len = this.themes.length; i < len; i++){
             if(themeToSet === this.themes[i]['theme']){
                 $('.theme_new_name_display').css('color', this.themes[i]['type'])
@@ -126,11 +101,7 @@ export default class theme_switcher{
                     duration: 200,
                     opacity: 0,
                     complete: () => {
-                        for (const [key, value] of Object.entries(this.themes[i])) {
-                            root.style.setProperty('--'+key , this.themes[i][key]);
-                            console.log(key,value)
-                          }
-                        this.hideThemeMenu();
+                        this.loadThemeVars(i)
                         this.generateThemeButtons();
                     }
                 }, 400)
@@ -147,21 +118,5 @@ export default class theme_switcher{
                 }, '-=400')
             }
         }
-    }
-    
-    hideThemeMenu(){
-        var tl = anime.timeline();
-        tl.add({
-            targets: '.theme_open',
-            easing: "easeOutCirc",
-            opacity : 0,
-            translateY: "100%",
-            duration: 150,
-        }).add({
-            targets: '.theme_closed',
-            easing: "easeOutCirc",
-            opacity : 1,
-            duration: 200,
-        })
     }
 }

@@ -13,15 +13,15 @@ export default class icons{
         $('.icon_group_list').each(function(){
             var icon_group_list = $(this)
             var buttons = icon_group_list.siblings( ".icon_header" ).find(".icon_btn_stlye_frame").children()
-            buttons.eq(0).addClass("contained_button_selected")
+            buttons.eq(0).addClass("icon_selector_pill_disabled")
             if(icon_group_list.children().length > 1){
                 icon_group_list.children().eq(1).hide() //hide the second icon group.
                 icon_group_list.siblings( ".icon_header" ).find(".icon_btn_stlye_frame").children().eq(2).hide()
                 buttons.on('click',function() {
-                    if( !$(this).hasClass("contained_button_selected")){
+                    if( !$(this).hasClass("icon_selector_pill_disabled")){
                         //change the button styles
-                        $(this).addClass("contained_button_selected")
-                        $(this).siblings().removeClass("contained_button_selected")
+                        $(this).addClass("icon_selector_pill_disabled")
+                        $(this).siblings().removeClass("icon_selector_pill_disabled")
                         //update the icons
                         icon_group_list.children().each(function(){
                             if($(this).is(":hidden")){
@@ -34,7 +34,7 @@ export default class icons{
                 })
             }else{
                 //hide useless button when only one icon group
-                buttons.eq(1).hide()
+                buttons.hide()
             }
         })
 
@@ -44,6 +44,14 @@ export default class icons{
 
         $( ".icon_display" ).on('mouseleave touchmove', (e) => {
             $(e.currentTarget).removeClass("icon_display_selected")
+        })
+
+        $( ".icon_selector_pill" ).on('mouseenter touchstart', (e) => {
+            $(e.currentTarget).addClass("icon_selector_pill_hover")
+        })
+
+        $( ".icon_selector_pill" ).on('mouseleave touchmove', (e) => {
+            $(e.currentTarget).removeClass("icon_selector_pill_hover")
         })
 
         $( ".icon_display" ).on("click",(e) => {

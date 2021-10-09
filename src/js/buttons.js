@@ -33,11 +33,14 @@ export default class buttons{
         })
 
         $( "a" ).on('mouseenter touchstart', (e) => {
+            $(e.currentTarget).children(".link_indicator").addClass("link_indicator_hover");
             $(e.currentTarget).addClass("a_selected")
         })
 
         $( "a" ).on('mouseleave touchmove click' , (e) => {
             $(e.currentTarget).removeClass("a_selected")
+            $(e.currentTarget).children(".link_indicator").removeClass("link_indicator_hover");
+
         })
 
     }

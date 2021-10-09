@@ -19,14 +19,14 @@
 .title_purse_top{
     width: 100%;
     height: 50%;
-    background-color: var(--type);
+    background-color: var(--text);
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 .title_purse_bottom{
     width: 100%;
     height: 50%;
-    background-color: var(--type);
+    background-color: var(--text);
 }
 
 .title_btn_works{
@@ -38,7 +38,7 @@
     align-items: center;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    font-weight: 500;
+    font-weight: var(--font_weight_l);
     color: var(--background);
 }
 
@@ -60,7 +60,7 @@
     width: 120px;
     height: 120px;
     transition: 150ms;
-    background-color: var(--type);
+    background-color: var(--text);
     border: 2px solid var(--background);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
     transform: rotate(45deg);

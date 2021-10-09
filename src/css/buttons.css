@@ -48,6 +48,7 @@
 .contained_button{
     padding: var(--spacing_xxs) var(--spacing_xs);
     background: var(--background_tertiary);
+    fill: var(--text);
     border: var(--border_surface_small);
     border-radius: var(--border_raduis_small);
     display: flex;
@@ -83,4 +84,37 @@ a{
 
 .a_selected{
     color: var(--text_interaction);
+}
+
+.link_indicator{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    fill: var(--text);
+
+}
+
+.link_indicator::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--text);
+    transition: all 0.2s;
+}
+
+.link_indicator_hover{
+    background: var(--text_interaction);
+    fill: var(--background);
+    border-radius: 50%;
+}
+
+.link_indicator_hover::after{
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--background);
 }

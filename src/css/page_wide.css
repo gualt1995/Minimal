@@ -1,38 +1,4 @@
 :root{
-    /* Color styles */
-    --theme:light;
-
-    --background:rgb(255, 255, 255);
-    --background_secondary:rgb(245, 245, 245);
-    --background_tertiary:rgb(223, 223, 223);
-    --background_faded: rgba(255, 255, 255, 0.533);
-
-    --color_interaction:rgb(169, 209, 255);
-    --border_color:rgb(161, 161, 161);
-
-    --text:rgb(0, 0, 0);
-    --text_secondary:rgba(0, 0, 0, 0.486);
-    --text_tertiary:rgba(0, 0, 0, 0.171);
-    --text_interaction:rgb(23, 0, 156);
-
-    --border_raduis_small: 6px;
-    --border_raduis_medium: 12px;
-    --border_raduis_large: 18px;
-
-    --shadow_surface: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    --shadow_surface_inverted: 0px 0px 6px rgba(0, 0, 0, 0.25);
-
-    --border_surface_small: solid 1px var(--border_color);
-    --border_surface_small_selected: solid 1px var(--text_interaction);
-    --border_surface_large: solid 1px var(--border_color);
-
-    --background_image_pattern: radial-gradient(var(--background_tertiary) 1px, var(--background) 1px);
-    --background-size_pattern: 8px 8px;
-
-    --accent:#B90000;
-    --negative:rgb(255, 0, 0);
-    --selected:#b7c2fd;
-
     --spacing_xxs : 6px;
     --spacing_xs : 8px;
     --spacing_s : 12px;
@@ -40,12 +6,6 @@
     --spacing_l : 24px;
     --spacing_xl : 32px;
     --spacing_xxl : 48px;
-
-    --illustrations_card_corners: 0px 6px 6px 6px;
-    --illustrations_card_border: 1px solid var(--border_color);
-    --illustrations_strip_corners: 6px 6px 0px 0px;
-
-    --contact_card_border: 1px solid var(--type);
 }
 
 html{
@@ -55,8 +15,8 @@ html{
     scroll-behavior: smooth;
     font-size: 18px;
     color: var(--text);
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
+    font-family: var(--font_family);
+    font-weight: var(--font_weight_m); 
 }
 
 body{
@@ -100,36 +60,34 @@ body{
 }
 
 .text_light{
-    font-weight: 300;
+    font-weight: var(--font_weight_s); ;
 }
 
 .text_regular{
-    font-weight: 400;
+    font-weight: var(--font_weight_m);
+}
+
+.text_bold{
+    font-weight: var(--font_weight_xl);
 }
 
 .text_medium_spaced_upper{
-    font-weight: 500;
+    font-weight: var(--font_weight_l);
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 
 .text_display_small_spaced{
-    font-weight: 500;
+    font-weight: var(--font_weight_l) ;
     font-size: 1.333em;
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 
 .text_display_small{
-    font-weight: bold;
+    font-weight: var(--font_weight_xl);
     font-size: 1.333em;
     text-transform: capitalize;
-}
-
-.site_bar_spacer{
-    width: 100%;
-    min-height: 100px;
-    padding-bottom: 10px;
 }
 
 .toast{

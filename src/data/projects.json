@@ -3,7 +3,7 @@
     [ 
         { 
             "title" : "ON AIR", 
-            "id" : "link_to_on_air",
+            "img_class_name" : "img_on_air",
             "subtitle" : "Tangible music",
             "body" : "A music platform where user own individual tracks, tracks are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc, each track is assigned an non-fungible token (NFT) to ensure it's authenticity. The quality of the audio may depend on the chosen format. Tracks can be used to create mixtapes, these can be lent/gifted to other users, or even exported to their corresponding physical fromats.",
             "tags" : [
@@ -17,7 +17,7 @@
         },
         { 
             "title" : "Chrome Mobile", 
-            "id" : "link_to_chromium",
+            "img_class_name" : "img_on_chromium",
             "subtitle" : "Case Study",
             "body" : "Experimenting with a few components for a hypothetical new fork of the chromium browser on mobile, mainly focused on improving reachability.",
             "tags" : [
@@ -30,7 +30,7 @@
         },
         { 
             "title" : "Logs App", 
-            "id" : "link_to_chromium",
+            "img_class_name" : "img_logs",
             "subtitle" : "Case Study",
             "body" : "Experimenting with a few components for a hypothetical new fork of the chromium browser on mobile, mainly focused on improving reachability.",
             "tags" : [
@@ -43,7 +43,7 @@
         },
         { 
             "title" : "La Martingale", 
-            "id" : "link_to_martingale",
+            "img_class_name" : "img_martingale",
             "subtitle" : "Mobile App",
             "body" : "La martingale is the companion App to a set of worksheets desgined to help medical students Pass the French ECNi exam. The app allows flexible access to the Knowledge base, both on Android and iOS, thanks to unlock tokens printed in each copy of the book. Feel free to check it out on App stores !",
             "tags" : [
@@ -58,7 +58,7 @@
         },
         { 
             "title" : "[ This ]", 
-            "id" : "link_to_tizio",
+            "img_class_name" : "img_tizio",
             "subtitle" : "WEB DEV",
             "body" : "Build with the classic trio, HTML, CSS and Js, partly generated with Handlebars and animated with anime.js, this is my storefront to the world ! Feel free to check out the code on github, and the prototypes in figma, mostly used to make sure that this page would look good on all devices; no matter their body shape…",
             "tags" : [
