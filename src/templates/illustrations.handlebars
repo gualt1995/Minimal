@@ -2,18 +2,20 @@
     <div class="illustrations_flex_wrapper">
        {{#each illustrations}}
             <div class="illustrations_card">
-                <div class="illustrations_card_content">
+                <div class="illustrations_card_inner">
                     <a href='{{url}}' target="_blank">
-                    <img loading="lazy" class="illustrations_card_img {{illustrations_img_class_name}}">
-                    <div class="illustrations_link_frame">
-                        <span>{{title}}</span>
-                        <svg class="illustrations_arrow" alt="Arrow_link" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.93359 5.04636C8.96953 5.0164 9.01484 5 9.06163 5H16.4892H18.9892V7.5L18.9892 14.9276C18.9892 14.9744 18.9728 15.0197 18.9428 15.0556L16.8428 17.5756C16.7231 17.7193 16.4892 17.6346 16.4892 17.4476V9.16962L6.87755 18.8794L5.10083 17.1206L14.6242 7.5H6.54163C6.35457 7.5 6.26989 7.26611 6.41359 7.14636L8.93359 5.04636Z"/>
-                        </svg>
-                    </div>
-                    <span class="illustrations_description">
-                        {{description}}
-                    </span>
+                        <img loading="lazy" class="illustrations_card_img {{illustrations_img_class_name}}">
+                        <div class="illustrations_link_frame">
+                            <span class="text_display_small">{{title}}</span>
+                            <div class="link_indicator">
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.43412 13.6281L12.6356 8.42664V12.9715C12.6356 13.3347 12.9336 13.6327 13.2968 13.6327C13.66 13.6327 13.9534 13.3394 13.9534 12.9762L13.9534 6.83874C13.9534 6.47552 13.66 6.18215 13.2968 6.18215L7.15938 6.17284C6.98519 6.17264 6.81807 6.24176 6.69489 6.36493C6.57172 6.48811 6.5026 6.65522 6.5028 6.82942C6.5028 7.19264 6.79617 7.486 7.15938 7.486L11.7042 7.49532L6.5028 12.6968C6.24669 12.9529 6.24669 13.372 6.5028 13.6281C6.75891 13.8842 7.17801 13.8842 7.43412 13.6281Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="illustrations_description">
+                            {{description}}
+                        </span>
                     </a>
                 </div>
             </div>

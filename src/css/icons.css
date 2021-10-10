@@ -41,7 +41,7 @@
 
 .icon_selector_pill{
     margin-right: var(--spacing_xs);
-    fill: var(--text);
+    fill: var(--accent);
     cursor: pointer;
 }
 
@@ -71,20 +71,23 @@
 .icon_style{
     margin: var(--spacing_xxs) var(--spacing_m)  var(--spacing_m) var(--spacing_m);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: var(--spacing_s);
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
 .icon_display{
     justify-self: center;
-    width: 110px;
     height: 120px;
+    width: 100%;
+    padding: var(--spacing_xxs);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     cursor: pointer;
-    border-radius: var(--border_raduis_medium);
+    border-radius: var(--border_raduis_small);
+    transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 .icon_display_selected{
@@ -121,12 +124,13 @@
 }
 
 .icon_preview_container{
-    width: 400px;
+    width: 95%;
+    max-width: 400px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
     box-shadow: var(--shadow_surface);
     background: var( --background);
     border-radius: var( --border_raduis_large);

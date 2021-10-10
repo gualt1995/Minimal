@@ -3,7 +3,7 @@ require('../css/page_wide.css');
 import buttons from './buttons.js';
 
 import navbar from './nav_bar.js';
-import cvCard from './cv_card.js';
+import cvCard from './resume.js';
 import contactCard from './contact_card.js';
 import footer from './footer.js';
 import title_screen from './title_screen.js';

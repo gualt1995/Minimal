@@ -9,7 +9,7 @@
 
             "color_interaction":"#06c",
             "border_color":"#d0d6e9",
-            "accent":"#a2b5d6",
+            "accent":"#6898ba",
             "negative":"rgb(255, 0, 0)",
             "selected":"#b7c2fd",
 
@@ -46,20 +46,20 @@
             "background_secondary":"rgb(0, 0, 0)",
             "background_tertiary":"rgb(50, 50, 50)",
 
-            "color_interaction":"rgb(221 53 120)",
+            "color_interaction":"rgb(255 21 21)",
             "border_color":"rgb(255 255 255)",
-            "accent":"#f9571af7",
+            "accent":"rgb(255 21 21)",
             "negative":"rgb(255, 0, 0)",
             "selected":"#b46161",
 
             "text":"rgb(255, 255, 255)",
             "text_secondary":"rgba(255, 255, 255)",
             "text_tertiary":"rgba(255, 255, 255, 0.171)",
-            "text_interaction":"rgb(205 26 98)",
+            "text_interaction":"rgb(255 21 21)",
 
-            "border_raduis_small": "0px",
-            "border_raduis_medium": "0px",
-            "border_raduis_large": "4px",
+            "border_raduis_small": "2px",
+            "border_raduis_medium": "4px",
+            "border_raduis_large": "6px",
 
             "shadow_surface_wide": "0px 4px 10px rgba(0, 0, 0, 0.25)",
             "shadow_surface": "0px 0px 0px rgb(0 0 0)",
@@ -84,16 +84,16 @@
             "background_secondary":"#FFD000",
             "background_tertiary":"rgba(0, 0, 0, 0.171)",
 
-            "color_interaction":"rgb(255 255 255)",
+            "color_interaction":"rgb(47 113 197)",
             "border_color":"rgb(54 54 54)",
-            "accent" : "#74A0F4",
+            "accent" : "#666666",
             "negative":"rgb(255, 0, 0)",
             "selected" : "#FFFFFF",
 
             "text":"rgb(0, 0, 0)",
             "text_secondary":"rgba(0, 0, 0)",
             "text_tertiary":"rgba(0, 0, 0)",
-            "text_interaction":"rgb(255, 255, 255)",
+            "text_interaction":"rgb(47 113 197)",
 
             "border_raduis_small": "2px",
             "border_raduis_medium": "4px",
@@ -125,7 +125,7 @@
 
             "color_interaction":"rgb(255 255 255)",
             "border_color":"rgb(54 54 54)",
-            "accent" : "#74A0F4",
+            "accent" : "rgb(221 53 120)",
             "negative":"rgb(255, 0, 0)",
             "selected" : "#FFFFFF",
 
@@ -139,7 +139,7 @@
             "border_raduis_large": "24px",
 
             "shadow_surface_wide": "0px 2px 0px rgb(0, 0, 0)",
-            "shadow_surface": "4px 4px 6px #B5B8D2",
+            "shadow_surface": "2px 2px 0px rgb(221 53 120)",
             "shadow_surface_inverted": "0px 0px 0px rgba(0 0 0,0)", 
 
             "border_surface_small": "solid 2px var(--border_color)",
@@ -157,27 +157,27 @@
 
         },
         { 
-            "theme" : "noise", 
-            "background":"#181717",
-            "background_secondary":"#212122",
-            "background_tertiary":"rgb(50, 50, 50)",
+            "theme" : "steam", 
+            "background":"#141413",
+            "background_secondary":"#22221e",
+            "background_tertiary":"rgb(48 47 38)",
 
-            "color_interaction":"rgb(221 53 120)",
-            "border_color":"#565555",
-            "accent":"#f9571af7",
+            "color_interaction":"rgb(255 255 255)",
+            "border_color":"#565239",
+            "accent":"#5f7a3af7",
             "negative":"rgb(255, 0, 0)",
-            "selected":"#b46161",
+            "selected":"#2f7000",
 
-            "text":"rgb(255, 255, 255)",
-            "text_secondary":"#BFBFBF",
+            "text":"rgb(243 235 187)",
+            "text_secondary":"rgb(144 140 111)",
             "text_tertiary":"rgba(255, 255, 255, 0.171)",
-            "text_interaction":"#E43152",
+            "text_interaction":"rgb(255, 255, 255)",
 
             "border_raduis_small": "0px",
             "border_raduis_medium": "0px",
             "border_raduis_large": "4px",
 
-            "shadow_surface_wide": "0px 4px 10px rgba(0, 0, 0, 0.25)",
+            "shadow_surface_wide": "0px 1px 0px var(--border_color)",
             "shadow_surface": "0px 0px 0px rgb(0 0 0)",
             "shadow_surface_inverted": "0px 0px 0px rgb(0 0 0)", 
 
@@ -189,7 +189,7 @@
             "background-size_pattern": "8px 8px",
 
             "font_family": "'Lato', sans-serif",
-            "font_weight_s": 100,
+            "font_weight_s": 300,
             "font_weight_m": 300,
             "font_weight_l": 400,
             "font_weight_xl": 700

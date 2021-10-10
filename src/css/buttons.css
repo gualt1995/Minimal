@@ -27,7 +27,7 @@
 }
 
 .icon_btn_hover{
-    background: var(--text);
+    background: var(--text_interaction);
 }
 
 .icon_btn_hover > svg{
@@ -46,23 +46,31 @@
 }
 
 .contained_button{
-    padding: var(--spacing_xxs) var(--spacing_xs);
+    padding: var(--spacing_xs) var(--spacing_s);
     background: var(--background_tertiary);
     fill: var(--text);
+    color: var(--text);
+    text-decoration: none;
     border: var(--border_surface_small);
     border-radius: var(--border_raduis_small);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .contained_button > svg{
-    margin-right: var(--spacing_xxs);
+    margin-left: var(--spacing_xxs);
 }
 
 .contained_button_hover{
+    fill: var(--background);
     background: var(--color_interaction);
+}
+
+.contained_button_hover > span{
+    color: var(--background);
 }
 
 .contained_button_selected{

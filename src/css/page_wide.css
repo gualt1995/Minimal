@@ -88,6 +88,7 @@ body{
     font-weight: var(--font_weight_xl);
     font-size: 1.333em;
     text-transform: capitalize;
+    padding-right: 4px;
 }
 
 .toast{
@@ -107,6 +108,10 @@ body{
     background: var(--text);
     color: var(--background);
     border: 1px solid var(--background_tertiary);
+}
+
+.accent_color{
+    color: var(--accent);
 }
 
 

@@ -146,7 +146,7 @@ export default class navbar{
       
         anime({
             targets: "#"+prevTabId,
-            opacity : 0,
+            opacity : 0.4,
             duration: 150,
             easing: 'linear',
             complete: function() {
@@ -155,7 +155,7 @@ export default class navbar{
                 anime({
                     targets: $( "#"+nextTabId )[0],
                     opacity : 1,
-                    duration: 200,
+                    duration: 100,
                     easing: 'linear',
                 });
             }

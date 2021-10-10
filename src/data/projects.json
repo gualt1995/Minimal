@@ -58,7 +58,7 @@
         },
         { 
             "title" : "[ This ]", 
-            "img_class_name" : "img_tizio",
+            "img_class_name" : "img_wip",
             "subtitle" : "WEB DEV",
             "body" : "Build with the classic trio, HTML, CSS and Js, partly generated with Handlebars and animated with anime.js, this is my storefront to the world ! Feel free to check out the code on github, and the prototypes in figma, mostly used to make sure that this page would look good on all devices; no matter their body shape…",
             "tags" : [

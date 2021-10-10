@@ -121,7 +121,7 @@
 .side_menu_inner{
     max-width: 300px;
     background: var(--background);
-    box-shadow: var(--shadow_surface);
+    box-shadow: var(--shadow_surface_wide);
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 1fr auto;
