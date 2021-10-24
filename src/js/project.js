@@ -1,5 +1,5 @@
 require('../css/project.css');
-import mugge from '../thumbnails/Mugge.png';
+import martingale from '../thumbnails/Martingale.png';
 import logs from '../thumbnails/Logs.png';
 import onAir from '../thumbnails/On_air.png';
 import chrome from '../thumbnails/Chrome.png';
@@ -16,7 +16,7 @@ export default class project{
         $(".img_on_air").attr("src", onAir);
         $(".img_on_chromium").attr("src", chrome);
         $(".img_logs").attr("src", logs);
-        $(".img_martingale").attr("src", mugge);
+        $(".img_martingale").attr("src", martingale);
         $(".img_wip").attr("src", wip);
         
     }

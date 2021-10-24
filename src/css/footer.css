@@ -12,7 +12,7 @@
 
 .footnote_frame_inner{
     flex-grow: 1;
-    max-width: 1150px;
+    max-width: var(--page_content_width);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.4fr 3fr 0.4fr 1fr;

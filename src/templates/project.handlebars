@@ -12,7 +12,11 @@
                 {{/each}}
             </div>
         </div>  
-        <div class="project_body"> {{body}} </div>
+        <div class="project_body">
+            {{#each body}}  
+                <p> {{this}}</p>
+            {{/each}}
+        </div>
         <div class="project_links_frame">
             {{#each links}}
                 <div class="project_link" > 

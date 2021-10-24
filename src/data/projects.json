@@ -1,11 +1,31 @@
 {
     "project" : 
     [ 
+
+        { 
+            "title" : "Logs App", 
+            "img_class_name" : "img_logs",
+            "subtitle" : "Mobile monitoring",
+            "body" : [ 
+                "Designed to allow users to quickly access their logs on mobile devices, this app could be used by on call engineers to enhance incident response and resolution time.",
+                "The goals is to allow users to view their latest logs, filter and search them, select relevant time timeframes and timezone and hopefully, help said users to quickly locate the offending hosts or containers and get services back up and running."
+            ],
+            "tags" : [
+                "Monitoring",
+                "Mobile"
+            ],
+            "links": [
+                { "url": "https://www.figma.com/community/file/1032663640202056756/Mobile-logs-monitoring-application", "name": "Designed in Figma"}
+            ]
+        },
         { 
             "title" : "ON AIR", 
             "img_class_name" : "img_on_air",
             "subtitle" : "Tangible music",
-            "body" : "A music platform where user own individual tracks, tracks are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc, each track is assigned an non-fungible token (NFT) to ensure it's authenticity. The quality of the audio may depend on the chosen format. Tracks can be used to create mixtapes, these can be lent/gifted to other users, or even exported to their corresponding physical fromats.",
+            "body" : [
+                "A music platform where user own individual tracks, these are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc.Tracks can be used to create mixtapes which can be lent/gifted to other users, or even exported to their corresponding physical formats.",
+                "Each track is link to non-fungible token (NFT) to ensure its authenticity. The quality of the audio may depend on the chosen format."
+            ],
             "tags" : [
                 "Skeuomorphism",
                 "Prototyping"
@@ -18,8 +38,11 @@
         { 
             "title" : "Chrome Mobile", 
             "img_class_name" : "img_on_chromium",
-            "subtitle" : "Case Study",
-            "body" : "Experimenting with a few components for a hypothetical new fork of the chromium browser on mobile, mainly focused on improving reachability.",
+            "subtitle" : "Focus on reachability",
+            "body" : [
+                "Experimenting with a few components for a hypothetical fork of the chromium browser on mobile, mainly focused on improving reachability",
+                "The search bar is brought down to the bottom of the screen, as well as the navigation keys and contextual actions to make sure that users can browse even when using their phone one handed."
+            ], 
             "tags" : [
                 "Mobile",
                 "Redesign"
@@ -29,23 +52,13 @@
             ]
         },
         { 
-            "title" : "Logs App", 
-            "img_class_name" : "img_logs",
-            "subtitle" : "Case Study",
-            "body" : "Experimenting with a few components for a hypothetical new fork of the chromium browser on mobile, mainly focused on improving reachability.",
-            "tags" : [
-                "Monitoring",
-                "Mobile"
-            ],
-            "links": [
-                { "url": "https://www.figma.com/community/file/986711141586791297/Chromium-Mobile", "name": "Designed in Figma"}
-            ]
-        },
-        { 
             "title" : "La Martingale", 
             "img_class_name" : "img_martingale",
             "subtitle" : "Mobile App",
-            "body" : "La martingale is the companion App to a set of worksheets desgined to help medical students Pass the French ECNi exam. The app allows flexible access to the Knowledge base, both on Android and iOS, thanks to unlock tokens printed in each copy of the book. Feel free to check it out on App stores !",
+            "body" : [
+                "La martingale is the companion App to a set of worksheets designed to help medical students Pass the French ECNi exam.",
+                "The app allows flexible access to the knowledge base, both on Android and iOS, thanks to codes printed in each copy of the book. Feel free to check it out on App stores !"
+            ],
             "tags" : [
                 "Mobile",
                 "Java",
@@ -60,7 +73,10 @@
             "title" : "[ This ]", 
             "img_class_name" : "img_wip",
             "subtitle" : "WEB DEV",
-            "body" : "Build with the classic trio, HTML, CSS and Js, partly generated with Handlebars and animated with anime.js, this is my storefront to the world ! Feel free to check out the code on github, and the prototypes in figma, mostly used to make sure that this page would look good on all devices; no matter their body shape…",
+            "body" : [
+                "Built with, HTML, CSS and JS, generated with Handlebars and partially animated with anime.js.",
+                "Feel free to check out the code on Github, and the drafts in Figma, which were mostly used to make sure that this page would look good on all devices, no matter their <body> shape"
+            ],
             "tags" : [
                 "Frontend",
                 "Web",
@@ -68,7 +84,7 @@
             ],
             "links": [
                 { "url": "https://github.com/gualt1995/Minimal", "name": "Code on Github"},
-                { "url": "https://www.figma.com/file/eOlA7GPhKIEvAMr9xMryEE/Minimalist-version?node-id=302%3A426", "name": "Designed in Figma"}
+                { "url": "https://www.figma.com/file/eOlA7GPhKIEvAMr9xMryEE/Minimalist-version?node-id=302%3A426", "name": "Draft in Figma"}
             ]
         }
     ]

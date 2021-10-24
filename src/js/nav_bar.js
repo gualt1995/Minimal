@@ -7,25 +7,26 @@ export default class navbar{
         var data = require('../data/tabs_names.json');
         var html = template(data)
         $('.screen_space').append(html);
+
         if(window.location.search){
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const tab = urlParams.get('tab')
             this.hideTabsExcept(tab)
-
         }else{
             history.replaceState({tab: "works"}, "works", "?tab=works");
             this.hideTabsExcept("works")
         }
-        var that = this;
 
-        $(".tabs_frame > div, .side_menu_tab_frame > div").on('click', function(e) {
+        this.scrollComponentsCheck();
+
+        $(".tabs_frame > div, .side_menu_tab_frame > div").on('click', (e)=> {
             var prevTabFrame = $(document.body).find(".selected")
             var nextTabFrame =  $("." + e.currentTarget.className.replace("_tab_selector","_frame"))
             console.log("." + e.currentTarget.className.replace("_tab_selector","_frame"))
             $(".side_menu").addClass("side_menu_hidden")
             if(! $(e.currentTarget).hasClass("tab_is_active")){
-                that.switchTabs( prevTabFrame, nextTabFrame, true);
+                this.switchTabs( prevTabFrame, nextTabFrame, true);
             }
         });
 
@@ -62,13 +63,12 @@ export default class navbar{
             $(e.currentTarget).css("text-decoration", "")
         })
 
-        $( window ).on('scroll',function() {
-            if(window.scrollY < 20 && window.innerWidth > 768){
-                $(".site_bar").addClass("expanded_site_bar")
-            }else{
-                $(".site_bar").removeClass("expanded_site_bar")
-            }
-            $(".side_menu").addClass("side_menu_hidden");   
+        $( window ).on('scroll',()=> {
+           this.scrollComponentsCheck()
+        });
+
+        $( window ).on('resize',()=> {
+            this.resizeComponentsCheck()
         });
 
         window.onpopstate = function(event) {
@@ -80,6 +80,26 @@ export default class navbar{
                 window.history.back();
             }
         } 
+    }
+
+    scrollComponentsCheck(){
+        if(window.scrollY < 20){
+            $(".site_bar").addClass("expanded_site_bar")
+        }else{
+            $(".site_bar").removeClass("expanded_site_bar")
+        }
+        $(".side_menu").addClass("side_menu_hidden");   
+    }
+
+    resizeComponentsCheck(){
+        if(window.innerWidth < 768){
+            $(".site_bar").removeClass("expanded_site_bar")
+        }else{
+            if(window.scrollY < 20){
+                $(".site_bar").addClass("expanded_site_bar")
+            }
+        }
+        $(".side_menu").addClass("side_menu_hidden");
     }
 
     hideTabsExcept(tabNotToHide){
@@ -98,16 +118,13 @@ export default class navbar{
     switchTabs(prevTabFrame, nextTabFrame, pushHistory){
         prevTabFrame.removeClass("selected")
         nextTabFrame.addClass("selected")
-
         var prevTabId = prevTabFrame.attr("id")
         var nextTabId = nextTabFrame.attr("id") 
-
         if(pushHistory){
             history.pushState({tab: nextTabId}, nextTabId, "?tab="+ nextTabId)
         }
         var prevTabButtonClass = "." + prevTabId + "_tab_selector";
         var nextTabButtonClass= "." + nextTabId + "_tab_selector";
-
         var tl = anime.timeline({
             easing: 'easeOutCirc',
         })
@@ -143,7 +160,6 @@ export default class navbar{
             duration:200,
         },200)
 
-      
         anime({
             targets: "#"+prevTabId,
             opacity : 0.4,

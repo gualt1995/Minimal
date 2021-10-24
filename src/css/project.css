@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 300px 1fr ;
     grid-template-rows: auto auto auto;
-    max-width: 1150px;
+    max-width: var(--page_content_width);
     min-height: 300px;
     width: 90%;
     border: var(--border_surface_large);
@@ -68,6 +68,12 @@
     grid-column-start: 2;
     grid-column-end: 4;
     margin: var(--spacing_xxs) var(--spacing_m);
+    display: grid;
+    gap: var(--spacing_xs);
+}
+
+.project_body > p{
+    margin: 0;
 }
 
 .project_links_frame{

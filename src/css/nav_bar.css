@@ -1,5 +1,4 @@
 .site_bar{
-    --site_bar_transitions: all 0.25s cubic-bezier(0.55, 0, 1, 0.45);
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -10,7 +9,7 @@
     align-items: center;
     background: var(--background);
     box-shadow: var(--shadow_surface_wide);
-    transition: var(--site_bar_transitions);
+    transition: all 0.25s cubic-bezier(0.55, 0, 1, 0.45);
 }
 
 .site_bar_spacer{
@@ -42,7 +41,7 @@
     width: 100%;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr min(1150px , 90%) 1fr;
+    grid-template-columns: 1fr min(var(--page_content_width) , 90%) 1fr;
 }
 
 .site_bar_logo_frame{
@@ -51,7 +50,6 @@
     grid-row-start: 1;
     padding-left: 8px;
     align-items: center;
-    transition: var(--site_bar_transitions);
 }
 
 .site_bar_logo_frame > svg{

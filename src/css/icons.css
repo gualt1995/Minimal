@@ -8,7 +8,7 @@
 
 .icons_group{
     width: 90%;
-    max-width: 1150px;
+    max-width: var(--page_content_width);
     border: var(--border_surface_large);
     background: var(--background_secondary);
     box-shadow: var(--shadow_surface);

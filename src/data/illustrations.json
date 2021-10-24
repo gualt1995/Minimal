@@ -2,13 +2,6 @@
     "illustrations" : 
     [
         { 
-            "title" : "Gaming Buttons", 
-            "url" : "https://www.figma.com/community/file/985862968836916854/Racing-Game-buttons",
-            "description" : "Mini UI kit focused on Gaming",
-            "illustrations_img_class_name" : "img_storm",
-            "type": "Buttons Kit"
-        },
-        { 
             "title" : "MUGGE", 
             "url" : "https://www.figma.com/community/file/968632724189976512/Mugge",
             "description" : "Album art and LP.",
@@ -16,32 +9,39 @@
             "type": "Illustration"
         },
         {
-            "title" : "TYKHO.3", 
-            "url" : "https://www.figma.com/community/file/968550486589020045/TYKHO.3",
-            "description" : "Lexon's Radio as SVG.",
-            "illustrations_img_class_name" : "img_lexon",
-            "type": "Illustration"
-        },
-        {
             "title" : "SAAB", 
             "url" : "https://www.figma.com/community/file/972240072451635265/Saab-900-turbo",
-            "description" : "900 turbo, Straight from 1985.",
+            "description" : "Saab 900 turbo, 1985.",
             "illustrations_img_class_name" : "img_saab",
             "type": "Illustration"
         },
         {
-            "title" : "A reachable browser", 
-            "url" : "https://www.figma.com/community/file/986711141586791297/Chromium-Mobile",
-            "description" : "Different twist on the search bar.",
-            "illustrations_img_class_name" : "img_browser",
-            "type": "UI / Exploration"
+            "title" : "TYKHO.3", 
+            "url" : "https://www.figma.com/community/file/968550486589020045/TYKHO.3",
+            "description" : "Radio Made by Lexon",
+            "illustrations_img_class_name" : "img_lexon",
+            "type": "Illustration"
         },
         {
-            "title" : "Logs Monitoring", 
-            "url" : "https://www.figma.com/file/ybiUWRbjZnvfRVD2TipraV/Mobile-App-logs?node-id=754%3A1871",
-            "description" : "A Logs Monitoring App on Mobile.",
-            "illustrations_img_class_name" : "img_logs",
-            "type": "UI / Mobile"
+            "title" : "GTV Silhouette", 
+            "url" : "https://www.figma.com/community/file/1009747734151494003/Alfa-Romeo-Silhouette",
+            "description" : "Alfa Romeo GTV 1976",
+            "illustrations_img_class_name" : "img_alfa",
+            "type": "Illustration"
+        },
+        {
+            "title" : "Audio Formats", 
+            "url" : "https://www.figma.com/community/file/1032998771305796813/Classic-Audio-Formats",
+            "description" : "LP, Minidisc and Cassette",
+            "illustrations_img_class_name" : "img_music",
+            "type": "Illustration"
+        },
+        {
+            "title" : "Tizio", 
+            "url" : "https://www.figma.com/community/file/972543759709873301/Artemide-Tizio",
+            "description" : "Iconic lamp by Artemide",
+            "illustrations_img_class_name" : "img_tizio",
+            "type": "Illustration"
         },
         {
             "title" : "Almost Home", 
@@ -49,6 +49,20 @@
             "description" : "Crew entering the atmosphere ",
             "illustrations_img_class_name" : "img_space",
             "type": "Illustration"
+        },
+        {
+            "title" : "Phones", 
+            "url" : "https://www.figma.com/community/file/975134316671352578/Minimalistic-Phones",
+            "description" : "Minimalistic Smartphones",
+            "illustrations_img_class_name" : "img_phones",
+            "type": "Illustration"
+        },
+        { 
+            "title" : "Gaming Buttons", 
+            "url" : "https://www.figma.com/community/file/985862968836916854/Racing-Game-buttons",
+            "description" : "Mini UI kit focused on Gaming",
+            "illustrations_img_class_name" : "img_storm",
+            "type": "Buttons Kit"
         }
     ]
 }

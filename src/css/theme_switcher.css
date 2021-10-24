@@ -3,6 +3,7 @@
 }
 
 .theme_widget{
+    font-size: 18px; /*-- keep it like this, should stay static for spacing--*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

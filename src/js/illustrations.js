@@ -1,12 +1,14 @@
 require('../css/illustrations.css');
-import anime from 'animejs/lib/anime.es.js';
 import mugge from '../thumbnails/Mugge.png';
 import lexon from '../thumbnails/Lexon.png';
 import saab from '../thumbnails/Saab.png';
-import logs from '../thumbnails/Logs.png';
-import chrome from '../thumbnails/Chrome.png';
+import alfa from '../thumbnails/Alfa.png';
+import music from '../thumbnails/Music.png';
 import space from '../thumbnails/Space.png';
 import storm from '../thumbnails/Storm.png';
+import tizio from '../thumbnails/Tizio.png';
+import phones from '../thumbnails/Phones.png';
+
 
 export default class illustrations{
     constructor(){
@@ -19,10 +21,13 @@ export default class illustrations{
         $(".img_mugge").attr("src", mugge);
         $(".img_lexon").attr("src", lexon);
         $(".img_saab").attr("src", saab);
-        $(".img_browser").attr("src", chrome);
-        $(".img_logs").attr("src", logs);
+        $(".img_alfa").attr("src", alfa);
+        $(".img_music").attr("src", music);
         $(".img_space").attr("src", space);
         $(".img_storm").attr("src", storm);
+        $(".img_tizio").attr("src", tizio);
+        $(".img_phones").attr("src", phones);
+
 
         $( ".illustrations_card" ).on('mouseenter',function(e) {
             $(e.currentTarget).addClass("illustrations_card_hover")

@@ -8,7 +8,7 @@
 
 .illustrations_content{
     width: 90%;
-    max-width: 1150px;
+    max-width: var(--page_content_width);
     display: flex;
     flex-direction: column;
 }

@@ -61,7 +61,7 @@
             "border_raduis_medium": "4px",
             "border_raduis_large": "6px",
 
-            "shadow_surface_wide": "0px 4px 10px rgba(0, 0, 0, 0.25)",
+            "shadow_surface_wide": "0px 1px 0px rgb(255, 255, 255)",
             "shadow_surface": "0px 0px 0px rgb(0 0 0)",
             "shadow_surface_inverted": "0px 0px 0px rgb(0 0 0)", 
 
@@ -118,28 +118,28 @@
 
         },
         { 
-            "theme" : "candy", 
-            "background": "#F8F0ED",
-            "background_secondary":"#f9dcd3",
-            "background_tertiary":"#ECB9A9",
+            "theme" : "sand", 
+            "background": "#DDCAB2",
+            "background_secondary":"#d9ccbc",
+            "background_tertiary":"#c7b39a",
 
-            "color_interaction":"rgb(255 255 255)",
-            "border_color":"rgb(54 54 54)",
-            "accent" : "rgb(221 53 120)",
+            "color_interaction":"rgb(0 0 0)",
+            "border_color":"rgb(106 30 30)",
+            "accent" : "rgb(128 131 143)",
             "negative":"rgb(255, 0, 0)",
-            "selected" : "#FFFFFF",
+            "selected" : "#dd7c7c",
 
-            "text":"rgb(0, 0, 0)",
-            "text_secondary":"rgba(0, 0, 0)",
+            "text":"#6B1E1E",
+            "text_secondary":"#5e2525",
             "text_tertiary":"rgba(0, 0, 0)",
-            "text_interaction":"rgb(255, 255, 255)",
+            "text_interaction":"rgb(189 39 39)",
 
-            "border_raduis_small": "6px",
-            "border_raduis_medium": "12px",
-            "border_raduis_large": "24px",
+            "border_raduis_small": "4px",
+            "border_raduis_medium": "6px",
+            "border_raduis_large": "8px",
 
             "shadow_surface_wide": "0px 2px 0px rgb(0, 0, 0)",
-            "shadow_surface": "2px 2px 0px rgb(221 53 120)",
+            "shadow_surface": "0px 2px 6px rgba(222, 65, 15, 0.25), 0px 4px 10px #be681875",
             "shadow_surface_inverted": "0px 0px 0px rgba(0 0 0,0)", 
 
             "border_surface_small": "solid 2px var(--border_color)",

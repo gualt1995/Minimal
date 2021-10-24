@@ -6,6 +6,7 @@
     --spacing_l : 24px;
     --spacing_xl : 32px;
     --spacing_xxl : 48px;
+    --page_content_width : 1150px;
 }
 
 html{
@@ -116,15 +117,26 @@ body{
 
 
 @media screen and (max-width: 768px) {
-    /* when the viewport is 450px or smaller */
     html{
         font-size: 16px;
     }
 }
 
 @media screen and (min-width: 1600px) {
-    /* when the viewport is 450px or smaller */
+
+    :root{
+        --spacing_xxs : 8px;
+        --spacing_xs : 10px;
+        --spacing_s : 14px;
+        --spacing_m : 22px;
+        --spacing_l : 26px;
+        --spacing_xl : 34px;
+        --spacing_xxl : 50px;
+        --page_content_width : 1300px;
+    }
+
     html{
         font-size: 20px;
+
     }
 }
