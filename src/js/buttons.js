@@ -24,20 +24,20 @@ export default class buttons{
             e.currentTarget.style.textDecoration=""
         })
 
-        $( ".contained_button" ).on('mouseenter touchstart', (e) => {
+        $( ".contained_button" ).on('mouseenter', (e) => {
             $(e.currentTarget).addClass("contained_button_hover")
         })
 
-        $( ".contained_button" ).on('mouseleave touchmove click', (e) => {
+        $( ".contained_button" ).on('mouseleave', (e) => {
             $(e.currentTarget).removeClass("contained_button_hover")
         })
 
-        $( "a" ).on('mouseenter touchstart', (e) => {
+        $( "a" ).on('mouseenter', (e) => {
             $(e.currentTarget).children(".link_indicator").addClass("link_indicator_hover");
             $(e.currentTarget).addClass("a_selected")
         })
 
-        $( "a" ).on('mouseleave touchmove click' , (e) => {
+        $( "a" ).on('mouseleave' , (e) => {
             $(e.currentTarget).removeClass("a_selected")
             $(e.currentTarget).children(".link_indicator").removeClass("link_indicator_hover");
 

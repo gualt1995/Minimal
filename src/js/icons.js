@@ -38,19 +38,19 @@ export default class icons{
             }
         })
 
-        $( ".icon_display" ).on('mouseenter touchstart', (e) => {
+        $( ".icon_display" ).on('mouseenter', (e) => {
             $(e.currentTarget).addClass("icon_display_selected")
         })
 
-        $( ".icon_display" ).on('mouseleave touchmove', (e) => {
+        $( ".icon_display" ).on('mouseleave', (e) => {
             $(e.currentTarget).removeClass("icon_display_selected")
         })
 
-        $( ".icon_selector_pill" ).on('mouseenter touchstart', (e) => {
+        $( ".icon_selector_pill" ).on('mouseenter', (e) => {
             $(e.currentTarget).addClass("icon_selector_pill_hover")
         })
 
-        $( ".icon_selector_pill" ).on('mouseleave touchmove', (e) => {
+        $( ".icon_selector_pill" ).on('mouseleave', (e) => {
             $(e.currentTarget).removeClass("icon_selector_pill_hover")
         })
 

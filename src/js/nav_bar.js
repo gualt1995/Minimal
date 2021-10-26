@@ -83,7 +83,7 @@ export default class navbar{
     }
 
     scrollComponentsCheck(){
-        if(window.scrollY < 20){
+        if(window.scrollY < 20 && window.innerWidth >= 768){
             $(".site_bar").addClass("expanded_site_bar")
         }else{
             $(".site_bar").removeClass("expanded_site_bar")
@@ -116,6 +116,7 @@ export default class navbar{
     }
 
     switchTabs(prevTabFrame, nextTabFrame, pushHistory){
+        window.scrollTo(0, 0);
         prevTabFrame.removeClass("selected")
         nextTabFrame.addClass("selected")
         var prevTabId = prevTabFrame.attr("id")

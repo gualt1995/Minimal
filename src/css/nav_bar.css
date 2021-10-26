@@ -120,6 +120,7 @@
     max-width: 300px;
     background: var(--background);
     box-shadow: var(--shadow_surface_wide);
+    border-right: var(--border_surface_small);
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 1fr auto;
