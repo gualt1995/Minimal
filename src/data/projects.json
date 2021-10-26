@@ -8,14 +8,15 @@
             "subtitle" : "Mobile monitoring",
             "body" : [ 
                 "Designed to allow users to quickly access their logs on mobile devices, this app could be used by on call engineers to enhance incident response and resolution time.",
-                "The goals is to allow users to view their latest logs, filter and search them, select relevant time timeframes and timezone and hopefully, help said users to quickly locate the offending hosts or containers and get services back up and running."
+                "The goal is to allow users to view their latest logs, filter and search them, select relevant timeframes/timezones and help said users to quickly locate the offending hosts or containers to get services back up and running."
             ],
             "tags" : [
                 "Monitoring",
                 "Mobile"
             ],
             "links": [
-                { "url": "https://www.figma.com/community/file/1032663640202056756/Mobile-logs-monitoring-application", "name": "Designed in Figma"}
+                { "url": "https://www.figma.com/community/file/1032663640202056756/Mobile-logs-monitoring-application", "name": "Designed in Figma"},
+                { "url": "https://www.figma.com/community/file/1034869312986835740/Logs-Mobile-app-user-flow", "name": "User flows"}
             ]
         },
         { 
@@ -23,7 +24,7 @@
             "img_class_name" : "img_on_air",
             "subtitle" : "Tangible music",
             "body" : [
-                "A music platform where user own individual tracks, these are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc.Tracks can be used to create mixtapes which can be lent/gifted to other users, or even exported to their corresponding physical formats.",
+                "A music platform where user own individual tracks, these are 'printed' in a limited quantity on various formats such as Compact cassette or Minidisc. Tracks can be used to create mixtapes which can be lent/gifted to other users, or even exported to their corresponding physical formats.",
                 "Each track is link to non-fungible token (NFT) to ensure its authenticity. The quality of the audio may depend on the chosen format."
             ],
             "tags" : [
